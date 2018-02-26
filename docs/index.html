@@ -13,6 +13,7 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+	<link rel="icon" href="favicon.png" />
 </head>
 <body>
     <div class="container template-vignette">
@@ -95,9 +96,9 @@ fig_id = sub("\\.","_",
 <p><img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"></p>
 <div id="r-package-addins-rmd" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#r-package-addins-rmd" class="anchor"></a>R package <code>addins.rmd</code>
+<a href="#r-package-addins-rmd" class="anchor"></a>R package <strong>addins.rmd</strong>
 </h1></div>
-<p><code>addins.rmd</code> is an R package that provides a set of <em>RStudio</em> addins for <em>R Markdown</em>. The main purpose of this package is to alleviate learning process of <em>R Markdown</em> syntax.</p>
+<p>Package <code>addins.rmd</code> is an <em>R</em> package that provides a set of <em>RStudio</em> addins for <em>R Markdown</em>. The main purpose of this package is to alleviate learning process of <em>R Markdown</em> syntax.</p>
 <!-- 
 1) **format text in R Markdown documents**: 
     - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
@@ -127,10 +128,45 @@ in strings like `"c:\data\"` converted into `"c:/data/"`).
 <!-- browseVignettes("addins.rmd") -->
 </div>
 </div>
+<div id="how-to-use-the-add-ins" class="section level1">
+<h1 class="hasAnchor">
+<a href="#how-to-use-the-add-ins" class="anchor"></a>How to use the add-ins</h1>
+<p>Below you can find a few examples how to use the add-ins of the package.</p>
+<div id="convert-text-into-headings" class="section level2">
+<h2 class="hasAnchor">
+<a href="#convert-text-into-headings" class="anchor"></a>Convert text into headings</h2>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif" alt="Demonstration 1: headings. Place a cursor with a mouse and use a necessary add-in."><p class="caption"><strong>Demonstration 1: headings.</strong> Place a cursor with a mouse and use a necessary add-in.</p>
+</div>
+<p><br></p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif" alt="Demonstration 2: headings. Notice that, if needed, a blank line above the selection is added."><p class="caption"><strong>Demonstration 2: headings.</strong> Notice that, if needed, a blank line above the selection is added.</p>
+</div>
+<p><br><br></p>
+</div>
+<div id="basic-text-formatting" class="section level2">
+<h2 class="hasAnchor">
+<a href="#basic-text-formatting" class="anchor"></a>Basic text formatting</h2>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif" alt="Demonstration 3: basic formatting. Before using this type of add-in, select a piece of text that should be formatted."><p class="caption"><strong>Demonstration 3: basic formatting.</strong> Before using this type of add-in, select a piece of text that should be formatted.</p>
+</div>
+<p><br><br></p>
+</div>
+<div id="create-lists" class="section level2">
+<h2 class="hasAnchor">
+<a href="#create-lists" class="anchor"></a>Create lists</h2>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif" alt="Demonstration 4: lists. The lists can be numbered and unnumbered. They can have several levels."><p class="caption"><strong>Demonstration 4: lists.</strong> The lists can be numbered and unnumbered. They can have several levels.</p>
+</div>
+</div>
+</div>
 <div id="pandocs-markdown" class="section level1">
 <h1 class="hasAnchor">
 <a href="#pandocs-markdown" class="anchor"></a>Pandoc’s Markdown</h1>
-<p><em>R Markdown</em> syntax is based on Pandoc’s Markdown syntax: <a href="https://pandoc.org/MANUAL.html#pandocs-markdown" class="uri">https://pandoc.org/MANUAL.html#pandocs-markdown</a></p>
+<p><em>R Markdown</em> syntax is based on Pandoc’s Markdown syntax. Read more if you need more advanced formatting options:</p>
+<ul>
+<li><a href="https://pandoc.org/MANUAL.html#pandocs-markdown" class="uri">https://pandoc.org/MANUAL.html#pandocs-markdown</a></li>
+</ul>
 <hr>
 <p>More information at <a href="http://gegznav.github.io/addins.rmd/" class="uri">http://gegznav.github.io/addins.rmd/</a></p>
 </div>
@@ -141,8 +177,6 @@ in strings like `"c:\data\"` converted into `"c:/data/"`).
     <h2 class="hasAnchor">
 <a href="#sidebar" class="anchor"></a>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/GegznaV/addins.rmd">https://​github.com/​GegznaV/​addins.rmd</a>
-</li>
 <li>Report a bug at <br><a href="https://github.com/GegznaV/addins.rmd/issues">https://​github.com/​GegznaV/​addins.rmd/​issues</a>
 </li>
 </ul>

@@ -44,11 +44,11 @@ impact](http://depsy.org/api/package/cran/addins.rmd/badge.svg)](http://depsy.or
 
 <img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
 
-# R package `addins.rmd`
+# R package **addins.rmd**
 
-`addins.rmd` is an R package that provides a set of *RStudio* addins for
-*R Markdown*. The main purpose of this package is to alleviate learning
-process of *R Markdown* syntax.
+Package `addins.rmd` is an *R* package that provides a set of *RStudio*
+addins for *R Markdown*. The main purpose of this package is to
+alleviate learning process of *R Markdown* syntax.
 
 <!-- 
 1) **format text in R Markdown documents**: 
@@ -93,10 +93,44 @@ devtools::install_github("GegznaV/addins.rmd")
 
 <!-- browseVignettes("addins.rmd") -->
 
+# How to use the add-ins
+
+Below you can find a few examples how to use the add-ins of the package.
+
+## Convert text into headings
+
+![**Demonstration 1: headings.** Place a cursor with a mouse and use a
+necessary
+add-in.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif)
+
+<br>
+
+![**Demonstration 2: headings.** Notice that, if needed, a blank line
+above the selection is
+added.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif)
+
+<br><br>
+
+## Basic text formatting
+
+![**Demonstration 3: basic formatting.** Before using this type of
+add-in, select a piece of text that should be
+formatted.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif)
+
+<br><br>
+
+## Create lists
+
+![**Demonstration 4: lists.** The lists can be numbered and unnumbered.
+They can have several
+levels.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif)
+
 # Pandoc’s Markdown
 
-*R Markdown* syntax is based on Pandoc’s Markdown syntax:
-<https://pandoc.org/MANUAL.html#pandocs-markdown>
+*R Markdown* syntax is based on Pandoc’s Markdown syntax. Read more if
+you need more advanced formatting options:
+
+  - <https://pandoc.org/MANUAL.html#pandocs-markdown>
 
 -----
 
