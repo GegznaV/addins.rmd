@@ -1,0 +1,244 @@
+Name: Rmd: Bold (** **)
+Description: Enclose selected text with `**` and `**`.
+Binding: rmd_a_bold
+Interactive: false
+
+Name: Rmd: Italics (_ _)
+Description: Enclose selected text with `_` and `_`.
+Binding: rmd_a_italics
+Interactive: false
+
+Name: Rmd: Bold italics (**_ _**)
+Description: Enclose selected text with `**_` and `_**`.
+Binding: rmd_a_bold_italics
+Interactive: false
+
+Name: Rmd: Bold (__ __)
+Description: Enclose selected text with `__` and `__`.
+Binding: rmd_a_bold2
+Interactive: false
+
+Name: Rmd: Italics (* *)
+Description: Enclose selected text with `*` and `*`.
+Binding: rmd_a_italics2
+Interactive: false
+
+Name: Rmd: Superscript (^ ^)
+Description: Enclose selected text with ^ and ^.
+Binding: rmd_a_superscript
+Interactive: false
+
+Name: Rmd: Subscript (~ ~)
+Description: Enclose selected text with ~ and ~.
+Binding: rmd_a_subscript
+Interactive: false
+
+Name: Rmd: Strike through (~~ ~~)
+Description: Enclose selected text with ~~ and ~~.
+Binding: rmd_a_strikethrough
+Interactive: false
+
+
+
+Name: Rmd: Heading 1 (======)
+Description: Underline with ======
+Binding: rmd_b_heading_01a_title
+Interactive: false
+
+Name: Rmd: Heading 2 (------)
+Description: Underline with ------
+Binding: rmd_b_heading_01b_subtitle
+Interactive: false
+
+Name: Rmd: Heading 1 (#)
+Description: Insert #
+Binding: rmd_b_heading_1
+Interactive: false
+
+Name: Rmd: Heading 2 (##)
+Description: Insert ##
+Binding: rmd_b_heading_2
+Interactive: false
+
+Name: Rmd: Heading 3 (###)
+Description: Insert ###
+Binding: rmd_b_heading_3
+Interactive: false
+
+Name: Rmd: Heading 4 (####)
+Description: Insert ####
+Binding: rmd_b_heading_4
+Interactive: false
+
+Name: Rmd: Heading 5 (#####)
+Description: Insert #####
+Binding: rmd_b_heading_5
+Interactive: false
+
+Name: Rmd: Heading 6 (######)
+Description: Insert ######
+Binding: rmd_b_heading_6
+Interactive: false
+
+
+
+Name: Rmd: Equation inline ($ $)
+Description: Enclose selected text with `$`.
+Binding: rmd_equation_a_inline
+Interactive: false
+
+Name: Rmd: Equation block ($$ $$)
+Description: Enclose selected text with `$$`.
+Binding: rmd_equation_b_block
+Interactive: false
+
+Name: Rmd: Equation block (\[   \])
+Description: Enclose selected text with `\[` and `\]`.
+Binding: rmd_equation_b_block2
+Interactive: false
+
+
+Name: Rmd: Code inline (` `)
+Description: Enclose selected text with ` and `.
+Binding: rmd_code_inline
+Interactive: false
+
+Name: Rmd: Code inline (R code to be executed) (`r  `)
+Description: Enclose selected text with `r and `.
+Binding: rmd_code_inline_r
+Interactive: false
+
+Name: Rmd: Code inline (highlighted as R code) (`  `{.r})
+Description: Enclose selected text with ` and `{.r}.
+Binding: rmd_code_inline_highlighted_as_r
+Interactive: false
+
+Name: Rmd: Code block (``` ```)
+Description: Enclose selected lines with ``` and ```.
+Binding: rmd_code_block
+Interactive: false
+
+Name: Rmd: Code block: R code (```{r}  ```)
+Description: Enclose selected lines with ```{r} and ```.
+Binding: rmd_code_block_r
+Interactive: false
+
+Name: Rmd: Code block: split R code (```  ```{r})
+Description: Insert lines ``` and ```{r} above the selection.
+Binding: rmd_code_block_r_split
+Interactive: false
+
+Name: Rmd: Link/URL [...](...)
+Description: Enclose selection with [ and ]().
+Binding: rmd_link_url
+Interactive: false
+
+Name: Rmd: Insert figure ![...](...)
+Description: Enclose selection with ![ and ]().
+Binding: rmd_insert_figure
+Interactive: false
+
+Name: Rmd: Block quotes (>, >, >, ...)
+Description: Make block quotes.
+Binding: rmd_block_quotes
+Interactive: false
+
+Name: Rmd: Line blocks (|, |, |, ...)
+Description: Make line blocks (useful for writing addresses).
+Binding: rmd_line_blocks
+Interactive: false
+
+Name: Rmd: List (unordered: -, -, -, ..., level 1)
+Description: Make unordered list (level 1).
+Binding: rmd_list_unordered
+Interactive: false
+
+Name: Rmd: List (unordered: +, +, +, ..., level 2)
+Description: Make unordered list (level 2).
+Binding: rmd_list_unordered_2
+Interactive: false
+
+Name: Rmd: List (numbered: 1, 2, 3, ..., level 1)
+Description: Make numbered list (level 1).
+Binding: rmd_list_numbered
+Interactive: false
+
+Name: Rmd: List (numbered: 1, 2, 3, ..., level 2)
+Description: Make numbered list (level 2).
+Binding: rmd_list_numbered_2
+Interactive: false
+
+Name: Rmd: List (lettered: a, b, c, ..., level 1)
+Description: Make lettered list (level 1).
+Binding: rmd_list_lettered
+Interactive: false
+
+Name: Rmd: List (lettered: a, b, c, ..., level 2)
+Description: Make lettered list (level 2).
+Binding: rmd_list_lettered_2
+Interactive: false
+
+Name: Rmd: List (numbered example list (@), (@), (@), ...)
+Description: Make numbered example list for sequentially numbered examples. Numbering does not restart.
+Binding: rmd_list_z_example_list
+Interactive: false
+
+Name: Rmd: pkg (example 1: markdown-style)
+Description: Insert an example of R Markdown table.
+Binding: rmd_table_1
+Interactive: false
+
+Name: Rmd: Table (example 2: multiline)
+Description: Insert an example of table.
+Binding: rmd_table_2
+Interactive: false
+
+Name: Rmd: Table (example 3: simple)
+Description: Insert an example of table.
+Binding: rmd_table_3
+Interactive: false
+
+Name: Rmd: Table (example 4: without column names)
+Description: Insert an example of table.
+Binding: rmd_table_4
+Interactive: false
+
+Name: Rmd: Table (example 5: grid-style)
+Description: Insert an example of table.
+Binding: rmd_table_5
+Interactive: false
+
+Name: Rmd: Horizontal rule (* * *)
+Description: Insert a horizontal rule (style: * * *) below the selection.
+Binding: rmd_horizontal_rule
+Interactive: false
+
+Name: Rmd: Symbols - asterisk (\*)
+Description: Insert symbols interpreted as: `*`.
+Binding: rmd_symbol_asterisk
+Interactive: false
+
+Name: Rmd: Symbols - single backslash (\\)
+Description: Insert symbols interpreted as: `\`.
+Binding: rmd_symbol_backslash
+Interactive: false
+
+Name: Rmd: Symbols - dollar sign (\$)
+Description: Insert symbols interpreted as: `$`.
+Binding: rmd_symbol_dollar
+Interactive: false
+
+Name: Rmd: Symbols - underscore (\_)
+Description: Insert symbols interpreted as: `_`.
+Binding: rmd_symbol_underscore
+Interactive: false
+
+Name: Rmd: Symbols - en dash (--)
+Description: Insert en dash.
+Binding: rmd_symbol_en_dash
+Interactive: false
+
+Name: Rmd: Symbols - em dash (---)
+Description: Insert em dash.
+Binding: rmd_symbol_em_dash
+Interactive: false
