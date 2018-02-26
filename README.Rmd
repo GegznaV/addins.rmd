@@ -45,7 +45,7 @@ knitr::opts_chunk$set(
 [![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("addins.rmd")`-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![Travis-CI Build Status](https://travis-ci.org/GegznaV/addins.rmd.png?branch=master)](https://travis-ci.org/GegznaV/addins.rmd)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
-[![Research software impact](http://depsy.org/api/package/cran/addins.rmd/badge.svg)](http://depsy.org/package/r/addins.rmd)
+<!-- [![Research software impact](http://depsy.org/api/package/cran/addins.rmd/badge.svg)](http://depsy.org/package/r/addins.rmd) -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addins.rmd)](http://www.rdocumentation.org/packages/addins.rmd) -->
 
