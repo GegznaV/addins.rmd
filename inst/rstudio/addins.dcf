@@ -183,7 +183,7 @@ Description: Make numbered example list for sequentially numbered examples. Numb
 Binding: rmd_list_z_example_list
 Interactive: false
 
-Name: Rmd: pkg (example 1: markdown-style)
+Name: Rmd: Table (example 1: markdown-style)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_1
 Interactive: false
