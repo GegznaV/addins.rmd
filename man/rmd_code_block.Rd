@@ -27,5 +27,6 @@ that adds lines above and below the selection.
 }
 \seealso{
 Other R Markdown formatting add-ins: \code{\link{format_rmd}},
+  \code{\link{insert_various_rmd}},
   \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }

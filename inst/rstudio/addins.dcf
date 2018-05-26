@@ -242,3 +242,23 @@ Name: Rmd: Symbols - em dash (---)
 Description: Insert em dash.
 Binding: rmd_symbol_em_dash
 Interactive: false
+
+Name: Rmd: Icon "Download"
+Description: Icon "Download".
+Binding: rmd_icon_fa_download
+Interactive: false
+
+Name: Rmd: Icon "PDF"
+Description: Icon "PDF".
+Binding: rmd_icon_fa_file_pdf
+Interactive: false
+
+Name: Rmd: Icon "YouTube square"
+Description: Icon "YouTube square".
+Binding: rmd_icon_fa_youtube_square
+Interactive: false
+
+Name: Rmd: Icon "External link"
+Description: Icon "External link".
+Binding: rmd_icon_fa_external_link
+Interactive: false
