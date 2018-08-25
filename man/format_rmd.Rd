@@ -16,7 +16,6 @@
 \alias{rmd_horizontal_rule}
 \alias{rmd_link_url}
 \alias{rmd_insert_figure}
-\alias{format_rmd}
 \alias{rmd_symbol_asterisk}
 \alias{rmd_symbol_backslash}
 \alias{rmd_symbol_underscore}
@@ -79,8 +78,6 @@ interpretation in R Markdown. Function, symbols and interpretation \itemize{
   \item \code{rmd_subscript()}:      between \code{~} and \code{~} as subscript;
   \item \code{rmd_strikethrough()}:  between \code{~~} and \code{~~} as strike-through text.
 }
-
-Escaped symbols
 }
 \seealso{
 https://pandoc.org/MANUAL.html#backslash-escapes
@@ -93,3 +90,4 @@ Other R Markdown formatting add-ins: \code{\link{insert_various_rmd}},
   \code{\link{rmd_code_block}},
   \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }
+\concept{R Markdown formatting add-ins}

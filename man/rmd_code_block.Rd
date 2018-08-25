@@ -3,7 +3,6 @@
 \name{rmd_code_block}
 \alias{rmd_code_block}
 \alias{rmd_code_block_r}
-\alias{rmd_code_block}
 \alias{rmd_code_block_r_split}
 \title{Convert rows into the block of code.}
 \usage{
@@ -30,3 +29,4 @@ Other R Markdown formatting add-ins: \code{\link{format_rmd}},
   \code{\link{insert_various_rmd}},
   \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }
+\concept{R Markdown formatting add-ins}
