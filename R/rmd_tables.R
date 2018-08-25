@@ -74,9 +74,7 @@ tbl_3 <- c(
 Left-aligned      Centered column       Right-aligned
 --------------  -------------------  ----------------
 Row_1_Col_1        Row_1_Col_2          Row_1_Col_3
-
 Row_2_Col_1        Row_2_Col_2          Row_2_Col_3
-
 Row_3_Col_1        Row_3_Col_2          Row_3_Col_3
 
 ")
