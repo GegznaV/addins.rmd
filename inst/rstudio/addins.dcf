@@ -82,17 +82,17 @@ Interactive: false
 
 
 
-Name: Rmd: Equation inline ($ $)
+Name: Rmd: LaTeX equation inline ($ $)
 Description: Enclose selected text with `$`.
 Binding: rmd_equation_a_inline
 Interactive: false
 
-Name: Rmd: Equation block ($$ $$)
+Name: Rmd: LaTeX equation block ($$ $$)
 Description: Enclose selected text with `$$`.
 Binding: rmd_equation_b_block
 Interactive: false
 
-Name: Rmd: Equation block (\[   \])
+Name: Rmd: LaTeX equation block (\[   \])
 Description: Enclose selected text with `\[` and `\]`.
 Binding: rmd_equation_b_block2
 Interactive: false
@@ -118,12 +118,12 @@ Description: Enclose selected lines with ``` and ```.
 Binding: rmd_code_block
 Interactive: false
 
-Name: Rmd: Code block: R code (```{r}  ```)
+Name: Rmd: Code block - R code (```{r}  ```)
 Description: Enclose selected lines with ```{r} and ```.
 Binding: rmd_code_block_r
 Interactive: false
 
-Name: Rmd: Code block: split R code (```  ```{r})
+Name: Rmd: Code block - split R code (```  ```{r})
 Description: Insert lines ``` and ```{r} above the selection.
 Binding: rmd_code_block_r_split
 Interactive: false
@@ -198,7 +198,7 @@ Description: Insert an example of table.
 Binding: rmd_table_3
 Interactive: false
 
-Name: Rmd: Table (example 4: without column names)
+Name: Rmd: Table (example 4: simple without column names)
 Description: Insert an example of table.
 Binding: rmd_table_4
 Interactive: false
@@ -213,32 +213,32 @@ Description: Insert a horizontal rule (style: * * *) below the selection.
 Binding: rmd_horizontal_rule
 Interactive: false
 
-Name: Rmd: Symbols - asterisk (\*)
+Name: Rmd: Symbol - asterisk (\*)
 Description: Insert symbols interpreted as: `*`.
 Binding: rmd_symbol_asterisk
 Interactive: false
 
-Name: Rmd: Symbols - single backslash (\\)
+Name: Rmd: Symbol - single backslash (\\)
 Description: Insert symbols interpreted as: `\`.
 Binding: rmd_symbol_backslash
 Interactive: false
 
-Name: Rmd: Symbols - dollar sign (\$)
+Name: Rmd: Symbol - dollar sign (\$)
 Description: Insert symbols interpreted as: `$`.
 Binding: rmd_symbol_dollar
 Interactive: false
 
-Name: Rmd: Symbols - underscore (\_)
+Name: Rmd: Symbol - underscore (\_)
 Description: Insert symbols interpreted as: `_`.
 Binding: rmd_symbol_underscore
 Interactive: false
 
-Name: Rmd: Symbols - en dash (--)
+Name: Rmd: Symbol - en dash (--)
 Description: Insert en dash.
 Binding: rmd_symbol_en_dash
 Interactive: false
 
-Name: Rmd: Symbols - em dash (---)
+Name: Rmd: Symbol - em dash (---)
 Description: Insert em dash.
 Binding: rmd_symbol_em_dash
 Interactive: false
