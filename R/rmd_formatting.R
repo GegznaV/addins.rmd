@@ -2,17 +2,6 @@
 #   \item \code{rmd_...()} as ... (\code{...} and \code{...});
 #   \item \code{rmd_...()} as ... (\code{...} and \code{...});
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' Add-ins for basic R Markdown formatting.
-#'
-#' RStudio add-ins, which enclose selected text with symbols that have special
-#' interpretation in R Markdown.
-#'
-#' @inheritParams addin.tools::rs_get_ind
-#'
-#' @name format_rmd
-#' @family R Markdown formatting add-ins
-#'
 # Function, symbols and interpretation \itemize{
 #   \item \code{rmd_bold()}:           between \code{**} and \code{**} as bold;
 #   \item \code{rmd_italics()}:        between \code{_} and \code{_} as italics;
@@ -25,6 +14,18 @@
 #   \item \code{rmd_subscript()}:      between \code{~} and \code{~} as subscript;
 #   \item \code{rmd_strikethrough()}:  between \code{~~} and \code{~~} as strike-through text.
 # }
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' Add-ins for basic R Markdown formatting.
+#'
+#' RStudio add-ins, which enclose selected text with symbols that have special
+#' interpretation in R Markdown.
+#'
+#' @inheritParams addin.tools::rs_get_ind
+#'
+#' @name format_rmd
+#' @family R Markdown formatting add-ins
+#'
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
