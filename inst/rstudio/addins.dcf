@@ -156,37 +156,37 @@ Description: Make line blocks (useful for writing addresses).
 Binding: rmd_line_blocks
 Interactive: false
 
-Name: {Rmd} List, level 1, unordered: -, -, -, ...
+Name: {Rmd} List, unordered (-, -, -, ...), level 1
 Description: Make unordered list (level 1).
 Binding: rmd_list_unordered
 Interactive: false
 
-Name: {Rmd} List, level 2, unordered: +, +, +, ...
+Name: {Rmd} List, unordered (+, +, +, ...), level 2
 Description: Make unordered list (level 2).
 Binding: rmd_list_unordered_2
 Interactive: false
 
-Name: {Rmd} List, level 1, numbered: 1, 2, 3, ...
+Name: {Rmd} List, numbered (1, 2, 3, ...), level 1
 Description: Make numbered list (level 1).
 Binding: rmd_list_numbered
 Interactive: false
 
-Name: {Rmd} List, level 2, numbered: 1, 2, 3, ...
+Name: {Rmd} List, numbered (1, 2, 3, ...), level 2
 Description: Make numbered list (level 2).
 Binding: rmd_list_numbered_2
 Interactive: false
 
-Name: {Rmd} List, level 1, lettered: a, b, c, ...
+Name: {Rmd} List, lettered (a, b, c, ...), level 1
 Description: Make lettered list (level 1).
 Binding: rmd_list_lettered
 Interactive: false
 
-Name: {Rmd} List, level 2, lettered: a, b, c, ...
+Name: {Rmd} List, lettered (a, b, c, ...), level 2
 Description: Make lettered list (level 2).
 Binding: rmd_list_lettered_2
 Interactive: false
 
-Name: {Rmd} Example list, numbered: (@), (@), ...
+Name: {Rmd} Numbered example list: (@), (@), ...
 Description: Make numbered example list for sequentially numbered examples. Numbering does not restart.
 Binding: rmd_list_z_example_list
 Interactive: false

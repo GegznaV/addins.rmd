@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Convert rows into the block of code. � rmd_code_block • addins.rmd</title>
+<title>Convert rows into the block of code. — rmd_code_block • addins.rmd</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -18,13 +18,33 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Convert rows into the block of code. — rmd_code_block" />
+
+<meta property="og:description" content="RStudio add-in to insert selected lines into code block:
+rmd_code_block() - verbatim code block;
+rmd_code_block_r() - R code block.
+.
+rmd_code_block_r_split() - splits block of R code." />
+
+<meta property="og:description" content="These functions internally use function
+rs_enclose_selected_rows_with() -
+that adds lines above and below the selection." />
+<meta name="twitter:card" content="summary" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -34,8 +54,7 @@
 <![endif]-->
 
 
-  	<link rel="icon" href="../favicon.png" />
-</head>
+  </head>
 
   <body>
     <div class="container template-reference-topic">
@@ -48,8 +67,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">addins.rmd | R package</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">addins.rmd</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.4.9000</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -71,6 +94,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -78,12 +102,15 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Convert rows into the block of code.</h1>
+    
+    <div class="hidden name"><code>rmd_code_block.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>RStudio add-in to insert selected lines into code block:</p><ul>
 <li><p><code>rmd_code_block()</code> - verbatim code block;</p></li>
@@ -95,6 +122,7 @@
 <code><a href='http://www.rdocumentation.org/packages/addin.tools/topics/rs_enclose_with_lines'>rs_enclose_selected_rows_with</a>()</code> -
 that adds lines above and below the selection.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>rmd_code_block_r</span>()
 
@@ -104,8 +132,8 @@ that adds lines above and below the selection.</p>
         
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p>Other R Markdown formatting add-ins: <code>format_rmd</code>,
-  <code><a href='rmd_equations.html'>rmd_equations</a></code>, <code><a href='rmd_list.html'>rmd_list</a></code></p>
+    <div class='dont-index'><p>Other R Markdown formatting add-ins: <code><a href='format_rmd.html'>format_rmd</a></code>,
+  <code><a href='rmd_equations.html'>rmd_equations</a></code>, <code><a href='rmd_list.html'>rmd_list</a></code></p></div>
     
 
   </div>
@@ -131,5 +159,8 @@ that adds lines above and below the selection.</p>
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+

@@ -10,17 +10,21 @@
 \alias{rmd_table_style_grid}
 \title{Insert R Markdown tables}
 \usage{
-rmd_table_style_md()
+rmd_table_style_md(context = rs_get_context())
 
-rmd_table_style_md_alternative()
+rmd_table_style_md_alternative(context = rs_get_context())
 
-rmd_table_style_multiline()
+rmd_table_style_multiline(context = rs_get_context())
 
-rmd_table_style_multiline_no_colnames()
+rmd_table_style_multiline_no_colnames(context = rs_get_context())
 
-rmd_table_style_simple()
+rmd_table_style_simple(context = rs_get_context())
 
-rmd_table_style_grid()
+rmd_table_style_grid(context = rs_get_context())
+}
+\arguments{
+\item{context}{Object with context of active RStudio document
+(class \code{document_context}).}
 }
 \description{
 Insert examples of R Markdown tables.

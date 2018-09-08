@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Insert R Markdown tables � rmd_tables • addins.rmd</title>
+<title>Insert R Markdown tables — rmd_tables • addins.rmd</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -18,13 +18,25 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Insert R Markdown tables — rmd_tables" />
+
+<meta property="og:description" content="Insert examples of R Markdown tables." />
+<meta name="twitter:card" content="summary" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -34,8 +46,7 @@
 <![endif]-->
 
 
-  	<link rel="icon" href="../favicon.png" />
-</head>
+  </head>
 
   <body>
     <div class="container template-reference-topic">
@@ -48,8 +59,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">addins.rmd | R package</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">addins.rmd</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.4.9000</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -71,6 +86,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -78,25 +94,31 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Insert R Markdown tables</h1>
+    
+    <div class="hidden name"><code>rmd_tables.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Insert examples of R Markdown tables.</p>
     
+    </div>
 
-    <pre class="usage"><span class='fu'>rmd_table_1</span>()
+    <pre class="usage"><span class='fu'>rmd_table_style_md</span>()
 
-<span class='fu'>rmd_table_2</span>()
+<span class='fu'>rmd_table_style_md_alternative</span>()
 
-<span class='fu'>rmd_table_3</span>()
+<span class='fu'>rmd_table_style_multiline</span>()
 
-<span class='fu'>rmd_table_4</span>()
+<span class='fu'>rmd_table_style_multiline_no_colnames</span>()
 
-<span class='fu'>rmd_table_5</span>()</pre>
+<span class='fu'>rmd_table_style_simple</span>()
+
+<span class='fu'>rmd_table_style_grid</span>()</pre>
         
 
   </div>
@@ -120,5 +142,8 @@
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+

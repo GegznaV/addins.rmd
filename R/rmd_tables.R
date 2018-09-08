@@ -4,37 +4,45 @@
 #' @name rmd_tables
 #' @title Insert R Markdown tables
 #' @description Insert examples of R Markdown tables.
+#' @inheritParams addin.tools::rs_get_ind
+
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
-rmd_table_style_md <- function() {
-    rs_enclose_first_row_with(text_above = tbl_md)
+rmd_table_style_md <- function(context = rs_get_context()) {
+    rs_enclose_first_row_with(text_above = tbl_md,
+                              context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
-rmd_table_style_md_alternative <- function() {
-    rs_enclose_first_row_with(text_above = tbl_md_alternative)
+rmd_table_style_md_alternative <- function(context = rs_get_context()) {
+    rs_enclose_first_row_with(text_above = tbl_md_alternative,
+                              context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
-rmd_table_style_multiline <- function() {
-    rs_enclose_first_row_with(text_above = tbl_multiline)
+rmd_table_style_multiline <- function(context = rs_get_context()) {
+    rs_enclose_first_row_with(text_above = tbl_multiline,
+                              context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
-rmd_table_style_multiline_no_colnames <- function() {
-    rs_enclose_first_row_with(text_above = tbl_multiline_no_colnames)
+rmd_table_style_multiline_no_colnames <- function(context = rs_get_context()) {
+    rs_enclose_first_row_with(text_above = tbl_multiline_no_colnames,
+                              context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
-rmd_table_style_simple <- function() {
-    rs_enclose_first_row_with(text_above = tbl_simple)
+rmd_table_style_simple <- function(context = rs_get_context()) {
+    rs_enclose_first_row_with(text_above = tbl_simple,
+                              context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
-rmd_table_style_grid <- function() {
-    rs_enclose_first_row_with(text_above = tbl_grid)
+rmd_table_style_grid <- function(context = rs_get_context()) {
+    rs_enclose_first_row_with(text_above = tbl_grid,
+                              context = context)
 }
 
 

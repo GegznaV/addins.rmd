@@ -18,13 +18,22 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Function reference" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -34,8 +43,7 @@
 <![endif]-->
 
 
-  	<link rel="icon" href="../favicon.png" />
-</head>
+  </head>
 
   <body>
     <div class="container template-reference-index">
@@ -48,8 +56,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">addins.rmd | R package</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">addins.rmd</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.4.9000</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -71,6 +83,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -78,76 +91,72 @@
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9">
+<div class="row">
+  <div class="contents col-md-9">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.0.1</small>
-      </h1>
+      <h1>Reference</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    <table class="ref-index">
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <colgroup>
+      
+      <col class="alias" />
+      <col class="title" />
+    </colgroup>
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="addins.rmd.html">addins.rmd</a></code> </p>
-          </td>
-          <td><p>RStudio Add-ins for R Markdown</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="format_rmd.html">rmd_a_bold</a></code> <code><a href="format_rmd.html">rmd_a_italics</a></code> <code><a href="format_rmd.html">rmd_a_bold_italics</a></code> <code><a href="format_rmd.html">rmd_a_bold2</a></code> <code><a href="format_rmd.html">rmd_a_italics2</a></code> <code><a href="format_rmd.html">rmd_code_inline</a></code> <code><a href="format_rmd.html">rmd_code_inline_r</a></code> <code><a href="format_rmd.html">rmd_code_inline_highlighted_as_r</a></code> <code><a href="format_rmd.html">rmd_a_superscript</a></code> <code><a href="format_rmd.html">rmd_a_subscript</a></code> <code><a href="format_rmd.html">rmd_a_strikethrough</a></code> <code><a href="format_rmd.html">rmd_horizontal_rule</a></code> <code><a href="format_rmd.html">rmd_link_url</a></code> <code><a href="format_rmd.html">rmd_insert_figure</a></code> <code><a href="format_rmd.html">rmd_symbol_asterisk</a></code> <code><a href="format_rmd.html">rmd_symbol_backslash</a></code> <code><a href="format_rmd.html">rmd_symbol_underscore</a></code> <code><a href="format_rmd.html">rmd_symbol_dollar</a></code> <code><a href="format_rmd.html">rmd_symbol_en_dash</a></code> <code><a href="format_rmd.html">rmd_symbol_em_dash</a></code> </p>
-          </td>
-          <td><p>Add-ins for basic R Markdown formatting.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rmd_code_block.html">rmd_code_block_r</a></code> <code><a href="rmd_code_block.html">rmd_code_block</a></code> <code><a href="rmd_code_block.html">rmd_code_block_r_split</a></code> </p>
-          </td>
-          <td><p>Convert rows into the block of code.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rmd_equations.html">rmd_equation_a_inline</a></code> <code><a href="rmd_equations.html">rmd_equation_b_block</a></code> <code><a href="rmd_equations.html">rmd_equation_b_block2</a></code> </p>
-          </td>
-          <td><p>Format as LaTeX equation.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rmd_headings.html">rmd_b_heading_1</a></code> <code><a href="rmd_headings.html">rmd_b_heading_2</a></code> <code><a href="rmd_headings.html">rmd_b_heading_3</a></code> <code><a href="rmd_headings.html">rmd_b_heading_4</a></code> <code><a href="rmd_headings.html">rmd_b_heading_5</a></code> <code><a href="rmd_headings.html">rmd_b_heading_6</a></code> <code><a href="rmd_headings.html">rmd_b_heading_01a_title</a></code> <code><a href="rmd_headings.html">rmd_b_heading_01b_subtitle</a></code> </p>
-          </td>
-          <td><p>Format text as R Markdown headings.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rmd_list.html">rmd_list</a></code> <code><a href="rmd_list.html">rmd_block_quotes</a></code> <code><a href="rmd_list.html">rmd_line_blocks</a></code> <code><a href="rmd_list.html">rmd_list_unordered</a></code> <code><a href="rmd_list.html">rmd_list_unordered_2</a></code> <code><a href="rmd_list.html">rmd_list_numbered</a></code> <code><a href="rmd_list.html">rmd_list_numbered_2</a></code> <code><a href="rmd_list.html">rmd_list_lettered</a></code> <code><a href="rmd_list.html">rmd_list_lettered_2</a></code> <code><a href="rmd_list.html">rmd_list_z_example_list</a></code> </p>
-          </td>
-          <td><p>Format text as R Markdown list.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="rmd_tables.html">rmd_table_1</a></code> <code><a href="rmd_tables.html">rmd_table_2</a></code> <code><a href="rmd_tables.html">rmd_table_3</a></code> <code><a href="rmd_tables.html">rmd_table_4</a></code> <code><a href="rmd_tables.html">rmd_table_5</a></code> </p>
-          </td>
-          <td><p>Insert R Markdown tables</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="addins.rmd.html">addins.rmd</a></code> </p>
+        </td>
+        <td><p>RStudio Add-ins for R Markdown</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="format_rmd.html">rmd_format_bold()</a></code> <code><a href="format_rmd.html">rmd_format_italics()</a></code> <code><a href="format_rmd.html">rmd_format_bold_italics()</a></code> <code><a href="format_rmd.html">rmd_format_bold2()</a></code> <code><a href="format_rmd.html">rmd_format_italics2()</a></code> <code><a href="format_rmd.html">rmd_code_inline()</a></code> <code><a href="format_rmd.html">rmd_code_inline_r()</a></code> <code><a href="format_rmd.html">rmd_code_inline_highlighted_as_r()</a></code> <code><a href="format_rmd.html">rmd_format_superscript()</a></code> <code><a href="format_rmd.html">rmd_format_subscript()</a></code> <code><a href="format_rmd.html">rmd_format_strikethrough()</a></code> <code><a href="format_rmd.html">rmd_horizontal_rule()</a></code> <code><a href="format_rmd.html">rmd_link_url()</a></code> <code><a href="format_rmd.html">rmd_insert_figure()</a></code> <code><a href="format_rmd.html">rmd_insert_figure_block()</a></code> <code><a href="format_rmd.html">rmd_symbol_asterisk()</a></code> <code><a href="format_rmd.html">rmd_symbol_backslash()</a></code> <code><a href="format_rmd.html">rmd_symbol_underscore()</a></code> <code><a href="format_rmd.html">rmd_symbol_dollar()</a></code> <code><a href="format_rmd.html">rmd_symbol_en_dash()</a></code> <code><a href="format_rmd.html">rmd_symbol_em_dash()</a></code> </p>
+        </td>
+        <td><p>Add-ins for basic R Markdown formatting.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rmd_code_block.html">rmd_code_block_r()</a></code> <code><a href="rmd_code_block.html">rmd_code_block()</a></code> <code><a href="rmd_code_block.html">rmd_code_block_r_split()</a></code> </p>
+        </td>
+        <td><p>Convert rows into the block of code.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rmd_equations.html">rmd_equation_a_inline()</a></code> <code><a href="rmd_equations.html">rmd_equation_b_block()</a></code> <code><a href="rmd_equations.html">rmd_equation_b_block2()</a></code> </p>
+        </td>
+        <td><p>Format as LaTeX equation.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rmd_headings.html">rmd_heading_1()</a></code> <code><a href="rmd_headings.html">rmd_heading_2()</a></code> <code><a href="rmd_headings.html">rmd_heading_3()</a></code> <code><a href="rmd_headings.html">rmd_heading_4()</a></code> <code><a href="rmd_headings.html">rmd_heading_5()</a></code> <code><a href="rmd_headings.html">rmd_heading_6()</a></code> <code><a href="rmd_headings.html">rmd_heading_1_title()</a></code> <code><a href="rmd_headings.html">rmd_heading_2_subtitle()</a></code> </p>
+        </td>
+        <td><p>Format text as R Markdown headings.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rmd_list.html">rmd_list()</a></code> <code><a href="rmd_list.html">rmd_block_quotes()</a></code> <code><a href="rmd_list.html">rmd_line_blocks()</a></code> <code><a href="rmd_list.html">rmd_list_unordered()</a></code> <code><a href="rmd_list.html">rmd_list_unordered_2()</a></code> <code><a href="rmd_list.html">rmd_list_numbered()</a></code> <code><a href="rmd_list.html">rmd_list_numbered_2()</a></code> <code><a href="rmd_list.html">rmd_list_lettered()</a></code> <code><a href="rmd_list.html">rmd_list_lettered_2()</a></code> <code><a href="rmd_list.html">rmd_list_z_example_list()</a></code> </p>
+        </td>
+        <td><p>Format text as R Markdown list.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="rmd_tables.html">rmd_table_style_md()</a></code> <code><a href="rmd_tables.html">rmd_table_style_md_alternative()</a></code> <code><a href="rmd_tables.html">rmd_table_style_multiline()</a></code> <code><a href="rmd_tables.html">rmd_table_style_multiline_no_colnames()</a></code> <code><a href="rmd_tables.html">rmd_table_style_simple()</a></code> <code><a href="rmd_tables.html">rmd_table_style_grid()</a></code> </p>
+        </td>
+        <td><p>Insert R Markdown tables</p></td>
+      </tr>
+    </tbody>
+    </table>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -170,5 +179,8 @@
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+

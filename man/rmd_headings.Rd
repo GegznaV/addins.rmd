@@ -12,21 +12,25 @@
 \alias{rmd_heading_2_subtitle}
 \title{Format text as R Markdown headings.}
 \usage{
-rmd_heading_1()
+rmd_heading_1(context = rs_get_context())
 
-rmd_heading_2()
+rmd_heading_2(context = rs_get_context())
 
-rmd_heading_3()
+rmd_heading_3(context = rs_get_context())
 
-rmd_heading_4()
+rmd_heading_4(context = rs_get_context())
 
-rmd_heading_5()
+rmd_heading_5(context = rs_get_context())
 
-rmd_heading_6()
+rmd_heading_6(context = rs_get_context())
 
-rmd_heading_1_title()
+rmd_heading_1_title(context = rs_get_context())
 
-rmd_heading_2_subtitle()
+rmd_heading_2_subtitle(context = rs_get_context())
+}
+\arguments{
+\item{context}{Object with context of active RStudio document
+(class \code{document_context}).}
 }
 \description{
 RStudio add-ins to format text as R Markdown headings.

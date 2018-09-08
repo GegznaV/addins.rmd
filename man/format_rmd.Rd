@@ -25,62 +25,55 @@
 \alias{rmd_symbol_em_dash}
 \title{Add-ins for basic R Markdown formatting.}
 \usage{
-rmd_format_bold()
+rmd_format_bold(context = rs_get_context())
 
-rmd_format_italics()
+rmd_format_italics(context = rs_get_context())
 
-rmd_format_bold_italics()
+rmd_format_bold_italics(context = rs_get_context())
 
-rmd_format_bold2()
+rmd_format_bold2(context = rs_get_context())
 
-rmd_format_italics2()
+rmd_format_italics2(context = rs_get_context())
 
-rmd_code_inline()
+rmd_code_inline(context = rs_get_context())
 
-rmd_code_inline_r()
+rmd_code_inline_r(context = rs_get_context())
 
-rmd_code_inline_highlighted_as_r()
+rmd_code_inline_highlighted_as_r(context = rs_get_context())
 
-rmd_format_superscript()
+rmd_format_superscript(context = rs_get_context())
 
-rmd_format_subscript()
+rmd_format_subscript(context = rs_get_context())
 
-rmd_format_strikethrough()
+rmd_format_strikethrough(context = rs_get_context())
 
-rmd_horizontal_rule()
+rmd_horizontal_rule(context = rs_get_context())
 
-rmd_link_url()
+rmd_link_url(context = rs_get_context())
 
-rmd_insert_figure()
+rmd_insert_figure(context = rs_get_context())
 
-rmd_insert_figure_block()
+rmd_insert_figure_block(context = rs_get_context())
 
-rmd_symbol_asterisk()
+rmd_symbol_asterisk(context = rs_get_context())
 
-rmd_symbol_backslash()
+rmd_symbol_backslash(context = rs_get_context())
 
-rmd_symbol_underscore()
+rmd_symbol_underscore(context = rs_get_context())
 
-rmd_symbol_dollar()
+rmd_symbol_dollar(context = rs_get_context())
 
-rmd_symbol_en_dash()
+rmd_symbol_en_dash(context = rs_get_context())
 
-rmd_symbol_em_dash()
+rmd_symbol_em_dash(context = rs_get_context())
+}
+\arguments{
+\item{context}{Object with context of active RStudio document
+(class \code{document_context}).}
 }
 \description{
 RStudio add-ins, which enclose selected text with symbols that have special
-interpretation in R Markdown. Function, symbols and interpretation \itemize{
-  \item \code{rmd_bold()}:           between \code{**} and \code{**} as bold;
-  \item \code{rmd_italics()}:        between \code{_} and \code{_} as italics;
-  \item \code{rmd_bold_italics()}:   between \code{**_} and \code{_**}as bold italics;
-  \item \code{rmd_bold2()}:          between \code{__} and \code{__} as bold;
-  \item \code{rmd_italics2()}:       between \code{*} and \code{*} as italics;
-  \item \code{rmd_code_inline()}:    between back-ticks (``) as inline code;
-  \item \code{rmd_r_code_inline()}:  formats text as inline R code to evaluate;
-  \item \code{rmd_superscript()}:    between \code{^} and \code{^} as superscript;
-  \item \code{rmd_subscript()}:      between \code{~} and \code{~} as subscript;
-  \item \code{rmd_strikethrough()}:  between \code{~~} and \code{~~} as strike-through text.
-}
+interpretation in R Markdown.
 }
 \seealso{
 https://pandoc.org/MANUAL.html#backslash-escapes
