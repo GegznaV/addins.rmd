@@ -120,3 +120,23 @@ rmd_insert_figure <- function() {
     rs_enclose_selection_with(symbol_before = "![",
                               symbol_after  = "](path_to_figure)")
 }
+
+#' @rdname format_rmd
+#' @export
+rmd_insert_figure_block <- function() {
+    nr <- stringr::str_replace(as.character(unclass(Sys.time())),
+                               "\\.",
+                               "-")
+    before <- stringr::str_glue(
+'```{{r fig-ID-{nr}, echo=FALSE, fig.cap=CAPTION}}
+CAPTION = "caption  "
+
+knitr::include_graphics("')
+
+    after <-
+'fig/pic/fig-ID.png")
+```'
+
+    rs_enclose_selection_with(symbol_before = before,
+                              symbol_after  = after)
+}

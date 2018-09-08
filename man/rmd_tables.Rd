@@ -2,22 +2,22 @@
 % Please edit documentation in R/rmd_tables.R
 \name{rmd_tables}
 \alias{rmd_tables}
-\alias{rmd_table_1}
-\alias{rmd_table_2}
-\alias{rmd_table_3}
-\alias{rmd_table_4}
-\alias{rmd_table_5}
+\alias{rmd_table_style_md}
+\alias{rmd_table_style_multiline}
+\alias{rmd_table_style_simple}
+\alias{rmd_table_style_simple_no_colnames}
+\alias{rmd_table_style_grid}
 \title{Insert R Markdown tables}
 \usage{
-rmd_table_1()
+rmd_table_style_md()
 
-rmd_table_2()
+rmd_table_style_multiline()
 
-rmd_table_3()
+rmd_table_style_simple()
 
-rmd_table_4()
+rmd_table_style_simple_no_colnames()
 
-rmd_table_5()
+rmd_table_style_grid()
 }
 \description{
 Insert examples of R Markdown tables.

@@ -16,6 +16,7 @@
 \alias{rmd_horizontal_rule}
 \alias{rmd_link_url}
 \alias{rmd_insert_figure}
+\alias{rmd_insert_figure_block}
 \alias{rmd_symbol_asterisk}
 \alias{rmd_symbol_backslash}
 \alias{rmd_symbol_underscore}
@@ -51,6 +52,8 @@ rmd_horizontal_rule()
 rmd_link_url()
 
 rmd_insert_figure()
+
+rmd_insert_figure_block()
 
 rmd_symbol_asterisk()
 
