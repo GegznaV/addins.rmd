@@ -7,11 +7,15 @@
 \alias{rmd_equation_b_block2}
 \title{Format as LaTeX equation.}
 \usage{
-rmd_equation_a_inline()
+rmd_equation_a_inline(context = rs_get_context())
 
-rmd_equation_b_block()
+rmd_equation_b_block(context = rs_get_context())
 
-rmd_equation_b_block2()
+rmd_equation_b_block2(context = rs_get_context())
+}
+\arguments{
+\item{context}{Object with context of active RStudio document
+(class \code{document_context}).}
 }
 \description{
 Select a piece of text with a cursor and call these functions as an add-in
