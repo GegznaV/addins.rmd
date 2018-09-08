@@ -11,6 +11,7 @@
 #' @name format_rmd
 #'
 #' @inheritParams addin.tools::rs_get_ind
+#'
 #' @family R Markdown formatting add-ins
 NULL
 

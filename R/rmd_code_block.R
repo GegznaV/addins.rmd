@@ -14,29 +14,32 @@
 #' \code{\link[addin.tools]{rs_enclose_selected_rows_with}()} -
 #' that adds lines above and below the selection.
 #'
+#' @inheritParams addin.tools::rs_get_ind
+#'
 #' @family R Markdown formatting add-ins
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_code_block
 #' @export
-rmd_code_block_r <- function() {
+rmd_code_block_r <- function(context = rs_get_context()) {
     rs_enclose_selected_rows_with(text_above = "```{r}",
-                                  text_below = "```")
+                                  text_below = "```",
+                                  context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_code_block
 #' @export
-rmd_code_block <- function() {
+rmd_code_block <- function(context = rs_get_context()) {
     rs_enclose_selected_rows_with(text_above = "```",
-                                  text_below = "```")
+                                  text_below = "```",
+                                  context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_code_block
 #' @export
-rmd_code_block_r_split <- function() {
-    rs_enclose_selected_rows_with(text_above = "```\n\n```{r}")
+rmd_code_block_r_split <- function(context = rs_get_context()) {
+    rs_enclose_selected_rows_with(text_above = "```\n\n```{r}",
+                                  context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-

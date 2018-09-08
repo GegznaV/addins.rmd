@@ -6,11 +6,15 @@
 \alias{rmd_code_block_r_split}
 \title{Convert rows into the block of code.}
 \usage{
-rmd_code_block_r()
+rmd_code_block_r(context = rs_get_context())
 
-rmd_code_block()
+rmd_code_block(context = rs_get_context())
 
-rmd_code_block_r_split()
+rmd_code_block_r_split(context = rs_get_context())
+}
+\arguments{
+\item{context}{Object with context of active RStudio document
+(class \code{document_context}).}
 }
 \description{
 RStudio add-in to insert selected lines into code block: \itemize{
