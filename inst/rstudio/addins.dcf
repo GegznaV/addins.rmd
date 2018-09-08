@@ -195,6 +195,11 @@ Description: Make numbered example list for sequentially numbered examples. Numb
 Binding: rmd_list_z_example_list
 Interactive: false
 
+Name: {Rmd} Remove lists (level 1)
+Description: Remove formating of lists, quotes and line blocks.
+Binding: rmd_remove_list
+Interactive: false
+
 
 Name: {Rmd} Horizontal rule (* * *)
 Description: Insert a horizontal rule (style: * * *) below the selection.

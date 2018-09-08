@@ -1,6 +1,6 @@
 #' Format text as R Markdown list.
 #'
-#' RStudio add-ins which convert text into R Markdown lists.
+#' RStudio add-ins which formats text as R Markdown lists.
 #' For the first-level lists: \itemize{
 #'   \item \code{rmd_list()} - the main function, that make lists;
 #'   \item \code{rmd_unordered_list()} - unordered list;
@@ -9,7 +9,7 @@
 #'   \item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
 #'   }
 #'
-#' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master".
+#' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".
 #'
 #' @param level (integer) the level of list.
 #' @inheritParams addin.tools::rs_get_ind
@@ -23,7 +23,7 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
 
     ind <- seq_along(selected_rows)
 
-    # Indentitation for level of list
+    # Indentation for level of list
     lev <- rep("\t", level - 1)
 
     text <- switch(type,
@@ -49,9 +49,9 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
                    "(@)" = ,
                    "@" = ,
                    "master" = ,
-                   "example-list" = paste0(rep("(@)", max(ind)), " "),
+                   "example list" = paste0(rep("(@)", max(ind)), " "),
 
-                   "blockquotes" = ,
+                   "block quotes" = ,
                    ">" = paste0(rep(">", max(ind)), " "),
 
                    "line blocks" = ,
@@ -70,13 +70,13 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
         }
     }
 }
-
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_block_quotes <- function() {
     rmd_list(">")
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_line_blocks <- function() {
@@ -123,5 +123,41 @@ rmd_list_lettered_2 <- function() {
 #' @export
 rmd_list_z_example_list <- function() {
     rmd_list("(@)")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#' Remove list-like formatting
+#'
+#' The function removes markup of lists, block quotes and line blocks.
+#' More specifically, removes leading |, >, *, -, + symbols followed by a space or end of line,
+#' leading arabic and Roman numbers, single letters, hash (\code{#}) or eta \code{@} symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list.
+#'
+#' @inheritParams addin.tools::rs_get_ind
+#'
+#' @export
+
+rmd_remove_list <- function(context = rs_get_context()) {
+    # Roman numbers (capital and small)
+    rom_c <- "(M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))"
+    rom_s <- "(m{0,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))"
+
+    # ordered list elements
+    ord <- stringr::str_glue("((#)|(@)|([[:digit:]]+)|([[:alpha:]])|{rom_s}|{rom_s})")
+
+    level = "[[:blank:]]{0,1}" # level 1
+    # level = "[[:blank:]]{4}" # level 2
+    # level = "[[:blank:]]{8}" # level 2
+
+    pattern <- stringr::str_glue("^{level}(([|>*+-])|({ord}[\\.\\)])|(\\({ord}\\)))(\\s|$)")
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    lines <- rs_get_selected_rows(context)
+    wo_list <- stringr::str_replace(lines, pattern, "")
+
+    if (!isTRUE(all.equal.character(lines, wo_list, check.attributes = FALSE))) {
+        inds <- attr(lines, "row_numbers")
+        selected_lines <- rstudioapi::document_range(c(min(inds), 1), c(max(inds), Inf))
+        wo_list <- paste0(wo_list, collapse = "\n")
+        rstudioapi::modifyRange(location = selected_lines, wo_list, id = context$id)
+    }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

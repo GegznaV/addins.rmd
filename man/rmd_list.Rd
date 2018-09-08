@@ -34,7 +34,7 @@ rmd_list_lettered_2()
 rmd_list_z_example_list()
 }
 \arguments{
-\item{type}{(character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master".}
+\item{type}{(character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".}
 
 \item{level}{(integer) the level of list.}
 
@@ -42,7 +42,7 @@ rmd_list_z_example_list()
 (class \code{document_context}).}
 }
 \description{
-RStudio add-ins which convert text into R Markdown lists.
+RStudio add-ins which formats text as R Markdown lists.
 For the first-level lists: \itemize{
   \item \code{rmd_list()} - the main function, that make lists;
   \item \code{rmd_unordered_list()} - unordered list;
