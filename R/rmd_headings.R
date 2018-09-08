@@ -1,12 +1,31 @@
 #' Format text as R Markdown headings.
 #'
-#' RStudio add-ins to format text as R Markdown headings.
+#' RStudio add-ins to format text as R Markdown headings and to remove this formatting.
+#'
+#' @details
+#' Function \code{rmd_heading_remove()} removes heading formatting:
+#' either hash-symbol-style headings (i.e., remove leading hash symbols \code{#}
+#' and spaces), or
+#' underline-style headings in the first selected row. \cr
+#'
+#' The other functions, which name beginns with \code{rmd_heading_}, at first
+#' apply \code{rmd_heading_remove()} to remove appropriate heading style and
+#' then format the first selected row as a heading of an appropriate level.
+#'
+#' @param style ("both", "hash", "underline", "auto") indicates which style of heading to remove: \itemize{
+#'     \item "underline" - removes underline-style heading formatting only;
+#'     \item "hash" - removes hash-style heading formatting only;
+#'     \item "both" - removes both heading formatting styles;
+#'     \item "auto" - tries to remove only one style: if finds underline style,
+#'     removes it, otherwise removes hash-style.
+#' }
 #'
 #' @inheritParams addin.tools::rs_get_ind
 #'
 #' @name rmd_headings
 #' @export
 rmd_heading_1 <- function(context = rs_get_context()) {
+    rmd_heading_remove(style = "both", context = context)
     rs_insert_before_first_selected_row("# ",
                                         ensure_blank_above = TRUE,
                                         context = context)
@@ -15,6 +34,7 @@ rmd_heading_1 <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_2 <- function(context = rs_get_context()) {
+    rmd_heading_remove(style = "both", context = context)
     rs_insert_before_first_selected_row("## ",
                                         ensure_blank_above = TRUE,
                                         context = context)
@@ -23,6 +43,7 @@ rmd_heading_2 <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_3 <- function(context = rs_get_context()) {
+    rmd_heading_remove(style = "both", context = context)
     rs_insert_before_first_selected_row("### ",
                                         ensure_blank_above = TRUE,
                                         context = context)
@@ -31,6 +52,7 @@ rmd_heading_3 <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_4 <- function(context = rs_get_context()) {
+    rmd_heading_remove(style = "both", context = context)
     rs_insert_before_first_selected_row("#### ",
                                         ensure_blank_above = TRUE,
                                         context = context)
@@ -39,6 +61,7 @@ rmd_heading_4 <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_5 <- function(context = rs_get_context()) {
+    rmd_heading_remove(style = "both", context = context)
     rs_insert_before_first_selected_row("##### ",
                                         ensure_blank_above = TRUE,
                                         context = context)
@@ -47,6 +70,7 @@ rmd_heading_5 <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_6 <- function(context = rs_get_context()) {
+    rmd_heading_remove(style = "both", context = context)
     rs_insert_before_first_selected_row("###### ",
                                         ensure_blank_above = TRUE,
                                         context = context)
@@ -55,8 +79,8 @@ rmd_heading_6 <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_1_title <- function(context = rs_get_context()) {
-
-    text <- repeat_symbol("=", 60)
+    text <- repeat_symbol("=", 79)
+    rmd_heading_remove(style = "underline", context = context)
     rs_enclose_first_row_with(text_below = text,
                               ensure_blank_above = TRUE,
                               context = context)
@@ -66,9 +90,80 @@ rmd_heading_1_title <- function(context = rs_get_context()) {
 #' @export
 rmd_heading_2_subtitle <- function(context = rs_get_context()) {
 
-    text <- repeat_symbol("-", 60)
+    text <- repeat_symbol("-", 79)
+    rmd_heading_remove(style = "underline", context = context)
     rs_enclose_first_row_with(text_below = text,
                               ensure_blank_above = TRUE,
                               context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rmd_headings
+#' @export
+
+rmd_heading_remove <- function(
+    style = c("auto", "both", "hash", "underline"),
+    context = rs_get_context()
+    ) {
+
+    style <- match.arg(style, several.ok = FALSE)
+    row <- rs_get_ind_first_selected_row(context)
+
+    is_underline <- is_underline_style_heading(row, context)
+
+    switch(style,
+           "underline" = rm_underline_style_heading(row, context, is_underline),
+           "hash"      = rm_hash_style_heading(row, context),
+           "both"      = {
+               rm_underline_style_heading(row, context, is_underline)
+               rm_hash_style_heading(row, context)
+           },
+           "auto"      =
+               if (is_underline) {
+                   rm_underline_style_heading(row, context, is_underline)
+               } else {
+                   rm_hash_style_heading(row, context)
+               }
+
+           )
+
+    if (is_underline) {
+
+        } else {
+        # Removes leading hash symbols and spaces of the first selected row
+        first_selected_row <- rs_get_row_range(row)
+        text1 <- stringr::str_replace(context$contents[row], "^#[\\s#]*", "")
+        rstudioapi::modifyRange(first_selected_row, text1, id = context$id)
+    }
+}
+
+is_underline_style_heading <- function(row, context) {
+    # Detect if the line is underline style heading
+
+    # row - index of the heading row
+    # context - rstudioapi context
+    stringr::str_detect(context$contents[row + 1], "^([-=])(\\1){2,}\\s*$")
+}
+
+rm_underline_style_heading <- function(row, context, detected) {
+    # Removes the second selected row if it contains underline style
+    # formatting of heanings.
+
+    # row - index of the heading row
+    # context - rstudioapi context
+    # detected - logical indicating if the row is underline style heading
+
+    if (detected) {
+        second_selected_row <- rs_get_row_range_w_newline(row + 1)
+        rstudioapi::modifyRange(second_selected_row, "", id = context$id)
+    }
+}
+
+rm_hash_style_heading <- function(row, context) {
+    # Removes leading hash symbols and spaces of the first selected row
+    first_selected_row <- rs_get_row_range(row)
+    text1 <- stringr::str_replace(context$contents[row], "^##*\\s*", "")
+    rstudioapi::modifyRange(first_selected_row, text1, id = context$id)
+}
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

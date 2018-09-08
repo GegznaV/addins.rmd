@@ -40,7 +40,6 @@ Binding: rmd_format_strikethrough
 Interactive: false
 
 
-
 Name: {Rmd} Heading 1 (======)
 Description: Underline with ======
 Binding: rmd_heading_1_title
@@ -79,6 +78,11 @@ Interactive: false
 Name: {Rmd} Heading 6 (######)
 Description: Insert ######
 Binding: rmd_heading_6
+Interactive: false
+
+Name: {Rmd} Remove heading
+Description: Removes R Markdow heading formatting (one style at a time)
+Binding: rmd_heading_remove
 Interactive: false
 
 
