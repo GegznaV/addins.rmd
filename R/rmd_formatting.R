@@ -26,34 +26,34 @@ NULL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_bold <- function() {
+rmd_format_bold <- function() {
     rs_enclose_selection_with(symbol = "**")
 
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_italics <- function() {
+rmd_format_italics <- function() {
     rs_enclose_selection_with(symbol = "_")
 
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_bold_italics <- function() {
+rmd_format_bold_italics <- function() {
     rs_enclose_selection_with(symbol_before = "**_", symbol_after = "_**")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_bold2 <- function() {
+rmd_format_bold2 <- function() {
     rs_enclose_selection_with(symbol = "__")
 
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_italics2 <- function() {
+rmd_format_italics2 <- function() {
     rs_enclose_selection_with(symbol = "*")
 
 }
@@ -78,19 +78,19 @@ rmd_code_inline_highlighted_as_r <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_superscript <- function() {
+rmd_format_superscript <- function() {
     rs_enclose_selection_with(symbol = "^")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_subscript <- function() {
+rmd_format_subscript <- function() {
     rs_enclose_selection_with(symbol = "~")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
-rmd_a_strikethrough <- function() {
+rmd_format_strikethrough <- function() {
     rs_enclose_selection_with(symbol = "~~")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -19,12 +19,12 @@ rmd_table_style_md_alternative <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_multiline <- function() {
-    rs_enclose_first_row_with(text_above = tbl_multiline_)
+    rs_enclose_first_row_with(text_above = tbl_multiline)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_multiline_no_colnames <- function() {
-    rs_enclose_first_row_with(text_above = tbl_multiline_2)
+    rs_enclose_first_row_with(text_above = tbl_multiline_no_colnames)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
@@ -44,13 +44,13 @@ rmd_table_style_grid <- function() {
 tbl_simple <- c(
     "
 
-: The name of the simple table.
-
 Left-aligned      Centered column       Right-aligned
 --------------  -------------------  ----------------
 Row_1_Col_1        Row_1_Col_2          Row_1_Col_3
 Row_2_Col_1        Row_2_Col_2          Row_2_Col_3
 Row_3_Col_1        Row_3_Col_2          Row_3_Col_3
+
+: The name of the simple-style table.
 
 ")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,11 +78,13 @@ tbl_md_alternative <- c(
 |  Row_3_Col_1  |  Row_3_Col_2  |  Row_3_Col_3  |  Row_3_Col_4  |
 
 : The name of the markdown-style table.
+
 ")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tbl_miltiline <- c(
+tbl_multiline <- c(
 "
+
 -----------------------------------------------------
 Left-aligned      Centered column      Right-aligned
 ---------------- -----------------  ----------------
@@ -94,13 +96,12 @@ Row_3_Col_1        Row_3_Col_2         Row_3_Col_3
 -----------------------------------------------------
 
 : The name of the multi-row table.
+
 ")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tbl_multiline_2 <- c(
+tbl_multiline_no_colnames <- c(
 "
-
-: The name of the table without column names.
 
 --------------  -----------------  ----------------
 Row_1_Col_1        Row_1_Col_2          Row_1_Col_3
@@ -110,13 +111,13 @@ Row_2_Col_1        Row_2_Col_2          Row_2_Col_3
 Row_3_Col_1        Row_3_Col_2          Row_3_Col_3
 --------------  -----------------  ----------------
 
+: The name of the table without column names.
+
 ")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tbl_grid <- c(
 "
-
-:  The name of the grid-style table.
 
 +---------------+---------------+--------------------+
 | Right-aligned |  Centered     |  Auto-aligned      |
@@ -127,6 +128,8 @@ tbl_grid <- c(
 | Row_2_Col_1   | Row_2_Col_2   | - Row_2_Col_3a     |
 |               |               | - Row_2_Col_3b     |
 +---------------+---------------+--------------------+
+
+:  The name of the grid-style table.
 
 ")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

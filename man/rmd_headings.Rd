@@ -2,31 +2,31 @@
 % Please edit documentation in R/rmd_headings.R
 \name{rmd_headings}
 \alias{rmd_headings}
-\alias{rmd_b_heading_1}
-\alias{rmd_b_heading_2}
-\alias{rmd_b_heading_3}
-\alias{rmd_b_heading_4}
-\alias{rmd_b_heading_5}
-\alias{rmd_b_heading_6}
-\alias{rmd_b_heading_01a_title}
-\alias{rmd_b_heading_01b_subtitle}
+\alias{rmd_heading_1}
+\alias{rmd_heading_2}
+\alias{rmd_heading_3}
+\alias{rmd_heading_4}
+\alias{rmd_heading_5}
+\alias{rmd_heading_6}
+\alias{rmd_heading_1_title}
+\alias{rmd_heading_2_subtitle}
 \title{Format text as R Markdown headings.}
 \usage{
-rmd_b_heading_1()
+rmd_heading_1()
 
-rmd_b_heading_2()
+rmd_heading_2()
 
-rmd_b_heading_3()
+rmd_heading_3()
 
-rmd_b_heading_4()
+rmd_heading_4()
 
-rmd_b_heading_5()
+rmd_heading_5()
 
-rmd_b_heading_6()
+rmd_heading_6()
 
-rmd_b_heading_01a_title()
+rmd_heading_1_title()
 
-rmd_b_heading_01b_subtitle()
+rmd_heading_2_subtitle()
 }
 \description{
 RStudio add-ins to format text as R Markdown headings.

@@ -4,49 +4,49 @@
 #'
 #' @name rmd_headings
 #' @export
-rmd_b_heading_1 <- function() {
+rmd_heading_1 <- function() {
     rs_insert_before_first_selected_row("# ",
                                         ensure_blank_above = TRUE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_2 <- function() {
+rmd_heading_2 <- function() {
     rs_insert_before_first_selected_row("## ",
                                         ensure_blank_above = TRUE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_3 <- function() {
+rmd_heading_3 <- function() {
     rs_insert_before_first_selected_row("### ",
                                         ensure_blank_above = TRUE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_4 <- function() {
+rmd_heading_4 <- function() {
     rs_insert_before_first_selected_row("#### ",
                                         ensure_blank_above = TRUE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_5 <- function() {
+rmd_heading_5 <- function() {
     rs_insert_before_first_selected_row("##### ",
                                         ensure_blank_above = TRUE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_6 <- function() {
+rmd_heading_6 <- function() {
     rs_insert_before_first_selected_row("###### ",
                                         ensure_blank_above = TRUE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_01a_title <- function() {
+rmd_heading_1_title <- function() {
 
     text <- repeat_symbol("=", 60)
     rs_enclose_first_row_with(text_below = text,
@@ -55,7 +55,7 @@ rmd_b_heading_01a_title <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_01b_subtitle <- function() {
+rmd_heading_2_subtitle <- function() {
 
     text <- repeat_symbol("-", 60)
     rs_enclose_first_row_with(text_below = text,

@@ -3,19 +3,22 @@
 \name{rmd_tables}
 \alias{rmd_tables}
 \alias{rmd_table_style_md}
+\alias{rmd_table_style_md_alternative}
 \alias{rmd_table_style_multiline}
+\alias{rmd_table_style_multiline_no_colnames}
 \alias{rmd_table_style_simple}
-\alias{rmd_table_style_simple_no_colnames}
 \alias{rmd_table_style_grid}
 \title{Insert R Markdown tables}
 \usage{
 rmd_table_style_md()
 
+rmd_table_style_md_alternative()
+
 rmd_table_style_multiline()
 
-rmd_table_style_simple()
+rmd_table_style_multiline_no_colnames()
 
-rmd_table_style_simple_no_colnames()
+rmd_table_style_simple()
 
 rmd_table_style_grid()
 }

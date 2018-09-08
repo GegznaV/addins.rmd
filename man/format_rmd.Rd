@@ -2,17 +2,17 @@
 % Please edit documentation in R/rmd_formatting.R, R/rmd_symbols_as_is.R
 \name{format_rmd}
 \alias{format_rmd}
-\alias{rmd_a_bold}
-\alias{rmd_a_italics}
-\alias{rmd_a_bold_italics}
-\alias{rmd_a_bold2}
-\alias{rmd_a_italics2}
+\alias{rmd_format_bold}
+\alias{rmd_format_italics}
+\alias{rmd_format_bold_italics}
+\alias{rmd_format_bold2}
+\alias{rmd_format_italics2}
 \alias{rmd_code_inline}
 \alias{rmd_code_inline_r}
 \alias{rmd_code_inline_highlighted_as_r}
-\alias{rmd_a_superscript}
-\alias{rmd_a_subscript}
-\alias{rmd_a_strikethrough}
+\alias{rmd_format_superscript}
+\alias{rmd_format_subscript}
+\alias{rmd_format_strikethrough}
 \alias{rmd_horizontal_rule}
 \alias{rmd_link_url}
 \alias{rmd_insert_figure}
@@ -25,15 +25,15 @@
 \alias{rmd_symbol_em_dash}
 \title{Add-ins for basic R Markdown formatting.}
 \usage{
-rmd_a_bold()
+rmd_format_bold()
 
-rmd_a_italics()
+rmd_format_italics()
 
-rmd_a_bold_italics()
+rmd_format_bold_italics()
 
-rmd_a_bold2()
+rmd_format_bold2()
 
-rmd_a_italics2()
+rmd_format_italics2()
 
 rmd_code_inline()
 
@@ -41,11 +41,11 @@ rmd_code_inline_r()
 
 rmd_code_inline_highlighted_as_r()
 
-rmd_a_superscript()
+rmd_format_superscript()
 
-rmd_a_subscript()
+rmd_format_subscript()
 
-rmd_a_strikethrough()
+rmd_format_strikethrough()
 
 rmd_horizontal_rule()
 
