@@ -132,6 +132,9 @@ rmd_link_url <- function(context = rs_get_context()) {
                               context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# TODO: 1. [!!!] Fix cursor position after code is inserted.
+#         Now it is at the end of the first line.
+#
 #' @rdname format_rmd
 #' @export
 rmd_insert_figure <- function(context = rs_get_context()) {
@@ -142,18 +145,18 @@ rmd_insert_figure <- function(context = rs_get_context()) {
 
 #' @rdname format_rmd
 #' @export
-rmd_insert_figure_block <- function(context = rs_get_context()) {
+rmd_insert_figure_r_code_block <- function(context = rs_get_context()) {
     nr <- stringr::str_replace(as.character(unclass(Sys.time())),
                                "\\.",
                                "-")
     before <- stringr::str_glue(
 '```{{r fig-ID-{nr}, echo=FALSE, fig.cap=CAPTION}}
-CAPTION = "caption  "
+CAPTION = "Figure caption  "
 
 knitr::include_graphics("')
 
     after <-
-'fig/pic/fig-ID.png")
+'")
 ```'
 
     rs_enclose_selection_with(symbol_before = before,

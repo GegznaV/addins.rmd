@@ -126,7 +126,7 @@ Interactive: false
 
 Name: {Rmd} R code block for figure
 Description: Inserts R code block for figure.
-Binding: rmd_code_block_r_figure
+Binding: rmd_insert_figure_r_code_block
 Interactive: false
 
 Name: {Rmd} Split R code block (```  ```{r})

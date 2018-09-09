@@ -16,7 +16,7 @@
 \alias{rmd_horizontal_rule}
 \alias{rmd_link_url}
 \alias{rmd_insert_figure}
-\alias{rmd_insert_figure_block}
+\alias{rmd_insert_figure_r_code_block}
 \alias{rmd_symbol_asterisk}
 \alias{rmd_symbol_backslash}
 \alias{rmd_symbol_underscore}
@@ -53,7 +53,7 @@ rmd_link_url(context = rs_get_context())
 
 rmd_insert_figure(context = rs_get_context())
 
-rmd_insert_figure_block(context = rs_get_context())
+rmd_insert_figure_r_code_block(context = rs_get_context())
 
 rmd_symbol_asterisk(context = rs_get_context())
 
