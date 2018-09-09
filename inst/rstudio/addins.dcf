@@ -24,6 +24,7 @@ Binding: rmd_format_italics
 Interactive: false
 
 
+
 Name: {Rmd} Superscript (^ ^)
 Description: Enclose selected text with ^ and ^.
 Binding: rmd_format_superscript
@@ -39,6 +40,12 @@ Description: Enclose selected text with ~~ and ~~.
 Binding: rmd_format_strikethrough
 Interactive: false
 
+
+
+Name: {Rmd} Remove heading
+Description: Removes R Markdow heading markup (one style at a time)
+Binding: rmd_heading_remove
+Interactive: false
 
 Name: {Rmd} Heading 1 (======)
 Description: Underline with ======
@@ -80,11 +87,6 @@ Description: Insert ######
 Binding: rmd_heading_6
 Interactive: false
 
-Name: {Rmd} Remove heading
-Description: Removes R Markdow heading formatting (one style at a time)
-Binding: rmd_heading_remove
-Interactive: false
-
 
 
 Name: {Rmd} LaTeX equation inline ($ $)
@@ -103,36 +105,6 @@ Binding: rmd_equation_b_block2
 Interactive: false
 
 
-Name: {Rmd} Link/URL [...](...)
-Description: Enclose selection with [ and ]().
-Binding: rmd_link_url
-Interactive: false
-
-Name: {Rmd} Figure ![...](...)
-Description: Enclose selection with ![ and ]().
-Binding: rmd_insert_figure
-Interactive: false
-
-
-Name: {Rmd} Code block (``` ```)
-Description: Enclose selected lines with ``` and ```.
-Binding: rmd_code_block
-Interactive: false
-
-Name: {Rmd} R code block (```{r}  ```)
-Description: Enclose selected lines with ```{r} and ```.
-Binding: rmd_code_block_r
-Interactive: false
-
-Name: {Rmd} R code block for figure
-Description: Inserts R code block for figure.
-Binding: rmd_insert_figure_r_code_block
-Interactive: false
-
-Name: {Rmd} Split R code block (```  ```{r})
-Description: Insert lines ``` and ```{r} above the selection.
-Binding: rmd_code_block_r_split
-Interactive: false
 
 Name: {Rmd} Inline code  (` `)
 Description: Enclose selected text with ` and `.
@@ -149,15 +121,41 @@ Description: Enclose selected text with ` and `{.r}.
 Binding: rmd_code_inline_highlighted_as_r
 Interactive: false
 
-
-Name: {Rmd} Block quotes (>, >, >, ...)
-Description: Make block quotes.
-Binding: rmd_block_quotes
+Name: {Rmd} Code block (``` ```)
+Description: Enclose selected lines with ``` and ```.
+Binding: rmd_code_block
 Interactive: false
 
-Name: {Rmd} Line blocks (|, |, |, ...)
-Description: Make line blocks (useful for writing addresses).
-Binding: rmd_line_blocks
+Name: {Rmd} R code block (```{r}  ```)
+Description: Enclose selected lines with ```{r} and ```.
+Binding: rmd_code_block_r
+Interactive: false
+
+Name: {Rmd} Split R code block (```  ```{r})
+Description: Insert lines ``` and ```{r} above the selection.
+Binding: rmd_code_block_r_split
+Interactive: false
+
+Name: {Rmd} R code block for figure
+Description: Inserts R code block for a figure.
+Binding: rmd_insert_figure_r_code_block
+Interactive: false
+
+Name: {Rmd} Figure ![...](...)
+Description: Enclose selection with ![ and ]().
+Binding: rmd_insert_figure
+Interactive: false
+
+Name: {Rmd} Link/URL [...](...)
+Description: Enclose selection with [ and ]().
+Binding: rmd_link_url
+Interactive: false
+
+
+
+Name: {Rmd} Remove list (level 1)
+Description: Remove markup of lists, block quotes and line blocks.
+Binding: rmd_remove_list
 Interactive: false
 
 Name: {Rmd} List, unordered (-, -, -, ...), level 1
@@ -195,16 +193,23 @@ Description: Make numbered example list for sequentially numbered examples. Numb
 Binding: rmd_list_z_example_list
 Interactive: false
 
-Name: {Rmd} Remove lists (level 1)
-Description: Remove formating of lists, quotes and line blocks.
-Binding: rmd_remove_list
+Name: {Rmd} Line blocks (|, |, |, ...)
+Description: Make line blocks (useful for writing addresses).
+Binding: rmd_line_blocks
 Interactive: false
+
+Name: {Rmd} Block quotes (>, >, >, ...)
+Description: Make block quotes.
+Binding: rmd_block_quotes
+Interactive: false
+
 
 
 Name: {Rmd} Horizontal rule (* * *)
 Description: Insert a horizontal rule (style: * * *) below the selection.
 Binding: rmd_horizontal_rule
 Interactive: false
+
 
 
 Name: {Rmd} Symbol: asterisk (\*)
