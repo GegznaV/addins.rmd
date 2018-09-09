@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Format as LaTeX equation. — rmd_equations • addins.rmd</title>
+<title>Remove list-like formatting — rmd_remove_list • addins.rmd</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,12 +30,11 @@
 
 
 
-<meta property="og:title" content="Format as LaTeX equation. — rmd_equations" />
+<meta property="og:title" content="Remove list-like formatting — rmd_remove_list" />
 
-<meta property="og:description" content="Select a piece of text with a cursor and call these functions as an add-in
-to enclose the text with special symbols. Text between $.$ is
-interpreted as an inline equation and between $$.$$ or \[.\]
-as a block equation in R Markdown." />
+<meta property="og:description" content="The function removes markup of lists, block quotes and line blocks.
+More specifically, removes leading |, &amp;gt;, *, -, + symbols followed by a space or end of line,
+leading arabic and Roman numbers, single letters, hash (#) or eta @ symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -100,25 +99,20 @@ as a block equation in R Markdown." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Format as LaTeX equation.</h1>
+    <h1>Remove list-like formatting</h1>
     
-    <div class="hidden name"><code>rmd_equations.Rd</code></div>
+    <div class="hidden name"><code>rmd_remove_list.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Select a piece of text with a cursor and call these functions as an add-in
-to enclose the text with special symbols. Text between <code>$.$</code> is
-interpreted as an inline equation and between <code>$$.$$</code> or <code>\[.\]</code>
-as a block equation in R Markdown.</p>
+    <p>The function removes markup of lists, block quotes and line blocks.
+More specifically, removes leading |, &gt;, *, -, + symbols followed by a space or end of line,
+leading arabic and Roman numbers, single letters, hash (<code>#</code>) or eta <code>@</code> symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rmd_equation_a_inline</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
-
-<span class='fu'>rmd_equation_b_block</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
-
-<span class='fu'>rmd_equation_b_block2</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())</pre>
+    <pre class="usage"><span class='fu'>rmd_remove_list</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -130,20 +124,13 @@ as a block equation in R Markdown.</p>
     </tr>
     </table>
     
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other R Markdown formatting add-ins: <code><a href='format_rmd.html'>format_rmd</a></code>,
-  <code><a href='rmd_code_block.html'>rmd_code_block</a></code>, <code><a href='rmd_list.html'>rmd_list</a></code></p></div>
-    
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#see-also">See also</a></li>
-          </ul>
+                </ul>
 
   </div>
 </div>

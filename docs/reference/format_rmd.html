@@ -33,18 +33,7 @@
 <meta property="og:title" content="Add-ins for basic R Markdown formatting. — format_rmd" />
 
 <meta property="og:description" content="RStudio add-ins, which enclose selected text with symbols that have special
-interpretation in R Markdown. Function, symbols and interpretation
-rmd_bold():           between ** and ** as bold;
-rmd_italics():        between _ and _ as italics;
-rmd_bold_italics():   between **_ and _**as bold italics;
-rmd_bold2():          between __ and __ as bold;
-rmd_italics2():       between * and * as italics;
-rmd_code_inline():    between back-ticks (``) as inline code;
-rmd_r_code_inline():  formats text as inline R code to evaluate;
-rmd_superscript():    between ^ and ^ as superscript;
-rmd_subscript():      between ~ and ~ as subscript;
-rmd_strikethrough():  between ~~ and ~~ as strike-through text.
-" />
+interpretation in R Markdown." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -73,7 +62,7 @@ rmd_strikethrough():  between ~~ and ~~ as strike-through text.
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addins.rmd</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.4.9000</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.5</span>
       </span>
     </div>
 
@@ -117,63 +106,62 @@ rmd_strikethrough():  between ~~ and ~~ as strike-through text.
     <div class="ref-description">
     
     <p>RStudio add-ins, which enclose selected text with symbols that have special
-interpretation in R Markdown. Function, symbols and interpretation</p><ul>
-<li><p><code>rmd_bold()</code>:           between <code>**</code> and <code>**</code> as bold;</p></li>
-<li><p><code>rmd_italics()</code>:        between <code>_</code> and <code>_</code> as italics;</p></li>
-<li><p><code>rmd_bold_italics()</code>:   between <code>**_</code> and <code>_**</code>as bold italics;</p></li>
-<li><p><code>rmd_bold2()</code>:          between <code>__</code> and <code>__</code> as bold;</p></li>
-<li><p><code>rmd_italics2()</code>:       between <code>*</code> and <code>*</code> as italics;</p></li>
-<li><p><code>rmd_code_inline()</code>:    between back-ticks (``) as inline code;</p></li>
-<li><p><code>rmd_r_code_inline()</code>:  formats text as inline R code to evaluate;</p></li>
-<li><p><code>rmd_superscript()</code>:    between <code>^</code> and <code>^</code> as superscript;</p></li>
-<li><p><code>rmd_subscript()</code>:      between <code>~</code> and <code>~</code> as subscript;</p></li>
-<li><p><code>rmd_strikethrough()</code>:  between <code>~~</code> and <code>~~</code> as strike-through text.</p></li>
-</ul>
+interpretation in R Markdown.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rmd_format_bold</span>()
+    <pre class="usage"><span class='fu'>rmd_format_bold</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_format_italics</span>()
+<span class='fu'>rmd_format_italics</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_format_bold_italics</span>()
+<span class='fu'>rmd_format_bold_italics</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_format_bold2</span>()
+<span class='fu'>rmd_format_bold2</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_format_italics2</span>()
+<span class='fu'>rmd_format_italics2</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_code_inline</span>()
+<span class='fu'>rmd_code_inline</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_code_inline_r</span>()
+<span class='fu'>rmd_code_inline_r</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_code_inline_highlighted_as_r</span>()
+<span class='fu'>rmd_code_inline_highlighted_as_r</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_format_superscript</span>()
+<span class='fu'>rmd_format_superscript</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_format_subscript</span>()
+<span class='fu'>rmd_format_subscript</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_format_strikethrough</span>()
+<span class='fu'>rmd_format_strikethrough</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_horizontal_rule</span>()
+<span class='fu'>rmd_horizontal_rule</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_link_url</span>()
+<span class='fu'>rmd_link_url</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_insert_figure</span>()
+<span class='fu'>rmd_insert_figure</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_insert_figure_block</span>()
+<span class='fu'>rmd_insert_figure_block</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_symbol_asterisk</span>()
+<span class='fu'>rmd_symbol_asterisk</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_symbol_backslash</span>()
+<span class='fu'>rmd_symbol_backslash</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_symbol_underscore</span>()
+<span class='fu'>rmd_symbol_underscore</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_symbol_dollar</span>()
+<span class='fu'>rmd_symbol_dollar</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_symbol_en_dash</span>()
+<span class='fu'>rmd_symbol_en_dash</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_symbol_em_dash</span>()</pre>
-        
+<span class='fu'>rmd_symbol_em_dash</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>context</th>
+      <td><p>Object with context of active RStudio document
+(class <code>document_context</code>).</p></td>
+    </tr>
+    </table>
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>https://pandoc.org/MANUAL.html#backslash-escapes</p>
@@ -187,6 +175,7 @@ interpretation in R Markdown. Function, symbols and interpretation</p><ul>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#see-also">See also</a></li>
           </ul>

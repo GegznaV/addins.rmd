@@ -32,7 +32,7 @@
 
 <meta property="og:title" content="Format text as R Markdown headings. — rmd_headings" />
 
-<meta property="og:description" content="RStudio add-ins to format text as R Markdown headings." />
+<meta property="og:description" content="RStudio add-ins to format text as R Markdown headings and to remove this formatting." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -61,7 +61,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addins.rmd</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.4.9000</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.5</span>
       </span>
     </div>
 
@@ -104,7 +104,7 @@
 
     <div class="ref-description">
     
-    <p>RStudio add-ins to format text as R Markdown headings.</p>
+    <p>RStudio add-ins to format text as R Markdown headings and to remove this formatting.</p>
     
     </div>
 
@@ -122,14 +122,50 @@
 
 <span class='fu'>rmd_heading_1_title</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_heading_2_subtitle</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())</pre>
-        
+<span class='fu'>rmd_heading_2_subtitle</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
+
+<span class='fu'>rmd_heading_remove</span>(<span class='kw'>style</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"auto"</span>, <span class='st'>"both"</span>, <span class='st'>"hash"</span>, <span class='st'>"underline"</span>),
+  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>context</th>
+      <td><p>Object with context of active RStudio document
+(class <code>document_context</code>).</p></td>
+    </tr>
+    <tr>
+      <th>style</th>
+      <td><p>("both", "hash", "underline", "auto") indicates which style of heading to remove:</p><ul>
+<li><p>"underline" - removes underline-style heading formatting only;</p></li>
+<li><p>"hash" - removes hash-style heading formatting only;</p></li>
+<li><p>"both" - removes both heading formatting styles;</p></li>
+<li><p>"auto" - tries to remove only one style: if finds underline style,
+    removes it, otherwise removes hash-style.</p></li>
+</ul></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Function <code>rmd_heading_remove()</code> removes heading formatting:
+either hash-symbol-style headings (i.e., remove leading hash symbols <code>#</code>
+and spaces), or
+underline-style headings in the first selected row. <br /></p>
+<p>The other functions, which name beginns with <code>rmd_heading_</code>, at first
+apply <code>rmd_heading_remove()</code> to remove appropriate heading style and
+then format the first selected row as a heading of an appropriate level.</p>
+    
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-                </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#details">Details</a></li>
+          </ul>
 
   </div>
 </div>

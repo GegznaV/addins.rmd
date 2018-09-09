@@ -69,7 +69,7 @@ that adds lines above and below the selection." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addins.rmd</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.4.9000</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.5</span>
       </span>
     </div>
 
@@ -124,12 +124,22 @@ that adds lines above and below the selection.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>rmd_code_block_r</span>()
+    <pre class="usage"><span class='fu'>rmd_code_block_r</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_code_block</span>()
+<span class='fu'>rmd_code_block</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())
 
-<span class='fu'>rmd_code_block_r_split</span>()</pre>
-        
+<span class='fu'>rmd_code_block_r_split</span>(<span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>rs_get_context</span>())</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>context</th>
+      <td><p>Object with context of active RStudio document
+(class <code>document_context</code>).</p></td>
+    </tr>
+    </table>
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other R Markdown formatting add-ins: <code><a href='format_rmd.html'>format_rmd</a></code>,
@@ -140,6 +150,7 @@ that adds lines above and below the selection.</p>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#see-also">See also</a></li>
           </ul>
