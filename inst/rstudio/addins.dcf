@@ -242,32 +242,32 @@ Description: Insert em dash.
 Binding: rmd_symbol_em_dash
 Interactive: false
 
-Name: {Rmd} Table (example: simple style)
+Name: {Rmd} Table: simple style (example)
 Description: Insert an example of table.
 Binding: rmd_table_style_simple
 Interactive: false
 
-Name: {Rmd} Table (example: markdown style 1)
+Name: {Rmd} Table: markdown style 1 (example)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_style_md
 Interactive: false
 
-Name: {Rmd} Table (example: markdown style 2)
+Name: {Rmd} Table: markdown style 2 (example)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_style_md_alternative
 Interactive: false
 
-Name: {Rmd} Table (example: multiline style)
+Name: {Rmd} Table: multiline style (example)
 Description: Insert an example of table.
 Binding: rmd_table_style_multiline
 Interactive: false
 
-Name: {Rmd} Table (example: multiline, no col.names)
+Name: {Rmd} Table: multiline, no col.names (example)
 Description: Insert an example of table.
 Binding: rmd_table_style_multiline_no_colnames
 Interactive: false
 
-Name: {Rmd} Table (example: grid style)
+Name: {Rmd} Table: grid style (example)
 Description: Insert an example of table.
 Binding: rmd_table_style_grid
 Interactive: false
