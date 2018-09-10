@@ -124,6 +124,10 @@ rmd_horizontal_rule <- function(context = rs_get_context()) {
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# TODO: 1. [!!!] change text "url_link" with text in selection;
+#       2. Fix cursor position similarly as in `rmd_insert_figure_r_code_block`.
+#       3. Create interactive add-in.
+#
 #' @rdname format_rmd
 #' @export
 rmd_link_url <- function(context = rs_get_context()) {
@@ -132,8 +136,9 @@ rmd_link_url <- function(context = rs_get_context()) {
                               context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# TODO: 1. [!!!] Fix cursor position after code is inserted.
-#         Now it is at the end of the first line.
+# TODO: 1. [!!!] change text "path_to_figure" with text in selection;
+#       2. Fix cursor position similarly as in `rmd_insert_figure_r_code_block`.
+#       3. Create interactive add-in.
 #
 #' @rdname format_rmd
 #' @export
@@ -146,20 +151,42 @@ rmd_insert_figure <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 rmd_insert_figure_r_code_block <- function(context = rs_get_context()) {
-    nr <- stringr::str_replace(as.character(unclass(Sys.time())),
-                               "\\.",
-                               "-")
-    before <- stringr::str_glue(
-'```{{r fig-ID-{nr}, echo=FALSE, fig.cap=CAPTION}}
-CAPTION = "Figure caption  "
+    # Generate figure ID
+    nr <- stringr::str_replace(as.character(unclass(Sys.time())), "\\.", "-")
 
+    # Generate code block
+    before <- stringr::str_glue(
+        '```{{r fig-ID-{nr}, echo=FALSE, fig.cap=CAPTION}}
 knitr::include_graphics("')
 
     after <-
-'")
+        '") # URL or path to your image.
+
+CAPTION = "" # Figure caption/description.
 ```'
 
+    # Insert text
     rs_enclose_selection_with(symbol_before = before,
                               symbol_after  = after,
+                              trim = TRUE,
                               context = context)
+
+    # Change cursor's position
+    zero_selection <- isTRUE(nchar(stringr::str_trim(rs_get_selection_text(context))) == 0)
+
+    if (zero_selection) {
+        # Place cursor inside parentheses of `include_graphics`
+        pos <- rstudioapi::document_position(
+            row    = rs_get_ind_first_selected_row(context) + 1,
+            column = 26
+        )
+    } else {
+        # Place cursor inside parentheses of `CAPTION`
+        pos <- rstudioapi::document_position(
+            row    = rs_get_ind_first_selected_row(context) + 3,
+            column = 12
+        )
+    }
+
+    rstudioapi::setCursorPosition(pos, id = context$id)
 }
