@@ -8,7 +8,7 @@
 #'
 #' @name rmd_equations
 #'
-#' @inheritParams addin.tools::rs_get_ind
+#' @inheritParams addin.tools::rs_get_index
 #'
 #' @family R Markdown formatting add-ins
 NULL

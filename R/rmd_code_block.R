@@ -14,7 +14,7 @@
 #' \code{\link[addin.tools]{rs_enclose_selected_rows_with}()} -
 #' that adds lines above and below the selection.
 #'
-#' @inheritParams addin.tools::rs_get_ind
+#' @inheritParams addin.tools::rs_get_index
 #'
 #' @family R Markdown formatting add-ins
 NULL

@@ -4,7 +4,7 @@
 #' @name rmd_tables
 #' @title Insert R Markdown tables
 #' @description Insert examples of R Markdown tables.
-#' @inheritParams addin.tools::rs_get_ind
+#' @inheritParams addin.tools::rs_get_index
 
 NULL
 

@@ -12,7 +12,7 @@
 #' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".
 #'
 #' @param level (integer) the level of list.
-#' @inheritParams addin.tools::rs_get_ind
+#' @inheritParams addin.tools::rs_get_index
 #'
 #' @export
 #' @family R Markdown formatting add-ins
@@ -132,7 +132,7 @@ rmd_list_z_example_list <- function() {
 #' More specifically, removes leading |, >, *, -, + symbols followed by a space or end of line,
 #' leading arabic and Roman numbers, single letters, hash (\code{#}) or eta \code{@} symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list.
 #'
-#' @inheritParams addin.tools::rs_get_ind
+#' @inheritParams addin.tools::rs_get_index
 #'
 #' @export
 
