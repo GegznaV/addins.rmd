@@ -36,10 +36,10 @@ rmd_heading_remove(style = c("auto", "both", "hash", "underline"),
 \item{context}{Object with context of active RStudio document
 (class \code{document_context}).}
 
-\item{style}{("both", "hash", "underline", "auto") indicates which style of heading to remove: \itemize{
-    \item "underline" - removes underline-style heading formatting only;
-    \item "hash" - removes hash-style heading formatting only;
+\item{style}{("auto", "both", "hash", "underline") indicates which style of heading to remove: \itemize{
     \item "both" - removes both heading formatting styles;
+    \item "hash" - removes hash-style heading formatting only;
+    \item "underline" - removes underline-style heading formatting only;
     \item "auto" - tries to remove only one style: if finds underline style,
     removes it, otherwise removes hash-style.
 }}
@@ -54,6 +54,7 @@ and spaces), or
 underline-style headings in the first selected row. \cr
 
 The other functions, which name beginns with \code{rmd_heading_}, at first
-apply \code{rmd_heading_remove()} to remove appropriate heading style and
-then format the first selected row as a heading of an appropriate level.
+apply \code{rmd_heading_remove()} to remove heading style (leading hash
+symbols and underline) and then format the first selected row as a heading
+of an appropriate level.
 }

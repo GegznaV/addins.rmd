@@ -42,11 +42,6 @@ Interactive: false
 
 
 
-Name: {Rmd} Heading: remove
-Description: Removes R Markdow heading markup (one style at a time)
-Binding: rmd_heading_remove
-Interactive: false
-
 Name: {Rmd} Heading 1 (#)
 Description: Insert #
 Binding: rmd_heading_1
@@ -85,6 +80,16 @@ Interactive: false
 Name: {Rmd} Heading 2 (-----------)
 Description: Underline with ------
 Binding: rmd_heading_2_subtitle
+Interactive: false
+
+Name: {Rmd} Heading: remove # style
+Description: Removes underline-style heading markup
+Binding: rmd_heading_remove_hash_style
+Interactive: false
+
+Name: {Rmd} Heading: remove underline
+Description: Removes underline-style heading markup
+Binding: rmd_heading_remove_underline
 Interactive: false
 
 
