@@ -42,19 +42,9 @@ Interactive: false
 
 
 
-Name: {Rmd} Remove heading
+Name: {Rmd} Heading: remove
 Description: Removes R Markdow heading markup (one style at a time)
 Binding: rmd_heading_remove
-Interactive: false
-
-Name: {Rmd} Heading 1 (======)
-Description: Underline with ======
-Binding: rmd_heading_1_title
-Interactive: false
-
-Name: {Rmd} Heading 2 (------)
-Description: Underline with ------
-Binding: rmd_heading_2_subtitle
 Interactive: false
 
 Name: {Rmd} Heading 1 (#)
@@ -87,19 +77,29 @@ Description: Insert ######
 Binding: rmd_heading_6
 Interactive: false
 
+Name: {Rmd} Heading 1 (======)
+Description: Underline with ======
+Binding: rmd_heading_1_title
+Interactive: false
+
+Name: {Rmd} Heading 2 (-----------)
+Description: Underline with ------
+Binding: rmd_heading_2_subtitle
+Interactive: false
 
 
-Name: {Rmd} LaTeX equation inline ($ $)
+
+Name: {Rmd} LaTeX equation: inline ($ $)
 Description: Enclose selected text with `$`.
 Binding: rmd_equation_a_inline
 Interactive: false
 
-Name: {Rmd} LaTeX equation block ($$ $$)
+Name: {Rmd} LaTeX equation: block ($$ $$)
 Description: Enclose selected text with `$$`.
 Binding: rmd_equation_b_block
 Interactive: false
 
-Name: {Rmd} LaTeX equation block (\[   \])
+Name: {Rmd} LaTeX equation: block (\[   \])
 Description: Enclose selected text with `\[` and `\]`.
 Binding: rmd_equation_b_block2
 Interactive: false
@@ -111,12 +111,12 @@ Description: Enclose selected text with ` and `.
 Binding: rmd_code_inline
 Interactive: false
 
-Name: {Rmd} Inline R code (to evaluate) (`r  `)
+Name: {Rmd} Inline R code to evaluate (`r  `)
 Description: Enclose selected text with `r and `.
 Binding: rmd_code_inline_r
 Interactive: false
 
-Name: {Rmd} Inline R code (to highlight) (`  `{.r})
+Name: {Rmd} Inline R code to highlight (`  `{.r})
 Description: Enclose selected text with ` and `{.r}.
 Binding: rmd_code_inline_highlighted_as_r
 Interactive: false
@@ -131,13 +131,13 @@ Description: Enclose selected lines with ```{r} and ```.
 Binding: rmd_code_block_r
 Interactive: false
 
-Name: {Rmd} Split R code block (```  ```{r})
+Name: {Rmd} R code block: split (```  ```{r})
 Description: Insert lines ``` and ```{r} above the selection.
 Binding: rmd_code_block_r_split
 Interactive: false
 
-Name: {Rmd} R code block for figure
-Description: Inserts R code block for a figure.
+Name: {Rmd} R code block: for figure
+Description: Inserts R code block for a figure/image.
 Binding: rmd_insert_figure_r_code_block
 Interactive: false
 
@@ -153,39 +153,39 @@ Interactive: false
 
 
 
-Name: {Rmd} Remove list (level 1)
+Name: {Rmd} List: remove level 1
 Description: Remove markup of lists, block quotes and line blocks.
 Binding: rmd_remove_list
 Interactive: false
 
-Name: {Rmd} List, unordered (-, -, -, ...), level 1
-Description: Make unordered list (level 1).
-Binding: rmd_list_unordered
-Interactive: false
-
-Name: {Rmd} List, unordered (+, +, +, ...), level 2
-Description: Make unordered list (level 2).
-Binding: rmd_list_unordered_2
-Interactive: false
-
-Name: {Rmd} List, numbered (1, 2, 3, ...), level 1
-Description: Make numbered list (level 1).
-Binding: rmd_list_numbered
-Interactive: false
-
-Name: {Rmd} List, numbered (1, 2, 3, ...), level 2
-Description: Make numbered list (level 2).
-Binding: rmd_list_numbered_2
-Interactive: false
-
-Name: {Rmd} List, lettered (a, b, c, ...), level 1
+Name: {Rmd} List: lettered (a, b, c, ...) level 1
 Description: Make lettered list (level 1).
 Binding: rmd_list_lettered
 Interactive: false
 
-Name: {Rmd} List, lettered (a, b, c, ...), level 2
+Name: {Rmd} List: lettered (a, b, c, ...) level 2
 Description: Make lettered list (level 2).
 Binding: rmd_list_lettered_2
+Interactive: false
+
+Name: {Rmd} List: numbered (1, 2, 3, ...) level 1
+Description: Make numbered list (level 1).
+Binding: rmd_list_numbered
+Interactive: false
+
+Name: {Rmd} List: numbered (1, 2, 3, ...) level 2
+Description: Make numbered list (level 2).
+Binding: rmd_list_numbered_2
+Interactive: false
+
+Name: {Rmd} List: unordered (-, -, -, ...) level 1
+Description: Make unordered list (level 1).
+Binding: rmd_list_unordered
+Interactive: false
+
+Name: {Rmd} List: unordered (+, +, +, ...) level 2
+Description: Make unordered list (level 2).
+Binding: rmd_list_unordered_2
 Interactive: false
 
 Name: {Rmd} Numbered example list: (@), (@), ...
@@ -262,7 +262,7 @@ Description: Insert an example of table.
 Binding: rmd_table_style_multiline
 Interactive: false
 
-Name: {Rmd} Table (example: multiline style, no col.names)
+Name: {Rmd} Table (example: multiline, no col.names)
 Description: Insert an example of table.
 Binding: rmd_table_style_multiline_no_colnames
 Interactive: false
