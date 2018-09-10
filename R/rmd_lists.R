@@ -1,3 +1,7 @@
+# TODO:
+# 1. Ability to skip empty lines;
+# 2. Ability to continue numbering.
+
 #' Format text as R Markdown list.
 #'
 #' RStudio add-ins which formats text as R Markdown lists.

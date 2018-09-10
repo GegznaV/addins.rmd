@@ -61,7 +61,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addins.rmd</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.5</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.5.9000</span>
       </span>
     </div>
 
@@ -137,10 +137,10 @@
     </tr>
     <tr>
       <th>style</th>
-      <td><p>("both", "hash", "underline", "auto") indicates which style of heading to remove:</p><ul>
-<li><p>"underline" - removes underline-style heading formatting only;</p></li>
-<li><p>"hash" - removes hash-style heading formatting only;</p></li>
+      <td><p>("auto", "both", "hash", "underline") indicates which style of heading to remove:</p><ul>
 <li><p>"both" - removes both heading formatting styles;</p></li>
+<li><p>"hash" - removes hash-style heading formatting only;</p></li>
+<li><p>"underline" - removes underline-style heading formatting only;</p></li>
 <li><p>"auto" - tries to remove only one style: if finds underline style,
     removes it, otherwise removes hash-style.</p></li>
 </ul></td>
@@ -154,8 +154,9 @@ either hash-symbol-style headings (i.e., remove leading hash symbols <code>#</co
 and spaces), or
 underline-style headings in the first selected row. <br /></p>
 <p>The other functions, which name beginns with <code>rmd_heading_</code>, at first
-apply <code>rmd_heading_remove()</code> to remove appropriate heading style and
-then format the first selected row as a heading of an appropriate level.</p>
+apply <code>rmd_heading_remove()</code> to remove heading style (leading hash
+symbols and underline) and then format the first selected row as a heading
+of an appropriate level.</p>
     
 
   </div>
