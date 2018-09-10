@@ -118,7 +118,7 @@ rmd_heading_remove <- function(
                rm_hash_style_heading(row, context)
            },
            "auto"      =
-               if (is_underline) {
+               if (isTRUE(is_underline)) {
                    rm_underline_style_heading(row, context, is_underline)
                } else {
                    rm_hash_style_heading(row, context)
@@ -126,7 +126,7 @@ rmd_heading_remove <- function(
 
            )
 
-    if (is_underline) {
+    if (isTRUE(is_underline)) {
 
         } else {
         # Removes leading hash symbols and spaces of the first selected row
@@ -152,7 +152,7 @@ rm_underline_style_heading <- function(row, context, detected) {
     # context - rstudioapi context
     # detected - logical indicating if the row is underline style heading
 
-    if (detected) {
+    if (isTRUE(detected)) {
         second_selected_row <- rs_get_row_range_w_newline(row + 1)
         rstudioapi::modifyRange(second_selected_row, "", id = context$id)
     }
