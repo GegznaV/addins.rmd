@@ -25,7 +25,7 @@ Remotes:
     github::ropenscilabs/icon
 Depends:
     R (>= 3.2),
-    addin.tools
+    addin.tools (>= 0.0.3)
 Imports:
     rstudioapi,
     magrittr,
