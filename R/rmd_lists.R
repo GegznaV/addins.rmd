@@ -73,6 +73,9 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
             rs_insert_at_row_start(selected_rows[1], "\n", id = context$id)
         }
     }
+    # Keep the rows selected --
+    # TODO: account for one blank line, if it is inserted
+    # rs_select_all_selected_rows(context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
@@ -148,8 +151,9 @@ rmd_remove_list <- function(context = rs_get_context()) {
     # ordered list elements
     ord <- stringr::str_glue("((#)|(@)|([[:digit:]]+)|([[:alpha:]])|{rom_s}|{rom_s})")
 
-    level = "[[:blank:]]{0,1}" # level 1
-    # level = "[[:blank:]]{4}" # level 2
+    level = "" # level 1
+    # level = "[[:blank:]]{0,1}" # level 1: must not select tab.
+    # level = "[[:blank:]]{4}" # level 2: may be 1 tab or 4 spaces
     # level = "[[:blank:]]{8}" # level 2
 
     pattern <- stringr::str_glue("^{level}(([|>*+-])|({ord}[\\.\\)])|(\\({ord}\\)))(\\s|$)")
@@ -163,5 +167,7 @@ rmd_remove_list <- function(context = rs_get_context()) {
         wo_list <- paste0(wo_list, collapse = "\n")
         rstudioapi::modifyRange(location = selected_lines, wo_list, id = context$id)
     }
+    # Keep the rows selected
+    rs_select_all_selected_rows(context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
