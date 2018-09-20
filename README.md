@@ -27,10 +27,10 @@ fig_id = sub("\\.","_",
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.3-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
+version](https://img.shields.io/badge/GitHub-0.0.6-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![Travis-CI Build
 Status](https://travis-ci.org/GegznaV/addins.rmd.png?branch=master)](https://travis-ci.org/GegznaV/addins.rmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2018--05--26-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2018--09--20-yellowgreen.svg)](/commits/master)
 <!-- [![Research software impact](http://depsy.org/api/package/cran/addins.rmd/badge.svg)](http://depsy.org/package/r/addins.rmd) -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addins.rmd)](http://www.rdocumentation.org/packages/addins.rmd) -->
@@ -129,8 +129,8 @@ levels.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/d
 
 # Pandoc’s Markdown
 
-*R Markdown* syntax is based on Pandoc’s Markdown syntax. Read more if
-you need more advanced formatting options:
+*R Markdown* syntax is based on Pandoc’s Markdown syntax. If you need
+more advanced formatting options, read more at:
 
   - <https://pandoc.org/MANUAL.html#pandocs-markdown>
 

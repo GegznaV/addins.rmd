@@ -152,7 +152,8 @@ knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/ma
 Pandoc's Markdown
 ==============================================================================
 
-*R Markdown* syntax is based on Pandoc's Markdown syntax. Read more if you need more advanced formatting options:
+*R Markdown* syntax is based on Pandoc's Markdown syntax. 
+If you need more advanced formatting options, read more at:
 
 - https://pandoc.org/MANUAL.html#pandocs-markdown
 
