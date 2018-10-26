@@ -22,7 +22,6 @@ RoxygenNote: 6.1.0
 VignetteBuilder: knitr
 Remotes:
     github::GegznaV/addin.tools
-    github::ropenscilabs/icon
 Depends:
     R (>= 3.2),
     addin.tools (>= 0.0.4)
@@ -31,8 +30,7 @@ Imports:
     magrittr,
     stringi,
     stringr,
-    purrr,
-    icon
+    purrr
 Suggests:
     knitr,
     rmarkdown
