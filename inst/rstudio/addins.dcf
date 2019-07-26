@@ -146,6 +146,11 @@ Description: Inserts R code block for a figure/image.
 Binding: rmd_insert_figure_r_code_block
 Interactive: false
 
+Name: {Rmd} Footnote ^[...]
+Description: Enclose selection with ^[ and ].
+Binding: rmd_format_footnote
+Interactive: false
+
 Name: {Rmd} Figure ![...](...)
 Description: Enclose selection with ![ and ]().
 Binding: rmd_insert_figure
