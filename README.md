@@ -27,10 +27,10 @@ fig_id = sub("\\.","_",
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.6-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
+version](https://img.shields.io/badge/GitHub-0.0.7-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![Travis-CI Build
 Status](https://travis-ci.org/GegznaV/addins.rmd.png?branch=master)](https://travis-ci.org/GegznaV/addins.rmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2018--09--20-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--07--26-yellowgreen.svg)](/commits/master)
 <!-- [![Research software impact](http://depsy.org/api/package/cran/addins.rmd/badge.svg)](http://depsy.org/package/r/addins.rmd) -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addins.rmd)](http://www.rdocumentation.org/packages/addins.rmd) -->
