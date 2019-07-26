@@ -1,8 +1,8 @@
 Package: addins.rmd
 Type: Package
 Title: RStudio Add-ins to Format R Markdown Documents
-Version: 0.0.6
-Date: 2018-09-20
+Version: 0.0.7
+Date: 2019-07-26
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
@@ -18,7 +18,7 @@ License: MIT + file LICENSE
 LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1.9000
 VignetteBuilder: knitr
 Remotes:
     github::GegznaV/addin.tools
