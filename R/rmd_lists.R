@@ -143,6 +143,13 @@ rmd_list_z_example_list <- function() {
 #'
 #' @export
 
+# FIXME: Does nor temove this list correctly:
+# - 1.
+# - 2.
+# - 3.
+# - 4.
+# - 5.
+
 rmd_remove_list <- function(context = rs_get_context()) {
     # Roman numbers (capital and small)
     rom_c <- "(M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))"
