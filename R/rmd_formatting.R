@@ -112,6 +112,13 @@ rmd_format_strikethrough <- function(context = rs_get_context()) {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
+rmd_format_footnote <- function(context = rs_get_context()) {
+    rs_enclose_selection_with(symbol_before = "^[", symbol_after = "]",
+                              context = context)
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
 rmd_horizontal_rule <- function(context = rs_get_context()) {
     # Style ***
     # Style * * *
@@ -177,13 +184,13 @@ CAPTION = "" # Figure caption/description.
     if (zero_selection) {
         # Place cursor inside parentheses of `include_graphics`
         pos <- rstudioapi::document_position(
-            row    = rs_get_first_selected_row_index(context) + 1,
+            row    = rs_get_first_selected_row_index(context = context) + 1,
             column = 26
         )
     } else {
         # Place cursor inside parentheses of `CAPTION`
         pos <- rstudioapi::document_position(
-            row    = rs_get_first_selected_row_index(context) + 3,
+            row    = rs_get_first_selected_row_index(context = context) + 3,
             column = 12
         )
     }
