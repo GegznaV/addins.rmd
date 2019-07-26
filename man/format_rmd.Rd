@@ -13,6 +13,7 @@
 \alias{rmd_format_superscript}
 \alias{rmd_format_subscript}
 \alias{rmd_format_strikethrough}
+\alias{rmd_format_footnote}
 \alias{rmd_horizontal_rule}
 \alias{rmd_link_url}
 \alias{rmd_insert_figure}
@@ -46,6 +47,8 @@ rmd_format_superscript(context = rs_get_context())
 rmd_format_subscript(context = rs_get_context())
 
 rmd_format_strikethrough(context = rs_get_context())
+
+rmd_format_footnote(context = rs_get_context())
 
 rmd_horizontal_rule(context = rs_get_context())
 
