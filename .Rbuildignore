@@ -10,3 +10,4 @@
 ^pkgdown.*
 ^pkgdown$
 ^docs/.*
+^TODO.Rmd$
