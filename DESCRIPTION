@@ -1,8 +1,8 @@
 Package: addins.rmd
 Type: Package
 Title: RStudio Add-ins to Format R Markdown Documents
-Version: 0.0.7
-Date: 2019-07-26
+Version: 0.0.8
+Date: 2019-07-31
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
@@ -24,13 +24,14 @@ Remotes:
     github::GegznaV/addin.tools
 Depends:
     R (>= 3.2),
-    addin.tools (>= 0.0.4)
+    addin.tools (>= 0.0.5)
 Imports:
     rstudioapi,
     magrittr,
     stringi,
     stringr,
-    purrr
+    purrr,
+    utils
 Suggests:
     knitr,
     rmarkdown
