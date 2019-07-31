@@ -71,8 +71,8 @@ rmd_symbol_en_dash(context = rs_get_context())
 rmd_symbol_em_dash(context = rs_get_context())
 }
 \arguments{
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 RStudio add-ins, which enclose selected text with symbols that have special

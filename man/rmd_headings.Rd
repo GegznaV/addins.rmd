@@ -33,8 +33,8 @@ rmd_heading_remove(style = c("auto", "both", "hash", "underline"),
   context = rs_get_context())
 }
 \arguments{
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 
 \item{style}{("auto", "both", "hash", "underline") indicates which style of heading to remove: \itemize{
     \item "both" - removes both heading formatting styles;

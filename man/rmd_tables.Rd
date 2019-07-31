@@ -23,8 +23,8 @@ rmd_table_style_simple(context = rs_get_context())
 rmd_table_style_grid(context = rs_get_context())
 }
 \arguments{
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 Insert examples of R Markdown tables.

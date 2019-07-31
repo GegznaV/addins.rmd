@@ -36,7 +36,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">addins.rmd</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.8</span>
       </span>
     </div>
 
@@ -68,52 +68,22 @@
 
     
     
-<!-- 
-
-TO DO: 
-
-1. Create an interactive addin, that enables to select formatting options;
-2. Write unit tests.
-3. Insert link [label](link_location)
-4. Insert image ![caption](image_location)
-5. Insert image with caption (interactive input through Shiny):
-
-fig_id = sub("\\.","_",
-             paste0("fig_ID__", (as.double(Sys.time()))))
-
-<div class="figure" style="text-align: center">
-<img src="image_location" alt="The_caption_of_your_figure_comes_here..."  />
-<p class="caption">The_caption_of_your_figure_comes_here...</p>
-</div>
-
-6. Write function to check if there is a space before and after the selection
-(for %>% and similar operators)
-
-7. Add possibility not to add list bullets and numbers to the empty rows.
-
--->
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<!-- [![Rdoc](http://www.rdocumentation.org/badges/version/addins.rmd)](http://www.rdocumentation.org/packages/addins.rmd) -->
-<!--
-
--->
 <hr>
-<p><img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"></p>
+<!-- ```{r, fig.align='center', out.height='30%', out.width='30%', echo=FALSE, eval = FALSE} --><!-- knitr::include_graphics("http://gegznav.github.io/addins.rmd/logo.png") --><!-- ``` --><p><img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"></p>
 <div id="r-package-addins-rmd" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#r-package-addins-rmd" class="anchor"></a>R package <strong>addins.rmd</strong>
 </h1></div>
 <p>Package <code>addins.rmd</code> is an <em>R</em> package that provides a set of <em>RStudio</em> addins for <em>R Markdown</em>. The main purpose of this package is to alleviate learning process of <em>R Markdown</em> syntax.</p>
-<!-- 
-1) **format text in R Markdown documents**: 
-    - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
-that is interpreted as "**bold**").
-2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position; 
-3)  **replace** symbols in selected
-pieces of text (e.g., convert backslashes to forward slashes which results 
-in strings like `"c:\data\"` converted into `"c:/data/"`). 
--->
+<!-- 1) **format text in R Markdown documents**:  -->
+<!--     - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*" -->
+<!-- that is interpreted as "**bold**"). -->
+<!-- 2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position;  -->
+<!-- 3)  **replace** symbols in selected -->
+<!-- pieces of text (e.g., convert backslashes to forward slashes which results  -->
+<!-- in strings like `"c:\data\"` converted into `"c:/data/"`).  -->
 <div id="install-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install-package" class="anchor"></a>Install package</h2>
@@ -209,9 +179,9 @@ in strings like `"c:\data\"` converted into `"c:/data/"`).
 <ul class="list-unstyled">
 <li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed"></a></li>
 <li><a href="https://cran.r-project.org/package=addins.rmd"><embed src="http://www.r-pkg.org/badges/version/addins.rmd"></embed></a></li>
-<li><a href="https://github.com/GegznaV/addins.rmd"><img src="https://img.shields.io/badge/GitHub-0.0.7-brightgreen.svg" alt="GitHub version"></a></li>
-<li><a href="https://travis-ci.org/GegznaV/addins.rmd"><img src="https://travis-ci.org/GegznaV/addins.rmd.png?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2019--07--26-yellowgreen.svg" alt="Updated-on"></a></li>
+<li><a href="https://github.com/GegznaV/addins.rmd"><img src="https://img.shields.io/badge/GitHub-0.0.8-brightgreen.svg" alt="GitHub version"></a></li>
+<li><a href="https://travis-ci.org/GegznaV/addins.rmd"><img src="https://travis-ci.org/GegznaV/addins.rmd.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2019--07--31-yellowgreen.svg" alt="Updated-on"></a></li>
 </ul>
 </div>
 </div>

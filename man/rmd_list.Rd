@@ -38,8 +38,8 @@ rmd_list_z_example_list()
 
 \item{level}{(integer) the level of list.}
 
-\item{context}{Object with context of active RStudio document
-(class \code{document_context}).}
+\item{context}{(class \code{document_context}) \cr
+Object with context of active RStudio document.}
 }
 \description{
 RStudio add-ins which formats text as R Markdown lists.
