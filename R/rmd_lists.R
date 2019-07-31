@@ -1,4 +1,4 @@
-# TODO:
+# TODO: rmd_list() add:
 # 1. Ability to skip empty lines;
 # 2. Ability to continue numbering.
 
@@ -143,7 +143,7 @@ rmd_list_z_example_list <- function() {
 #'
 #' @export
 
-# FIXME: Does nor temove this list correctly:
+# FIXME: Does not remove this list correctly in this situation:
 # - 1.
 # - 2.
 # - 3.
