@@ -42,3 +42,14 @@ CAPTION = "The_caption_of_your_figure_comes_here..."
      1. Ability to skip empty lines;
      2. Ability to continue numbering.
      
+
+10. add_hash_style_heading(), rmd_heading_remove()
+Application of "insert H1" addin in a row results in removed rows only on seccond time:
+```
+          1
+
+#           1
+
+# 1
+```
+Fixit or document the behavior.
