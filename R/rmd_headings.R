@@ -80,7 +80,7 @@ rmd_heading_remove <- function(
     ) {
 
     style <- match.arg(style, several.ok = FALSE)
-    row <- rs_get_first_selected_row_index(context = context)
+    row   <- rs_get_index_first_selected_row(context = context)
 
     is_underline <- is_underline_style_heading(row, context = context)
 
