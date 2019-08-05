@@ -53,3 +53,14 @@ Application of "insert H1" addin in a row results in removed rows only on seccon
 # 1
 ```
 Fixit or document the behavior.
+
+11. New feature: add `\`  at the end of the line as break line symbol (the same as two spaces `  `)
+
+12. Add reference-like (interactive) addin for links and images:
+```
+[text][id]
+
+[id]: url "name"
+```
+
+13. Add indentation style code blocks: starts after blank line with indentation of 4 spaces and ends at not indented line.
