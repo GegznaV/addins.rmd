@@ -11,38 +11,38 @@ NULL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_md <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = tbl_md,
-                              context = context)
+  rs_enclose_selected_rows_with(text_above = tbl_md,
+    context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_md_alternative <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = tbl_md_alternative,
-                              context = context)
+  rs_enclose_selected_rows_with(text_above = tbl_md_alternative,
+    context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_multiline <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = tbl_multiline,
-                              context = context)
+  rs_enclose_selected_rows_with(text_above = tbl_multiline,
+    context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_multiline_no_colnames <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = tbl_multiline_no_colnames,
-                              context = context)
+  rs_enclose_selected_rows_with(text_above = tbl_multiline_no_colnames,
+    context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_simple <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = tbl_simple,
-                              context = context)
+  rs_enclose_selected_rows_with(text_above = tbl_simple,
+    context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_tables
 rmd_table_style_grid <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = tbl_grid,
-                              context = context)
+  rs_enclose_selected_rows_with(text_above = tbl_grid,
+    context = context)
 }
 
 
@@ -50,7 +50,7 @@ rmd_table_style_grid <- function(context = rs_get_context()) {
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tbl_simple <- c(
-    "
+  "
 
 Left-aligned      Centered column       Right-aligned
 --------------  -------------------  ----------------
@@ -63,7 +63,7 @@ Row_3_Col_1        Row_3_Col_2          Row_3_Col_3
 ")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tbl_md <- c(
-    "
+  "
 
 Auto-aligned  | Left-aligned  |   Centered    | Right-aligned
 ------------- | :------------ | :-----------: | ------------:
@@ -77,7 +77,7 @@ Auto-aligned  | Left-aligned  |   Centered    | Right-aligned
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 tbl_md_alternative <- c(
-"
+  "
 
 | Auto-aligned  | Left-aligned  |   Centered    | Right-aligned |
 | ------------- | :------------ | :-----------: | ------------: |
@@ -91,7 +91,7 @@ tbl_md_alternative <- c(
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tbl_multiline <- c(
-"
+  "
 
 -----------------------------------------------------
 Left-aligned      Centered column      Right-aligned
@@ -109,7 +109,7 @@ Row_3_Col_1        Row_3_Col_2         Row_3_Col_3
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tbl_multiline_no_colnames <- c(
-"
+  "
 
 --------------  -----------------  ----------------
 Row_1_Col_1        Row_1_Col_2          Row_1_Col_3
@@ -125,7 +125,7 @@ Row_3_Col_1        Row_3_Col_2          Row_3_Col_3
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tbl_grid <- c(
-"
+  "
 
 +---------------+---------------+--------------------+
 | Right-aligned |  Centered     |  Auto-aligned      |
