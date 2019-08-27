@@ -5,10 +5,10 @@
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.8-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
+version](https://img.shields.io/badge/GitHub-0.0.9-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![Travis-CI Build
 Status](https://travis-ci.org/GegznaV/addins.rmd.svg?branch=master)](https://travis-ci.org/GegznaV/addins.rmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--07--31-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--08--27-yellowgreen.svg)](/commits/master)
 
 -----
 
@@ -23,7 +23,7 @@ Status](https://travis-ci.org/GegznaV/addins.rmd.svg?branch=master)](https://tra
 # R package **addins.rmd**
 
 Package `addins.rmd` is an *R* package that provides a set of *RStudio*
-addins for *R Markdown*. The main purpose of this package is to
+add-ins for *R Markdown*. The main purpose of this package is to
 alleviate learning process of *R Markdown* syntax.
 
 <!-- 1) **format text in R Markdown documents**:  -->
@@ -53,11 +53,10 @@ alleviate learning process of *R Markdown* syntax.
 Install development version from GitHub:
 
 ``` r
-if (!require(devtools)) 
-    install.packages("devtools")
+if (!require(remotes)) {install.packages("remotes")}
 
-devtools::install_github("GegznaV/addin.tools")
-devtools::install_github("GegznaV/addins.rmd")
+remotes::install_github("GegznaV/addin.tools")
+remotes::install_github("GegznaV/addins.rmd")
 ```
 
 <!-- Recommended workflow and a few examples -->
@@ -76,42 +75,63 @@ devtools::install_github("GegznaV/addins.rmd")
 
 <!-- browseVignettes("addins.rmd") -->
 
+For the current version of the package:
+
+1)  Find and click *RStudio* “Addins” button;
+2)  Type **`{Rmd}`** in the add-ins search box;
+3)  All the add-ins of the package **addins.rmd** will be displayed in
+    the drop-down list below.
+
+![**Fig. 1.** Steps to find addins of the package
+**addins.rmd**.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/steps-search-addins.png)
+
 # How to use the add-ins
 
 Below you can find a few examples how to use the add-ins of the package.
 
 ## Convert text into headings
 
-![**Demonstration 1: headings.** Place a cursor with a mouse and use a
-necessary
-add-in.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif)
+![**Fig. 2.** **Demonstration 1: headings.** Place a cursor with a mouse
+and use a necessary add-in.  
+*(In this demonstrations, older version of the package is
+used.)*](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif)
 
 <br>
 
-![**Demonstration 2: headings.** Notice that, if needed, a blank line
-above the selection is
+![**Fig. 3.** Demonstration 2: headings.\*\* Notice that, if needed, a
+blank line above the selection is
 added.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif)
 
 <br><br>
 
 ## Basic text formatting
 
-![**Demonstration 3: basic formatting.** Before using this type of
-add-in, select a piece of text that should be
-formatted.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif)
+![**Fig. 4.** **Demonstration 3: basic formatting.** Before using this
+type of add-in, select a piece of text that should be formatted.  
+*(In this demonstrations, older version of the package is
+used.)*](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif)
 
 <br><br>
 
 ## Create lists
 
-![**Demonstration 4: lists.** The lists can be numbered and unnumbered.
-They can have several
-levels.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif)
+![**Fig. 5.** **Demonstration 4: lists.** The lists can be numbered and
+unnumbered. They can have several levels. *(In this demonstrations,
+older version of the package is
+used.)*](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif)
+
+<br><br>
+
+## Create R code chunks
+
+![**Fig. 6.** **Demonstration 5: R code chunks.** Select one or several
+lines with code, select an appropriate add-in and include code into a
+chunk.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-chunk-add-1.gif)
 
 # Pandoc’s Markdown
 
 *R Markdown* syntax is based on Pandoc’s Markdown syntax. If you need
-more advanced formatting options, read more at:
+more advanced formatting options, please, read more at:
 
   - <https://pandoc.org/MANUAL.html#pandocs-markdown>
 

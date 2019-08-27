@@ -76,7 +76,7 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#r-package-addins-rmd" class="anchor"></a>R package <strong>addins.rmd</strong>
 </h1></div>
-<p>Package <code>addins.rmd</code> is an <em>R</em> package that provides a set of <em>RStudio</em> addins for <em>R Markdown</em>. The main purpose of this package is to alleviate learning process of <em>R Markdown</em> syntax.</p>
+<p>Package <code>addins.rmd</code> is an <em>R</em> package that provides a set of <em>RStudio</em> add-ins for <em>R Markdown</em>. The main purpose of this package is to alleviate learning process of <em>R Markdown</em> syntax.</p>
 <!-- 1) **format text in R Markdown documents**:  -->
 <!--     - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*" -->
 <!-- that is interpreted as "**bold**"). -->
@@ -92,11 +92,10 @@
 <!-- install.packages("addins.rmd") -->
 <!-- ``` -->
 <p>Install development version from GitHub:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(devtools)) </a>
-<a class="sourceLine" id="cb1-2" title="2">    <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb1-3" title="3"></a>
-<a class="sourceLine" id="cb1-4" title="4">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/reexports.html">install_github</a></span>(<span class="st">"GegznaV/addin.tools"</span>)</a>
-<a class="sourceLine" id="cb1-5" title="5">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/reexports.html">install_github</a></span>(<span class="st">"GegznaV/addins.rmd"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(remotes)) {<span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)}</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3">remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"GegznaV/addin.tools"</span>)</a>
+<a class="sourceLine" id="cb1-4" title="4">remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"GegznaV/addins.rmd"</span>)</a></code></pre></div>
 <!-- Recommended workflow and a few examples -->
 <!-- ----------------------------------------------------- -->
 <!-- Get started online http://gegznav.github.io/addins.rmd/articles/v1_workflow.html -->
@@ -105,6 +104,15 @@
 <!-- vignette("v1_workflow", package = "addins.rmd") -->
 <!-- ``` -->
 <!-- browseVignettes("addins.rmd") -->
+<p>For the current version of the package:</p>
+<ol style="list-style-type: decimal">
+<li>Find and click <em>RStudio</em> “Addins” button;</li>
+<li>Type <strong><code>{Rmd}</code></strong> in the add-ins search box;</li>
+<li>All the add-ins of the package <strong>addins.rmd</strong> will be displayed in the drop-down list below.</li>
+</ol>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/steps-search-addins.png" alt="Fig. 1. Steps to find addins of the package addins.rmd."><p class="caption"><strong>Fig. 1.</strong> Steps to find addins of the package <strong>addins.rmd</strong>.</p>
+</div>
 </div>
 </div>
 <div id="how-to-use-the-add-ins" class="section level1">
@@ -115,11 +123,11 @@
 <h2 class="hasAnchor">
 <a href="#convert-text-into-headings" class="anchor"></a>Convert text into headings</h2>
 <div class="figure">
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif" alt="Demonstration 1: headings. Place a cursor with a mouse and use a necessary add-in."><p class="caption"><strong>Demonstration 1: headings.</strong> Place a cursor with a mouse and use a necessary add-in.</p>
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif" alt="Fig. 2. Demonstration 1: headings. Place a cursor with a mouse and use a necessary add-in. (In this demonstrations, older version of the package is used.)"><p class="caption"><strong>Fig. 2.</strong> <strong>Demonstration 1: headings.</strong> Place a cursor with a mouse and use a necessary add-in.<br><em>(In this demonstrations, older version of the package is used.)</em></p>
 </div>
 <p><br></p>
 <div class="figure">
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif" alt="Demonstration 2: headings. Notice that, if needed, a blank line above the selection is added."><p class="caption"><strong>Demonstration 2: headings.</strong> Notice that, if needed, a blank line above the selection is added.</p>
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif" alt="Fig. 3. Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added."><p class="caption"><strong>Fig. 3.</strong> Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.</p>
 </div>
 <p><br><br></p>
 </div>
@@ -127,7 +135,7 @@
 <h2 class="hasAnchor">
 <a href="#basic-text-formatting" class="anchor"></a>Basic text formatting</h2>
 <div class="figure">
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif" alt="Demonstration 3: basic formatting. Before using this type of add-in, select a piece of text that should be formatted."><p class="caption"><strong>Demonstration 3: basic formatting.</strong> Before using this type of add-in, select a piece of text that should be formatted.</p>
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif" alt="Fig. 4. Demonstration 3: basic formatting. Before using this type of add-in, select a piece of text that should be formatted. (In this demonstrations, older version of the package is used.)"><p class="caption"><strong>Fig. 4.</strong> <strong>Demonstration 3: basic formatting.</strong> Before using this type of add-in, select a piece of text that should be formatted.<br><em>(In this demonstrations, older version of the package is used.)</em></p>
 </div>
 <p><br><br></p>
 </div>
@@ -135,16 +143,24 @@
 <h2 class="hasAnchor">
 <a href="#create-lists" class="anchor"></a>Create lists</h2>
 <div class="figure">
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif" alt="Demonstration 4: lists. The lists can be numbered and unnumbered. They can have several levels."><p class="caption"><strong>Demonstration 4: lists.</strong> The lists can be numbered and unnumbered. They can have several levels.</p>
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif" alt="Fig. 5. Demonstration 4: lists. The lists can be numbered and unnumbered. They can have several levels. (In this demonstrations, older version of the package is used.)"><p class="caption"><strong>Fig. 5.</strong> <strong>Demonstration 4: lists.</strong> The lists can be numbered and unnumbered. They can have several levels. <em>(In this demonstrations, older version of the package is used.)</em></p>
+</div>
+<p><br><br></p>
+</div>
+<div id="create-r-code-chunks" class="section level2">
+<h2 class="hasAnchor">
+<a href="#create-r-code-chunks" class="anchor"></a>Create R code chunks</h2>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-chunk-add-1.gif" alt="Fig. 6. Demonstration 5: R code chunks. Select one or several lines with code, select an appropriate add-in and include code into a chunk."><p class="caption"><strong>Fig. 6.</strong> <strong>Demonstration 5: R code chunks.</strong> Select one or several lines with code, select an appropriate add-in and include code into a chunk.</p>
 </div>
 </div>
 </div>
 <div id="pandocs-markdown" class="section level1">
 <h1 class="hasAnchor">
 <a href="#pandocs-markdown" class="anchor"></a>Pandoc’s Markdown</h1>
-<p><em>R Markdown</em> syntax is based on Pandoc’s Markdown syntax. If you need more advanced formatting options, read more at:</p>
+<p><em>R Markdown</em> syntax is based on Pandoc’s Markdown syntax. If you need more advanced formatting options, please, read more at:</p>
 <ul>
-<li><a href="https://pandoc.org/MANUAL.html#pandocs-markdown" class="uri">https://pandoc.org/MANUAL.html#pandocs-markdown</a></li>
+<li><a href="https://pandoc.org/MANUAL.html#pandocs-markdown" target="_blank">https://pandoc.org/MANUAL.html#pandocs-markdown</a></li>
 </ul>
 <hr>
 <p>More information at <a href="http://gegznav.github.io/addins.rmd/" class="uri">http://gegznav.github.io/addins.rmd/</a></p>
@@ -179,9 +195,9 @@
 <ul class="list-unstyled">
 <li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed"></a></li>
 <li><a href="https://cran.r-project.org/package=addins.rmd"><embed src="http://www.r-pkg.org/badges/version/addins.rmd"></embed></a></li>
-<li><a href="https://github.com/GegznaV/addins.rmd"><img src="https://img.shields.io/badge/GitHub-0.0.8-brightgreen.svg" alt="GitHub version"></a></li>
+<li><a href="https://github.com/GegznaV/addins.rmd"><img src="https://img.shields.io/badge/GitHub-0.0.9-brightgreen.svg" alt="GitHub version"></a></li>
 <li><a href="https://travis-ci.org/GegznaV/addins.rmd"><img src="https://travis-ci.org/GegznaV/addins.rmd.svg?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2019--07--31-yellowgreen.svg" alt="Updated-on"></a></li>
+<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2019--08--27-yellowgreen.svg" alt="Updated-on"></a></li>
 </ul>
 </div>
 </div>
