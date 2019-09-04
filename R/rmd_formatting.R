@@ -179,7 +179,8 @@ CAPTION = "" # Figure caption/description.
                               context = context)
 
     # Change cursor's position
-    zero_selection <- isTRUE(nchar(stringr::str_trim(rs_get_selection_text(context))) == 0)
+    zero_selection <-
+        isTRUE(nchar(stringr::str_trim(rs_get_selection_text(context = context))) == 0)
 
     if (zero_selection) {
         # Place cursor inside parentheses of `include_graphics`
