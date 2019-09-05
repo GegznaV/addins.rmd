@@ -85,17 +85,17 @@ rmd_heading_remove <- function(
     is_underline <- is_underline_style_heading(row, context = context)
 
     switch(style,
-           "underline" = rm_underline_style_heading(row, context, is_underline),
-           "hash"      = rm_hash_style_heading(row, context = context),
+           "underline" = rm_underline_style_heading(row = row, context =  context, detected = is_underline),
+           "hash"      = rm_hash_style_heading(row = row, context = context),
            "both"      = {
-               rm_underline_style_heading(row, context, is_underline)
-               rm_hash_style_heading(row, context)
+               rm_underline_style_heading(row = row, context = context, detected = is_underline)
+               rm_hash_style_heading(row = row, context = context)
            },
            "auto"      =
                if (isTRUE(is_underline)) {
-                   rm_underline_style_heading(row, context, is_underline)
+                   rm_underline_style_heading(row = row, context = context, detected = is_underline)
                } else {
-                   rm_hash_style_heading(row, context)
+                   rm_hash_style_heading(row = row, context = context)
                }
            )
 }
