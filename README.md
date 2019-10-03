@@ -8,7 +8,7 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 version](https://img.shields.io/badge/GitHub-0.0.9-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![Travis-CI Build
 Status](https://travis-ci.org/GegznaV/addins.rmd.svg?branch=master)](https://travis-ci.org/GegznaV/addins.rmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--08--27-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--10--03-yellowgreen.svg)](/commits/master)
 
 -----
 
@@ -59,6 +59,10 @@ remotes::install_github("GegznaV/addin.tools")
 remotes::install_github("GegznaV/addins.rmd")
 ```
 
+<br>
+
+# How to use thse add-ins
+
 <!-- Recommended workflow and a few examples -->
 
 <!-- ----------------------------------------------------- -->
@@ -84,8 +88,6 @@ For the current version of the package:
 
 ![**Fig. 1.** Steps to find addins of the package
 **addins.rmd**.](https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/steps-search-addins.png)
-
-# How to use the add-ins
 
 Below you can find a few examples how to use the add-ins of the package.
 

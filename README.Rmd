@@ -58,6 +58,11 @@ remotes::install_github("GegznaV/addin.tools")
 remotes::install_github("GegznaV/addins.rmd")
 ```
 
+<br>
+
+How to use thse add-ins
+==============================================================================
+
 <!-- Recommended workflow and a few examples -->
 <!-- ----------------------------------------------------- -->
 
@@ -72,9 +77,9 @@ remotes::install_github("GegznaV/addins.rmd")
 
 For the current version of the package:
 
-(1) Find and click *RStudio* "Addins" button;
-(2) Type **`{Rmd}`** in the add-ins search box;
-(3) All the add-ins of the package **addins.rmd** will be displayed in the drop-down list below.
+1) Find and click *RStudio* "Addins" button;
+2) Type **`{Rmd}`** in the add-ins search box;
+3) All the add-ins of the package **addins.rmd** will be displayed in the drop-down list below.
 
 ```{r steps-search-addins, echo=FALSE, fig.cap=CAPTION}
 knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/steps-search-addins.png")
@@ -82,9 +87,6 @@ knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/ma
 CAPTION = "**Fig. 1.** Steps to find addins of the package **addins.rmd**.  "
 ```
 
-
-How to use the add-ins
-==============================================================================
 
 Below you can find a few examples how to use the add-ins of the package.
 
