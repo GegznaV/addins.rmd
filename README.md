@@ -5,10 +5,10 @@
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.9-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
+version](https://img.shields.io/badge/GitHub-0.0.10-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![Travis-CI Build
 Status](https://travis-ci.org/GegznaV/addins.rmd.svg?branch=master)](https://travis-ci.org/GegznaV/addins.rmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--10--03-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2019--10--10-yellowgreen.svg)](/commits/master)
 
 -----
 
