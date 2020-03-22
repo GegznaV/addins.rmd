@@ -134,7 +134,12 @@ rmd_horizontal_rule <- function(context = rs_get_context()) {
 # TODO: 1. [!!!] change text "url_link" with text in selection;
 #       2. Fix cursor position similarly as in `rmd_insert_figure_r_code_block`.
 #       3. Create interactive add-in.
-#
+
+# https://stackoverflow.com/a/17773849/4783029
+pattern_url <- "(https?://(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?://(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})"
+
+pattern_url_2 <- "^(((http(s)?|(ftp(s)?))://)(www\\.)?([a-zA-Z0-9][a-zA-Z0-9\\.\\/-]+[a-zA-Z0-9]\\.[^\\s]{2,})+(\\:[0-9]{5})?|(mailto:){1}([\\w\\.]+)\\@{1}[\\w]+\\.[\\w]{2,})\\s$"
+
 #' @rdname format_rmd
 #' @export
 rmd_link_url <- function(context = rs_get_context()) {
@@ -179,7 +184,8 @@ CAPTION = "" # Figure caption/description.
                               context = context)
 
     # Change cursor's position
-    zero_selection <- isTRUE(nchar(stringr::str_trim(rs_get_selection_text(context))) == 0)
+    zero_selection <-
+        isTRUE(nchar(stringr::str_trim(rs_get_selection_text(context = context))) == 0)
 
     if (zero_selection) {
         # Place cursor inside parentheses of `include_graphics`

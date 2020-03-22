@@ -27,7 +27,7 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
 
     ind <- seq_along(selected_rows)
 
-    # Indentation for level of list
+    # Indentation for list levels
     lev <- rep("\t", level - 1)
 
     text <- switch(type,

@@ -58,7 +58,7 @@ Row_1_Col_1        Row_1_Col_2          Row_1_Col_3
 Row_2_Col_1        Row_2_Col_2          Row_2_Col_3
 Row_3_Col_1        Row_3_Col_2          Row_3_Col_3
 
-: The name of the simple-style table.
+: The caption of the simple-style table.
 
 ")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +71,7 @@ Auto-aligned  | Left-aligned  |   Centered    | Right-aligned
  Row_2_Col_1  |  Row_2_Col_2  |  Row_2_Col_3  |  Row_2_Col_4
  Row_3_Col_1  |  Row_3_Col_2  |  Row_3_Col_3  |  Row_3_Col_4
 
-: The name of the markdown-style table.
+: The caption of the markdown-style table.
 
 ")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,7 +85,7 @@ tbl_md_alternative <- c(
 |  Row_2_Col_1  |  Row_2_Col_2  |  Row_2_Col_3  |  Row_2_Col_4  |
 |  Row_3_Col_1  |  Row_3_Col_2  |  Row_3_Col_3  |  Row_3_Col_4  |
 
-: The name of the markdown-style table.
+: The caption of the markdown-style table.
 
 ")
 
@@ -103,7 +103,7 @@ Row_2_Col_1        Row_2_Col_2         Row_2_Col_3
 Row_3_Col_1        Row_3_Col_2         Row_3_Col_3
 -----------------------------------------------------
 
-: The name of the multi-row table.
+: The caption of the multi-row table.
 
 ")
 
@@ -119,7 +119,7 @@ Row_2_Col_1        Row_2_Col_2          Row_2_Col_3
 Row_3_Col_1        Row_3_Col_2          Row_3_Col_3
 --------------  -----------------  ----------------
 
-: The name of the table without column names.
+: The caption of the table without column names.
 
 ")
 
@@ -137,7 +137,7 @@ tbl_grid <- c(
 |               |               | - Row_2_Col_3b     |
 +---------------+---------------+--------------------+
 
-:  The name of the grid-style table.
+:  The caption of the grid-style table.
 
 ")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
