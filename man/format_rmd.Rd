@@ -81,10 +81,14 @@ interpretation in R Markdown.
 \seealso{
 https://pandoc.org/MANUAL.html#backslash-escapes
 
-Other R Markdown formatting add-ins: \code{\link{rmd_code_block}},
-  \code{\link{rmd_equations}}, \code{\link{rmd_list}}
+Other R Markdown formatting add-ins: 
+\code{\link{rmd_code_block}()},
+\code{\link{rmd_equations}},
+\code{\link{rmd_list}()}
 
-Other R Markdown formatting add-ins: \code{\link{rmd_code_block}},
-  \code{\link{rmd_equations}}, \code{\link{rmd_list}}
+Other R Markdown formatting add-ins: 
+\code{\link{rmd_code_block}()},
+\code{\link{rmd_equations}},
+\code{\link{rmd_list}()}
 }
 \concept{R Markdown formatting add-ins}

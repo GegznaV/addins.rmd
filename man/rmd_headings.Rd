@@ -29,8 +29,10 @@ rmd_heading_1_title(context = rs_get_context())
 
 rmd_heading_2_subtitle(context = rs_get_context())
 
-rmd_heading_remove(style = c("auto", "both", "hash", "underline"),
-  context = rs_get_context())
+rmd_heading_remove(
+  style = c("auto", "both", "hash", "underline"),
+  context = rs_get_context()
+)
 }
 \arguments{
 \item{context}{(class \code{document_context}) \cr
