@@ -30,38 +30,39 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
     # Indentation for list levels
     lev <- rep("\t", level - 1)
 
-    text <- switch(type,
-                   "1" = ,
-                   "ordered" = ,
-                   "numbered" = ,
-                   "numbers" = paste0(lev, ind,          ". "),
+    text <- switch(
+        type,
+        "1" = ,
+        "ordered" = ,
+        "numbered" = ,
+        "numbers" = paste0(lev, ind,          ". "),
 
-                   "a" = ,
-                   "lettered" = ,
-                   "letters" = paste0(lev, letters[ind], ". "),
+        "a" = ,
+        "lettered" = ,
+        "letters" = paste0(lev, letters[ind], ". "),
 
-                   "A" = ,
-                   "LETTERED" = ,
-                   "LETTERS" = paste0(lev, LETTERS[ind], ". "),
+        "A" = ,
+        "LETTERED" = ,
+        "LETTERS" = paste0(lev, LETTERS[ind], ". "),
 
-                   "+" = ,
-                   "unordered" = paste0(lev, rep("+", max(ind)), " "),
+        "+" = ,
+        "unordered" = paste0(lev, rep("+", max(ind)), " "),
 
-                   "-" = paste0(lev, rep("-", max(ind)), " "),
-                   "*" = paste0(lev, rep("*", max(ind)), " "),
+        "-" = paste0(lev, rep("-", max(ind)), " "),
+        "*" = paste0(lev, rep("*", max(ind)), " "),
 
-                   "(@)" = ,
-                   "@" = ,
-                   "master" = ,
-                   "example list" = paste0(rep("(@)", max(ind)), " "),
+        "(@)" = ,
+        "@" = ,
+        "master" = ,
+        "example list" = paste0(rep("(@)", max(ind)), " "),
 
-                   "block quotes" = ,
-                   ">" = paste0(rep(">", max(ind)), " "),
+        "block quotes" = ,
+        ">" = paste0(rep(">", max(ind)), " "),
 
-                   "line blocks" = ,
-                   "|" = paste0(rep("|", max(ind)), " "),
+        "line blocks" = ,
+        "|" = paste0(rep("|", max(ind)), " "),
 
-                   stop("Unrecognized symol.")
+        stop("Unrecognized symol.")
     )
 
 
