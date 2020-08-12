@@ -77,27 +77,28 @@ rmd_heading_2_subtitle <- function(context = rs_get_context()) {
 rmd_heading_remove <- function(
     style = c("auto", "both", "hash", "underline"),
     context = rs_get_context()
-    ) {
+) {
 
     style <- match.arg(style, several.ok = FALSE)
     row   <- rs_get_index_first_selected_row(context = context)
 
     is_underline <- is_underline_style_heading(row, context = context)
 
-    switch(style,
-           "underline" = rm_underline_style_heading(row = row, context =  context, detected = is_underline),
-           "hash"      = rm_hash_style_heading(row = row, context = context),
-           "both"      = {
-               rm_underline_style_heading(row = row, context = context, detected = is_underline)
-               rm_hash_style_heading(row = row, context = context)
-           },
-           "auto"      =
-               if (isTRUE(is_underline)) {
-                   rm_underline_style_heading(row = row, context = context, detected = is_underline)
-               } else {
-                   rm_hash_style_heading(row = row, context = context)
-               }
-           )
+    switch(
+        style,
+        "underline" = rm_underline_style_heading(row = row, context =  context, detected = is_underline),
+        "hash"      = rm_hash_style_heading(row = row, context = context),
+        "both"      = {
+            rm_underline_style_heading(row = row, context = context, detected = is_underline)
+            rm_hash_style_heading(row = row, context = context)
+        },
+        "auto"      =
+            if (isTRUE(is_underline)) {
+                rm_underline_style_heading(row = row, context = context, detected = is_underline)
+            } else {
+                rm_hash_style_heading(row = row, context = context)
+            }
+    )
 }
 
 # ============================================================================
@@ -116,8 +117,8 @@ add_underline_style_heading <- function(symbol = "=", context = rs_get_context()
     text <- repeat_symbol(symbol, len)
     rmd_heading_remove(style = "underline", context = context)
     rs_enclose_first_row_with(text_below = text,
-                              ensure_blank_above = TRUE,
-                              context = context)
+        ensure_blank_above = TRUE,
+        context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 is_underline_style_heading <- function(row, context) {
@@ -145,8 +146,8 @@ rm_underline_style_heading <- function(row, context, detected) {
 add_hash_style_heading <- function(symbol = "# ", context = rs_get_context()) {
     rmd_heading_remove(style = "both", context = context)
     rs_insert_before_first_selected_row(symbol,
-                                        ensure_blank_above = TRUE,
-                                        context = context)
+        ensure_blank_above = TRUE,
+        context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm_leading_hash <- function(str) {
