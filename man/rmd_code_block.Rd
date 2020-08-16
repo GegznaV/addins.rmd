@@ -29,7 +29,9 @@ These functions internally use function
 that adds lines above and below the selection.
 }
 \seealso{
-Other R Markdown formatting add-ins: \code{\link{format_rmd}},
-  \code{\link{rmd_equations}}, \code{\link{rmd_list}}
+Other R Markdown formatting add-ins: 
+\code{\link{format_rmd}},
+\code{\link{rmd_equations}},
+\code{\link{rmd_list}()}
 }
 \concept{R Markdown formatting add-ins}

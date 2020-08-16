@@ -3,7 +3,6 @@
 \docType{package}
 \name{addins.rmd}
 \alias{addins.rmd}
-\alias{addins.rmd-package}
 \title{RStudio Add-ins for R Markdown}
 \description{
 \code{addins.rmd} provides a set of RStudio add-ins to format R Markdown documents.
