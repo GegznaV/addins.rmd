@@ -26,6 +26,6 @@
 #'
 #'
 #' @import addin.tools
-#' @example
+#' @examples
 #' # Use this package as an RStudio addin.
 NULL
