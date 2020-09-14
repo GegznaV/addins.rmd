@@ -35,6 +35,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          options("repos" = "https://cran.rstudio.com/")
           install.packages("remotes")
           install.packages("rmarkdown")
           install.packages("ps")
