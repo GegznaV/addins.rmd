@@ -12,6 +12,9 @@
 \code{Bug reports and suggestions:} \url{https://github.com/GegznaV/addins.rmd/issues} \cr
 \code{Author:} Vilmantas Gegzna
 }
+\examples{
+# Use this package as an RStudio addin.
+}
 \seealso{
 Use the links below to learn more about RStudio add-ins
 and especially how to use them in combination with user-defined
