@@ -12,3 +12,4 @@
 ^docs/.*
 ^TODO.Rmd$
 ^_tmp$
+^\.github$

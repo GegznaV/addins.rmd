@@ -76,6 +76,15 @@ rmd_format_italics2 <- function(context = rs_get_context()) {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
+rmd_format_html_comment <- function(context = rs_get_context()) {
+  rs_enclose_selection_with(
+    symbol_before = "<!--", symbol_after = "-->",
+    context = context
+  )
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
 rmd_code_inline <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol = "`",

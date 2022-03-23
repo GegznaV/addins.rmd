@@ -40,6 +40,11 @@ Description: Enclose selected text with ~~ and ~~.
 Binding: rmd_format_strikethrough
 Interactive: false
 
+Name: {Rmd} HTML comment (<!-- -->)
+Description: Enclose selected text with <!-- and -->.
+Binding: rmd_format_html_comment
+Interactive: false
+
 
 
 Name: {Rmd} Heading 1 (#)
