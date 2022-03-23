@@ -4,7 +4,7 @@ on:
   push:
     branches: [main, master, devel, develop, development]
   pull_request:
-    branches: [main, master, devel, develop, development]
+    branches: [main, master]
 
 name: R-CMD-check
 
