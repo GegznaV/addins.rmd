@@ -17,21 +17,27 @@ NULL
 #' @rdname rmd_equations
 #' @export
 rmd_equation_a_inline <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "$",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol = "$",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_equations
 #' @export
 rmd_equation_b_block <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "$$",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol = "$$",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_equations
 #' @export
 rmd_equation_b_block2 <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "\\[", symbol_after = "\\]",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol_before = "\\[", symbol_after = "\\]",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

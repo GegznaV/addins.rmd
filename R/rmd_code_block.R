@@ -23,23 +23,29 @@ NULL
 #' @rdname rmd_code_block
 #' @export
 rmd_code_block_r <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = "```{r}",
-                                  text_below = "```",
-                                  context = context)
+  rs_enclose_selected_rows_with(
+    text_above = "```{r}",
+    text_below = "```",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_code_block
 #' @export
 rmd_code_block <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = "```",
-                                  text_below = "```",
-                                  context = context)
+  rs_enclose_selected_rows_with(
+    text_above = "```",
+    text_below = "```",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_code_block
 #' @export
 rmd_code_block_r_split <- function(context = rs_get_context()) {
-    rs_enclose_selected_rows_with(text_above = "```\n\n```{r}",
-                                  context = context)
+  rs_enclose_selected_rows_with(
+    text_above = "```\n\n```{r}",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
