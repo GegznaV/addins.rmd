@@ -2,7 +2,9 @@ on:
   push:
     branches:
     - master
+    - main
     - devel
+    - development
 
 name: pkgdown
 
