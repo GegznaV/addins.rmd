@@ -175,8 +175,7 @@ pattern_url_2 <- "^(((http(s)?|(ftp(s)?))://)(www\\.)?([a-zA-Z0-9][a-zA-Z0-9\\.\
 #' @export
 rmd_link_url <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
-    symbol_before = "[",
-    symbol_after = "](url_link)",
+    symbol_before = "[", symbol_after = "](url_link)",
     context = context
   )
 }
@@ -189,8 +188,7 @@ rmd_link_url <- function(context = rs_get_context()) {
 #' @export
 rmd_insert_figure <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
-    symbol_before = "![",
-    symbol_after = "](path_to_figure)",
+    symbol_before = "![", symbol_after = "](path_to_figure)",
     context = context
   )
 }
