@@ -1,8 +1,8 @@
 Package: addins.rmd
 Type: Package
 Title: RStudio Add-ins to Format R Markdown Documents
-Version: 0.0.10.9000
-Date: 2020-05-29
+Version: 0.0.11
+Date: 2022-03-23  
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
