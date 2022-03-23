@@ -7,3 +7,5 @@
 #     cat("\nGoodbye at ", date(), "\n")
 # }
 
+# Styler options
+options(styler.cache_root = "styler")
