@@ -32,110 +32,133 @@ NULL
 #' @rdname format_rmd
 #' @export
 rmd_format_bold <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "**",
-                              context = context)
-
+  rs_enclose_selection_with(
+    symbol = "**",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_italics <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "_",
-                              context = context)
-
+  rs_enclose_selection_with(
+    symbol = "_",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_bold_italics <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "**_", symbol_after = "_**",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol_before = "**_", symbol_after = "_**",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_bold2 <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "__",
-                              context = context)
-
+  rs_enclose_selection_with(
+    symbol = "__",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_italics2 <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "*",
-                              context = context)
-
+  rs_enclose_selection_with(
+    symbol = "*",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_html_comment <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "<!--", symbol_after = "-->",
-                              context = context)
-
+  rs_enclose_selection_with(
+    symbol_before = "<!--", symbol_after = "-->",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_code_inline <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "`",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol = "`",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_code_inline_r <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "`r ", symbol_after = "`",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol_before = "`r ", symbol_after = "`",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_code_inline_highlighted_as_r <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "`", symbol_after = "`{.r}",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol_before = "`", symbol_after = "`{.r}",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_superscript <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "^",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol = "^",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_subscript <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "~",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol = "~",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_strikethrough <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol = "~~",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol = "~~",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_format_footnote <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "^[", symbol_after = "]",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol_before = "^[", symbol_after = "]",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 rmd_horizontal_rule <- function(context = rs_get_context()) {
-    # Style ***
-    # Style * * *
-    # Style ___
-    # Style _ _ _
-    # Style ---
-    # Style - - -
-    rs_enclose_selected_rows_with(text_below = "* * *",
-                                  context = context)
+  # Style ***
+  # Style * * *
+  # Style ___
+  # Style _ _ _
+  # Style ---
+  # Style - - -
+  rs_enclose_selected_rows_with(
+    text_below = "* * *",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -151,9 +174,11 @@ pattern_url_2 <- "^(((http(s)?|(ftp(s)?))://)(www\\.)?([a-zA-Z0-9][a-zA-Z0-9\\.\
 #' @rdname format_rmd
 #' @export
 rmd_link_url <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "[",
-                              symbol_after  = "](url_link)",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol_before = "[",
+    symbol_after = "](url_link)",
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # TODO: 1. [!!!] change text "path_to_figure" with text in selection;
@@ -163,51 +188,56 @@ rmd_link_url <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 rmd_insert_figure <- function(context = rs_get_context()) {
-    rs_enclose_selection_with(symbol_before = "![",
-                              symbol_after  = "](path_to_figure)",
-                              context = context)
+  rs_enclose_selection_with(
+    symbol_before = "![",
+    symbol_after = "](path_to_figure)",
+    context = context
+  )
 }
 
 #' @rdname format_rmd
 #' @export
 rmd_insert_figure_r_code_block <- function(context = rs_get_context()) {
-    # Generate figure ID
-    nr <- stringr::str_replace(as.character(unclass(Sys.time())), "\\.", "-")
+  # Generate figure ID
+  nr <- stringr::str_replace(as.character(unclass(Sys.time())), "\\.", "-")
 
-    # Generate code block
-    before <- stringr::str_glue(
-        '```{{r fig-ID-{nr}, echo=FALSE, fig.cap=CAPTION}}
-knitr::include_graphics("')
+  # Generate code block
+  before <- stringr::str_glue(
+    '```{{r fig-ID-{nr}, echo=FALSE, fig.cap=CAPTION}}
+knitr::include_graphics("'
+  )
 
-    after <-
-        '") # URL or path to your image.
+  after <-
+    '") # URL or path to your image.
 
 CAPTION = "" # Figure caption/description.
 ```'
 
-    # Insert text
-    rs_enclose_selection_with(symbol_before = before,
-                              symbol_after  = after,
-                              trim = TRUE,
-                              context = context)
+  # Insert text
+  rs_enclose_selection_with(
+    symbol_before = before,
+    symbol_after = after,
+    trim = TRUE,
+    context = context
+  )
 
-    # Change cursor's position
-    zero_selection <-
-        isTRUE(nchar(stringr::str_trim(rs_get_selection_text(context = context))) == 0)
+  # Change cursor's position
+  zero_selection <-
+    isTRUE(nchar(stringr::str_trim(rs_get_selection_text(context = context))) == 0)
 
-    if (zero_selection) {
-        # Place cursor inside parentheses of `include_graphics`
-        pos <- rstudioapi::document_position(
-            row    = rs_get_index_first_selected_row(context = context) + 1,
-            column = 26
-        )
-    } else {
-        # Place cursor inside parentheses of `CAPTION`
-        pos <- rstudioapi::document_position(
-            row    = rs_get_index_first_selected_row(context = context) + 3,
-            column = 12
-        )
-    }
+  if (zero_selection) {
+    # Place cursor inside parentheses of `include_graphics`
+    pos <- rstudioapi::document_position(
+      row    = rs_get_index_first_selected_row(context = context) + 1,
+      column = 26
+    )
+  } else {
+    # Place cursor inside parentheses of `CAPTION`
+    pos <- rstudioapi::document_position(
+      row    = rs_get_index_first_selected_row(context = context) + 3,
+      column = 12
+    )
+  }
 
-    rstudioapi::setCursorPosition(pos, id = context$id)
+  rstudioapi::setCursorPosition(pos, id = context$id)
 }

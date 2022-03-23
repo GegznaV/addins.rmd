@@ -26,139 +26,137 @@
 #' @name rmd_headings
 #' @export
 rmd_heading_1 <- function(context = rs_get_context()) {
-    add_hash_style_heading("# ", context = context)
+  add_hash_style_heading("# ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_2 <- function(context = rs_get_context()) {
-    add_hash_style_heading("## ", context = context)
+  add_hash_style_heading("## ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_3 <- function(context = rs_get_context()) {
-    add_hash_style_heading("### ", context = context)
+  add_hash_style_heading("### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_4 <- function(context = rs_get_context()) {
-    add_hash_style_heading("#### ", context = context)
+  add_hash_style_heading("#### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_5 <- function(context = rs_get_context()) {
-    add_hash_style_heading("##### ", context = context)
+  add_hash_style_heading("##### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_6 <- function(context = rs_get_context()) {
-    add_hash_style_heading("###### ", context = context)
+  add_hash_style_heading("###### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_1_title <- function(context = rs_get_context()) {
-    add_underline_style_heading("=", context = context)
+  add_underline_style_heading("=", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_2_subtitle <- function(context = rs_get_context()) {
-    add_underline_style_heading("-", context = context)
+  add_underline_style_heading("-", context = context)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_heading_remove <- function(
-    style = c("auto", "both", "hash", "underline"),
-    context = rs_get_context()
-) {
+rmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
+                               context = rs_get_context()) {
+  style <- match.arg(style, several.ok = FALSE)
+  row <- rs_get_index_first_selected_row(context = context)
 
-    style <- match.arg(style, several.ok = FALSE)
-    row   <- rs_get_index_first_selected_row(context = context)
+  is_underline <- is_underline_style_heading(row, context = context)
 
-    is_underline <- is_underline_style_heading(row, context = context)
-
-    switch(
-        style,
-        "underline" = rm_underline_style_heading(row = row, context =  context, detected = is_underline),
-        "hash"      = rm_hash_style_heading(row = row, context = context),
-        "both"      = {
-            rm_underline_style_heading(row = row, context = context, detected = is_underline)
-            rm_hash_style_heading(row = row, context = context)
-        },
-        "auto"      =
-            if (isTRUE(is_underline)) {
-                rm_underline_style_heading(row = row, context = context, detected = is_underline)
-            } else {
-                rm_hash_style_heading(row = row, context = context)
-            }
-    )
+  switch(style,
+    "underline" = rm_underline_style_heading(row = row, context = context, detected = is_underline),
+    "hash" = rm_hash_style_heading(row = row, context = context),
+    "both" = {
+      rm_underline_style_heading(row = row, context = context, detected = is_underline)
+      rm_hash_style_heading(row = row, context = context)
+    },
+    "auto" =
+      if (isTRUE(is_underline)) {
+        rm_underline_style_heading(row = row, context = context, detected = is_underline)
+      } else {
+        rm_hash_style_heading(row = row, context = context)
+      }
+  )
 }
 
 # ============================================================================
 rmd_heading_remove_underline <- function(context = rs_get_context()) {
-    rmd_heading_remove("underline", context = context)
+  rmd_heading_remove("underline", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rmd_heading_remove_hash_style <- function(context = rs_get_context()) {
-    rmd_heading_remove("hash", context = context)
+  rmd_heading_remove("hash", context = context)
 }
 # ============================================================================
 add_underline_style_heading <- function(symbol = "=", context = rs_get_context()) {
-    # len <- nchar(rm_leading_hash(rs_get_first_selected_row(context = context)))
-    len <- nchar(rs_get_first_selected_row(context = context))
-    len <- max(3, len + 1)
-    text <- repeat_symbol(symbol, len)
-    rmd_heading_remove(style = "underline", context = context)
-    rs_enclose_first_row_with(text_below = text,
-        ensure_blank_above = TRUE,
-        context = context)
+  # len <- nchar(rm_leading_hash(rs_get_first_selected_row(context = context)))
+  len <- nchar(rs_get_first_selected_row(context = context))
+  len <- max(3, len + 1)
+  text <- repeat_symbol(symbol, len)
+  rmd_heading_remove(style = "underline", context = context)
+  rs_enclose_first_row_with(
+    text_below = text,
+    ensure_blank_above = TRUE,
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 is_underline_style_heading <- function(row, context) {
-    # Detect if the line is underline style heading
+  # Detect if the line is underline style heading
 
-    # row - index of the heading row
-    # context - rstudioapi context
-    stringr::str_detect(context$contents[row + 1], "^([-=])(\\1){2,}\\s*$")
+  # row - index of the heading row
+  # context - rstudioapi context
+  stringr::str_detect(context$contents[row + 1], "^([-=])(\\1){2,}\\s*$")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm_underline_style_heading <- function(row, context, detected) {
-    # Removes the second selected row if it contains underline style
-    # formatting of heanings.
+  # Removes the second selected row if it contains underline style
+  # formatting of heanings.
 
-    # row - index of the heading row
-    # context - rstudioapi context
-    # detected - logical indicating if the row is underline style heading
+  # row - index of the heading row
+  # context - rstudioapi context
+  # detected - logical indicating if the row is underline style heading
 
-    if (isTRUE(detected)) {
-        second_selected_row <- rs_get_row_range_w_newline(row + 1)
-        rstudioapi::modifyRange(second_selected_row, "", id = context$id)
-    }
+  if (isTRUE(detected)) {
+    second_selected_row <- rs_get_row_range_w_newline(row + 1)
+    rstudioapi::modifyRange(second_selected_row, "", id = context$id)
+  }
 }
 # ============================================================================
 add_hash_style_heading <- function(symbol = "# ", context = rs_get_context()) {
-    rmd_heading_remove(style = "both", context = context)
-    rs_insert_before_first_selected_row(symbol,
-        ensure_blank_above = TRUE,
-        context = context)
+  rmd_heading_remove(style = "both", context = context)
+  rs_insert_before_first_selected_row(symbol,
+    ensure_blank_above = TRUE,
+    context = context
+  )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm_leading_hash <- function(str) {
-    stringr::str_replace(str, "^##*\\s*", "")
+  stringr::str_replace(str, "^##*\\s*", "")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm_hash_style_heading <- function(row, context) {
-    # Removes leading hash symbols and spaces of the first selected row
-    first_selected_row <- rs_get_row_range(row)
-    text1 <- rm_leading_hash(context$contents[row])
-    rstudioapi::modifyRange(first_selected_row, text1, id = context$id)
+  # Removes leading hash symbols and spaces of the first selected row
+  first_selected_row <- rs_get_row_range(row)
+  text1 <- rm_leading_hash(context$contents[row])
+  rstudioapi::modifyRange(first_selected_row, text1, id = context$id)
 }
 # ============================================================================
-
