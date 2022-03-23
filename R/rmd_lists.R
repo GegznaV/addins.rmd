@@ -22,115 +22,115 @@
 #' @family R Markdown formatting add-ins
 
 rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
-    sel <- context$selection[[1]]
-    selected_rows <- sel$range$start["row"]:sel$range$end["row"]
+  sel <- context$selection[[1]]
+  selected_rows <- sel$range$start["row"]:sel$range$end["row"]
 
-    ind <- seq_along(selected_rows)
+  ind <- seq_along(selected_rows)
 
-    # Indentation for list levels
-    lev <- rep("\t", level - 1)
+  # Indentation for list levels
+  lev <- rep("    ", level - 1)
 
-    text <- switch(
-        type,
-        "1" = ,
-        "ordered" = ,
-        "numbered" = ,
-        "numbers" = paste0(lev, ind,          ". "),
+  text <- switch(type,
+    "1" = ,
+    "ordered" = ,
+    "numbered" = ,
+    "numbers" = paste0(lev, ind, ". "),
 
-        "a" = ,
-        "lettered" = ,
-        "letters" = paste0(lev, letters[ind], ". "),
+    "a" = ,
+    "lettered" = ,
+    "letters" = paste0(lev, letters[ind], ". "),
 
-        "A" = ,
-        "LETTERED" = ,
-        "LETTERS" = paste0(lev, LETTERS[ind], ". "),
+    "A" = ,
+    "LETTERED" = ,
+    "LETTERS" = paste0(lev, LETTERS[ind], ". "),
 
-        "+" = ,
-        "unordered" = paste0(lev, rep("+", max(ind)), " "),
+    "+" = ,
+    "unordered" = paste0(lev, rep("+", max(ind)), " "),
 
-        "-" = paste0(lev, rep("-", max(ind)), " "),
-        "*" = paste0(lev, rep("*", max(ind)), " "),
+    "-" = paste0(lev, rep("-", max(ind)), " "),
 
-        "(@)" = ,
-        "@" = ,
-        "master" = ,
-        "example list" = paste0(rep("(@)", max(ind)), " "),
+    "*" = paste0(lev, rep("*", max(ind)), " "),
 
-        "block quotes" = ,
-        ">" = paste0(rep(">", max(ind)), " "),
+    "(@)" = ,
+    "@" = ,
+    "master" = ,
+    "example list" = paste0(rep("(@)", max(ind)), " "),
 
-        "line blocks" = ,
-        "|" = paste0(rep("|", max(ind)), " "),
+    "block quotes" = ,
+    ">" = paste0(rep(">", max(ind)), " "),
 
-        stop("Unrecognized symol.")
-    )
+    "line blocks" = ,
+    "|" = paste0(rep("|", max(ind)), " "),
+
+    stop("Unrecognized symol.")
+  )
 
 
-    purrr::walk2(selected_rows, text, rs_insert_at_row_start, id = context$id)
+  purrr::walk2(selected_rows, text, rs_insert_at_row_start, id = context$id)
 
-    # insert an empty line:  to display list correctly
-    if (level == 1) {
-        if (is_blank_line_needed_above(context)) {
-            rs_insert_at_row_start(selected_rows[1], "\n", id = context$id)
-        }
+  # insert an empty line:  to display list correctly
+  if (level == 1) {
+    if (is_blank_line_needed_above(context)) {
+      rs_insert_at_row_start(selected_rows[1], "\n", id = context$id)
     }
-    # Keep the rows selected --
-    # TODO: account for one blank line, if it is inserted
-    # rs_select_all_selected_rows(context = context)
+  }
+  # Keep the rows selected --
+  # TODO: account for one blank line, if it is inserted
+  # rs_select_all_selected_rows(context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_block_quotes <- function() {
-    rmd_list(">")
+  rmd_list(">")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_line_blocks <- function() {
-    rmd_list("|")
+  rmd_list("|")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_unordered <- function() {
-    rmd_list("-", level = 1)
+  rmd_list("-", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_unordered_2 <- function() {
-    rmd_list("+", level = 2)
+  rmd_list("+", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_numbered <- function() {
-    rmd_list("numbered", level = 1)
+  rmd_list("numbered", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_numbered_2 <- function() {
-    rmd_list("numbered", level = 2)
+  rmd_list("numbered", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_lettered <- function() {
-    rmd_list("lettered", level = 1)
+  rmd_list("lettered", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_lettered_2 <- function() {
-    rmd_list("lettered", level = 2)
+  rmd_list("lettered", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_z_example_list <- function() {
-    rmd_list("(@)")
+  rmd_list("(@)")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -152,30 +152,30 @@ rmd_list_z_example_list <- function() {
 # - 5.
 
 rmd_remove_list <- function(context = rs_get_context()) {
-    # Roman numbers (capital and small)
-    rom_c <- "(M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))"
-    rom_s <- "(m{0,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))"
+  # Roman numbers (capital and small)
+  rom_c <- "(M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))"
+  rom_s <- "(m{0,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))"
 
-    # ordered list elements
-    ord <- stringr::str_glue("((#)|(@)|([[:digit:]]+)|([[:alpha:]])|{rom_s}|{rom_s})")
+  # ordered list elements
+  ord <- stringr::str_glue("((#)|(@)|([[:digit:]]+)|([[:alpha:]])|{rom_s}|{rom_s})")
 
-    level = "" # level 1
-    # level = "[[:blank:]]{0,1}" # level 1: must not select tab.
-    # level = "[[:blank:]]{4}" # level 2: may be 1 tab or 4 spaces
-    # level = "[[:blank:]]{8}" # level 2
+  level <- "" # level 1
+  # level = "[[:blank:]]{0,1}" # level 1: must not select tab.
+  # level = "[[:blank:]]{4}" # level 2: may be 1 tab or 4 spaces
+  # level = "[[:blank:]]{8}" # level 2
 
-    pattern <- stringr::str_glue("^{level}(([|>*+-])|({ord}[\\.\\)])|(\\({ord}\\)))(\\s|$)")
-    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    lines <- rs_get_selected_rows(context)
-    wo_list <- stringr::str_replace(lines, pattern, "")
+  pattern <- stringr::str_glue("^{level}(([|>*+-])|({ord}[\\.\\)])|(\\({ord}\\)))(\\s|$)")
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  lines <- rs_get_selected_rows(context)
+  wo_list <- stringr::str_replace(lines, pattern, "")
 
-    if (!isTRUE(all.equal.character(lines, wo_list, check.attributes = FALSE))) {
-        inds <- attr(lines, "row_numbers")
-        selected_lines <- rstudioapi::document_range(c(min(inds), 1), c(max(inds), Inf))
-        wo_list <- paste0(wo_list, collapse = "\n")
-        rstudioapi::modifyRange(location = selected_lines, wo_list, id = context$id)
-    }
-    # Keep the rows selected
-    rs_select_all_selected_rows(context = context)
+  if (!isTRUE(all.equal.character(lines, wo_list, check.attributes = FALSE))) {
+    inds <- attr(lines, "row_numbers")
+    selected_lines <- rstudioapi::document_range(c(min(inds), 1), c(max(inds), Inf))
+    wo_list <- paste0(wo_list, collapse = "\n")
+    rstudioapi::modifyRange(location = selected_lines, wo_list, id = context$id)
+  }
+  # Keep the rows selected
+  rs_select_all_selected_rows(context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
