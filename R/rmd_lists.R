@@ -22,6 +22,20 @@
 #' @family R Markdown formatting add-ins
 
 rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
+
+  if (is_rmd_visual_mode()) {
+    rstudioapi::sendToConsole(
+      'warning(
+        "List-related package `addins.rmd` addins do not work in ",
+        "Markdown Visual Editor (VME) mode. \n",
+        "Use related VME functionality instead."
+      )',
+      execute = TRUE,
+      focus = FALSE
+    )
+    return()
+  }
+
   sel <- context$selection[[1]]
   selected_rows <- sel$range$start["row"]:sel$range$end["row"]
 
