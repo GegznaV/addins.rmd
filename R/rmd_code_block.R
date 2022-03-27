@@ -51,7 +51,11 @@ rmd_code_block_r <- function(context = rs_get_context()) {
 #' @export
 rmd_code_block <- function(context = rs_get_context()) {
   if (is_rmd_visual_mode()) {
-    stop("This addin does not work in Markdown visual editor mode")
+    rstudioapi::sendToConsole(
+      'warning("Addin `rmd_code_block()` does not work in Markdown Visual Editor mode.")',
+      execute = TRUE,
+      focus = FALSE
+    )
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```",
@@ -65,7 +69,11 @@ rmd_code_block <- function(context = rs_get_context()) {
 #' @export
 rmd_code_block_r_split <- function(context = rs_get_context()) {
   if (is_rmd_visual_mode()) {
-    stop("This addin does not work in Markdown visual editor mode")
+    rstudioapi::sendToConsole(
+      'warning("Addin `rmd_code_block_r_split()` does not work in Markdown Visual Editor mode.")',
+      execute = TRUE,
+      focus = FALSE
+    )
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```\n\n```{r}",
