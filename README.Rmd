@@ -38,6 +38,7 @@ R package **addins.rmd**
 Package `addins.rmd` is an *R* package that provides a set of *RStudio* add-ins for *R Markdown*. The main purpose of this package is to alleviate learning process of *R Markdown* syntax. 
 
 <!-- 
+
 1) **format text in R Markdown documents**:
     - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
 that is interpreted as "**bold**").
@@ -45,6 +46,7 @@ that is interpreted as "**bold**").
 3)  **replace** symbols in selected
 pieces of text (e.g., convert backslashes to forward slashes which results
 in strings like `"c:\data\"` converted into `"c:/data/"`).
+
 -->
 
 Install package
