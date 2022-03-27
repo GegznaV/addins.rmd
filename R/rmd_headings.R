@@ -105,9 +105,7 @@ rmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (is_rmd_visual_mode()) {
     rstudioapi::sendToConsole(
-      'warning(
-        "This addin does not work in "Markdown Visual Editor (VME) mode. "
-      )',
+      'warning("This addin does not work in Markdown Visual Editor (VME) mode. ")',
       execute = TRUE,
       focus = FALSE
     )
@@ -149,9 +147,7 @@ add_underline_style_heading <- function(symbol = "=", context = rs_get_context()
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (is_rmd_visual_mode()) {
     rstudioapi::sendToConsole(
-      'warning(
-        "This addin does not work in "Markdown Visual Editor (VME) mode. "
-      )',
+      'warning("This addin does not work in Markdown Visual Editor (VME) mode. ")',
       execute = TRUE,
       focus = FALSE
     )
