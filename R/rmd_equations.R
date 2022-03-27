@@ -1,3 +1,5 @@
+# TODO: rewrite the functions for Visual Markdown Editor mode.
+
 # Equations -------------------------------------------------------------------
 #' Format as LaTeX equation.
 #'

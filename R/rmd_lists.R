@@ -1,3 +1,5 @@
+# TODO: rewrite the functions for Visual Markdown Editor mode.
+
 # TODO: rmd_list() add:
 # 1. Ability to skip empty lines;
 # 2. Ability to continue numbering.
