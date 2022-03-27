@@ -39,11 +39,11 @@ rmd_heading_remove(
 Object with context of active RStudio document.}
 
 \item{style}{("auto", "both", "hash", "underline") indicates which style of heading to remove: \itemize{
-    \item "both" - removes both heading formatting styles;
-    \item "hash" - removes hash-style heading formatting only;
-    \item "underline" - removes underline-style heading formatting only;
-    \item "auto" - tries to remove only one style: if finds underline style,
-    removes it, otherwise removes hash-style.
+\item "both" - removes both heading formatting styles;
+\item "hash" - removes hash-style heading formatting only;
+\item "underline" - removes underline-style heading formatting only;
+\item "auto" - tries to remove only one style: if finds underline style,
+removes it, otherwise removes hash-style.
 }}
 }
 \description{
@@ -51,7 +51,7 @@ RStudio add-ins to format text as R Markdown headings and to remove this formatt
 }
 \details{
 Function \code{rmd_heading_remove()} removes heading formatting:
-either hash-symbol-style headings (i.e., remove leading hash symbols \code{#}
+either hash-symbol-style headings (i.e., remove leading hash symbols \verb{#}
 and spaces), or
 underline-style headings in the first selected row. \cr
 

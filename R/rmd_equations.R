@@ -1,9 +1,11 @@
+# TODO: rewrite the functions for Visual Markdown Editor mode.
+
 # Equations -------------------------------------------------------------------
 #' Format as LaTeX equation.
 #'
 #' Select a piece of text with a cursor and call these functions as an add-in
-#' to enclose the text with special symbols. Text between \code{$.$} is
-#' interpreted as an inline equation and between \code{$$.$$} or \code{\[.\]}
+#' to enclose the text with special symbols. Text between `$.$` is
+#' interpreted as an inline equation and between `$$.$$` or `\[.\]`
 #' as a block equation in R Markdown.
 #'
 #' @name rmd_equations

@@ -1,3 +1,5 @@
+# TODO: rewrite the functions for Visual Markdown Editor mode.
+
 # TODO: rmd_list() add:
 # 1. Ability to skip empty lines;
 # 2. Ability to continue numbering.
@@ -6,11 +8,11 @@
 #'
 #' RStudio add-ins which formats text as R Markdown lists.
 #' For the first-level lists: \itemize{
-#'   \item \code{rmd_list()} - the main function, that make lists;
-#'   \item \code{rmd_unordered_list()} - unordered list;
-#'   \item \code{rmd_numbered_list()} - numbered list;
-#'   \item \code{rmd_lettered_list()} - lettered list (non-capital English letters);
-#'   \item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
+#'   \item `rmd_list()` - the main function, that make lists;
+#'   \item `rmd_unordered_list()` - unordered list;
+#'   \item `rmd_numbered_list()` - numbered list;
+#'   \item `rmd_lettered_list()` - lettered list (non-capital English letters);
+#'   \item `rmd_master_list()` - master list (which numbering continues throughout the document).
 #'   }
 #'
 #' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".
@@ -22,6 +24,19 @@
 #' @family R Markdown formatting add-ins
 
 rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
+  if (is_rmd_visual_mode()) {
+    rstudioapi::sendToConsole(
+      'warning(
+        "List-related package `addins.rmd` addins do not work in ",
+        "Markdown Visual Editor (VME) mode. \n",
+        "Use related VME functionality instead."
+      )',
+      execute = TRUE,
+      focus = FALSE
+    )
+    return()
+  }
+
   sel <- context$selection[[1]]
   selected_rows <- sel$range$start["row"]:sel$range$end["row"]
 
@@ -29,7 +44,7 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
 
   # Indentation for list levels
   lev <- rep("    ", level - 1)
-
+  # styler: off
   text <- switch(type,
     "1" = ,
     "ordered" = ,
@@ -63,6 +78,7 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
     "|" = paste0(rep("|", max(ind)), " "),
 
     stop("Unrecognized symol.")
+    # styler: on
   )
 
 
@@ -138,7 +154,7 @@ rmd_list_z_example_list <- function() {
 #'
 #' The function removes markup of lists, block quotes and line blocks.
 #' More specifically, removes leading |, >, *, -, + symbols followed by a space or end of line,
-#' leading arabic and Roman numbers, single letters, hash (\code{#}) or eta \code{@} symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list.
+#' leading arabic and Roman numbers, single letters, hash (`#`) or eta `@` symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list.
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'

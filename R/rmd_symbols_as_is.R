@@ -1,3 +1,5 @@
+# TODO: rewrite the functions for Visual Markdown Editor mode.
+
 # Formatting ------------------------------------------------------------
 #   \item \code{rmd_...()} as ... (\code{...} and \code{...});
 #   \item \code{rmd_...()} as ... (\code{...} and \code{...});

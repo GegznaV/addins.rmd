@@ -8,14 +8,14 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.11-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.rmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.rmd/actions)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2022--03--23-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2022--03--27-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ------------------------------------------------------------------------
 
-<!-- ```{r, fig.align='center', out.height='30%', out.width='30%', echo=FALSE, eval = FALSE} -->
-<!-- knitr::include_graphics("http://gegznav.github.io/addins.rmd/logo.png") -->
-<!-- ``` -->
+<!-- 
+
+-->
 
 <img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
 
@@ -25,20 +25,25 @@ Package `addins.rmd` is an *R* package that provides a set of *RStudio*
 add-ins for *R Markdown*. The main purpose of this package is to
 alleviate learning process of *R Markdown* syntax.
 
-<!-- 1) **format text in R Markdown documents**:  -->
-<!--     - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*" -->
-<!-- that is interpreted as "**bold**"). -->
-<!-- 2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position;  -->
-<!-- 3)  **replace** symbols in selected -->
-<!-- pieces of text (e.g., convert backslashes to forward slashes which results  -->
-<!-- in strings like `"c:\data\"` converted into `"c:/data/"`).  -->
+<!-- 
+1) **format text in R Markdown documents**:
+    - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
+that is interpreted as "**bold**").
+2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position;
+3)  **replace** symbols in selected
+pieces of text (e.g., convert backslashes to forward slashes which results
+in strings like `"c:\data\"` converted into `"c:/data/"`).
+-->
 
 ## Install package
 
-<!-- Install released version from CRAN: -->
-<!-- ```{r Install package from CRAN, eval=FALSE} -->
-<!-- install.packages("addins.rmd") -->
-<!-- ``` -->
+<!-- 
+Install released version from CRAN: 
+
+```r
+install.packages("addins.rmd")
+```
+-->
 
 Install development version from GitHub:
 
@@ -53,14 +58,19 @@ remotes::install_github("GegznaV/addins.rmd")
 
 # How to use thse add-ins
 
-<!-- Recommended workflow and a few examples -->
-<!-- ----------------------------------------------------- -->
-<!-- Get started online http://gegznav.github.io/addins.rmd/articles/v1_workflow.html -->
-<!-- And offline: -->
-<!-- ```{r, eval=FALSE} -->
-<!-- vignette("v1_workflow", package = "addins.rmd") -->
-<!-- ``` -->
-<!-- browseVignettes("addins.rmd") -->
+<!-- 
+Recommended workflow and a few examples
+-----------------------------------------------------
+
+Get started online http://gegznav.github.io/addins.rmd/articles/v1_workflow.html
+
+And offline:
+
+```r
+vignette("v1_workflow", package = "addins.rmd")
+```
+browseVignettes("addins.rmd") 
+-->
 
 For the current version of the package:
 

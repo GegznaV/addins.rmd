@@ -19,8 +19,8 @@ Object with context of active RStudio document.}
 }
 \description{
 Select a piece of text with a cursor and call these functions as an add-in
-to enclose the text with special symbols. Text between \code{$.$} is
-interpreted as an inline equation and between \code{$$.$$} or \code{\[.\]}
+to enclose the text with special symbols. Text between \verb{$.$} is
+interpreted as an inline equation and between \verb{$$.$$} or \verb{\[.\]}
 as a block equation in R Markdown.
 }
 \seealso{
