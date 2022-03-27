@@ -6,11 +6,11 @@
 #'
 #' RStudio add-ins which formats text as R Markdown lists.
 #' For the first-level lists: \itemize{
-#'   \item \code{rmd_list()} - the main function, that make lists;
-#'   \item \code{rmd_unordered_list()} - unordered list;
-#'   \item \code{rmd_numbered_list()} - numbered list;
-#'   \item \code{rmd_lettered_list()} - lettered list (non-capital English letters);
-#'   \item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
+#'   \item `rmd_list()` - the main function, that make lists;
+#'   \item `rmd_unordered_list()` - unordered list;
+#'   \item `rmd_numbered_list()` - numbered list;
+#'   \item `rmd_lettered_list()` - lettered list (non-capital English letters);
+#'   \item `rmd_master_list()` - master list (which numbering continues throughout the document).
 #'   }
 #'
 #' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".
@@ -138,7 +138,7 @@ rmd_list_z_example_list <- function() {
 #'
 #' The function removes markup of lists, block quotes and line blocks.
 #' More specifically, removes leading |, >, *, -, + symbols followed by a space or end of line,
-#' leading arabic and Roman numbers, single letters, hash (\code{#}) or eta \code{@} symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list.
+#' leading arabic and Roman numbers, single letters, hash (`#`) or eta `@` symbols either followed by a dot or a closing parentheses or enclosed with parentheses. The symbol or the combination must be preceeded with no more than 1 space and followed by either a space or an end of a line, i.e., to be a valid markup, which is interpreted as a list.
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'

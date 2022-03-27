@@ -4,9 +4,9 @@
 #' @title Convert rows into the block of code.
 #' @description
 #' RStudio add-in to insert selected lines into code block: \itemize{
-#'    \item \code{rmd_code_block()} - verbatim code block.
+#'    \item `rmd_code_block()` - verbatim code block.
 #'          **Note:** in Markdown Visual Editor mode does not work.
-#'    \item \code{rmd_code_block_r()} - R code block.
+#'    \item `rmd_code_block_r()` - R code block.
 #'          **Note!** In Markdown Visual Editor (MVE) mode works differently:
 #'          in MVE mode, RStudio IDE command
 #'          [`insertChunk`](https://docs.rstudio.com/ide/server-pro/rstudio_ide_commands/rstudio_ide_commands.html)
@@ -15,11 +15,11 @@
 #'          the last line of the document in MVE mode, the selected text is
 #'          interpreted as chunk options, otherwise as chunk contents.
 #' }
-#' \code{rmd_code_block_r_split()} - splits block of R code.
+#' `rmd_code_block_r_split()` - splits block of R code.
 #'
 #'
 #' These functions internally use function
-#' \code{\link[addin.tools]{rs_enclose_selected_rows_with}()} -
+#' [addin.tools::rs_enclose_selected_rows_with()] -
 #' that adds lines above and below the selection.
 #'
 #' @importFrom addin.tools rs_get_context is_rmd_visual_mode

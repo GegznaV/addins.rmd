@@ -44,12 +44,12 @@ Object with context of active RStudio document.}
 \description{
 RStudio add-ins which formats text as R Markdown lists.
 For the first-level lists: \itemize{
-  \item \code{rmd_list()} - the main function, that make lists;
-  \item \code{rmd_unordered_list()} - unordered list;
-  \item \code{rmd_numbered_list()} - numbered list;
-  \item \code{rmd_lettered_list()} - lettered list (non-capital English letters);
-  \item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
-  }
+\item \code{rmd_list()} - the main function, that make lists;
+\item \code{rmd_unordered_list()} - unordered list;
+\item \code{rmd_numbered_list()} - numbered list;
+\item \code{rmd_lettered_list()} - lettered list (non-capital English letters);
+\item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
+}
 }
 \seealso{
 Other R Markdown formatting add-ins: 

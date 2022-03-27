@@ -7,10 +7,10 @@
 \description{
 \code{addins.rmd} provides a set of RStudio add-ins to format R Markdown documents.
 
-\code{License:} MIT   \cr
-\code{URL:} \url{https://github.com/GegznaV/addins.rmd} \cr
-\code{Bug reports and suggestions:} \url{https://github.com/GegznaV/addins.rmd/issues} \cr
-\code{Author:} Vilmantas Gegzna
+\verb{License:} MIT   \cr
+\verb{URL:} \url{https://github.com/GegznaV/addins.rmd} \cr
+\verb{Bug reports and suggestions:} \url{https://github.com/GegznaV/addins.rmd/issues} \cr
+\verb{Author:} Vilmantas Gegzna
 }
 \examples{
 # Use this package as an RStudio addin.

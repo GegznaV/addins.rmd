@@ -3,13 +3,13 @@
 #' RStudio add-ins to format text as R Markdown headings and to remove this formatting.
 #'
 #' @details
-#' Function \code{rmd_heading_remove()} removes heading formatting:
-#' either hash-symbol-style headings (i.e., remove leading hash symbols \code{#}
+#' Function `rmd_heading_remove()` removes heading formatting:
+#' either hash-symbol-style headings (i.e., remove leading hash symbols `#`
 #' and spaces), or
 #' underline-style headings in the first selected row. \cr
 #'
-#' The other functions, which name beginns with \code{rmd_heading_}, at first
-#' apply \code{rmd_heading_remove()} to remove heading style (leading hash
+#' The other functions, which name beginns with `rmd_heading_`, at first
+#' apply `rmd_heading_remove()` to remove heading style (leading hash
 #' symbols and underline) and then format the first selected row as a heading
 #' of an appropriate level.
 #'

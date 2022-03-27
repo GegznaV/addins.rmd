@@ -7,6 +7,7 @@
 \alias{rmd_format_bold_italics}
 \alias{rmd_format_bold2}
 \alias{rmd_format_italics2}
+\alias{rmd_format_html_comment}
 \alias{rmd_code_inline}
 \alias{rmd_code_inline_r}
 \alias{rmd_code_inline_highlighted_as_r}
@@ -35,6 +36,8 @@ rmd_format_bold_italics(context = rs_get_context())
 rmd_format_bold2(context = rs_get_context())
 
 rmd_format_italics2(context = rs_get_context())
+
+rmd_format_html_comment(context = rs_get_context())
 
 rmd_code_inline(context = rs_get_context())
 
