@@ -24,7 +24,6 @@
 #' @family R Markdown formatting add-ins
 
 rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
-
   if (is_rmd_visual_mode()) {
     rstudioapi::sendToConsole(
       'warning(
@@ -45,7 +44,7 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
 
   # Indentation for list levels
   lev <- rep("    ", level - 1)
-
+  # styler: off
   text <- switch(type,
     "1" = ,
     "ordered" = ,
@@ -79,6 +78,7 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
     "|" = paste0(rep("|", max(ind)), " "),
 
     stop("Unrecognized symol.")
+    # styler: on
   )
 
 
