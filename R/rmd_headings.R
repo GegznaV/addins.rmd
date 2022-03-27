@@ -26,37 +26,62 @@
 #' @name rmd_headings
 #' @export
 rmd_heading_1 <- function(context = rs_get_context()) {
-  add_hash_style_heading("# ", context = context)
+  if (is_rmd_visual_mode()) {
+    return()
+  } else {
+    add_hash_style_heading("# ", context = context)
+  }
 }
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_2 <- function(context = rs_get_context()) {
+    if (is_rmd_visual_mode()) {
+    return()
+  } else {
   add_hash_style_heading("## ", context = context)
+  }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_3 <- function(context = rs_get_context()) {
+    if (is_rmd_visual_mode()) {
+    return()
+  } else {
   add_hash_style_heading("### ", context = context)
+  }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_4 <- function(context = rs_get_context()) {
+    if (is_rmd_visual_mode()) {
+    return()
+  } else {
   add_hash_style_heading("#### ", context = context)
+  }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_5 <- function(context = rs_get_context()) {
+      if (is_rmd_visual_mode()) {
+    return()
+  } else {
   add_hash_style_heading("##### ", context = context)
+  }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_6 <- function(context = rs_get_context()) {
+      if (is_rmd_visual_mode()) {
+    return()
+  } else {
   add_hash_style_heading("###### ", context = context)
+  }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
@@ -76,6 +101,20 @@ rmd_heading_2_subtitle <- function(context = rs_get_context()) {
 #' @export
 rmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
                                context = rs_get_context()) {
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  if (is_rmd_visual_mode()) {
+    rstudioapi::sendToConsole(
+      'warning(
+        "This addin does not work in "Markdown Visual Editor (VME) mode. "
+      )',
+      execute = TRUE,
+      focus = FALSE
+    )
+    return()
+  }
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
   style <- match.arg(style, several.ok = FALSE)
   row <- rs_get_index_first_selected_row(context = context)
 
@@ -107,6 +146,19 @@ rmd_heading_remove_hash_style <- function(context = rs_get_context()) {
 }
 # ============================================================================
 add_underline_style_heading <- function(symbol = "=", context = rs_get_context()) {
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  if (is_rmd_visual_mode()) {
+    rstudioapi::sendToConsole(
+      'warning(
+        "This addin does not work in "Markdown Visual Editor (VME) mode. "
+      )',
+      execute = TRUE,
+      focus = FALSE
+    )
+    return()
+  }
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
   # len <- nchar(rm_leading_hash(rs_get_first_selected_row(context = context)))
   len <- nchar(rs_get_first_selected_row(context = context))
   len <- max(3, len + 1)
@@ -129,7 +181,7 @@ is_underline_style_heading <- function(row, context) {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm_underline_style_heading <- function(row, context, detected) {
   # Removes the second selected row if it contains underline style
-  # formatting of heanings.
+  # formatting of headings.
 
   # row - index of the heading row
   # context - rstudioapi context
