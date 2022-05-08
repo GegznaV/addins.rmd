@@ -168,3 +168,4 @@ If you need more advanced formatting options, please, read more at:
 ***
 
 More information at http://gegznav.github.io/addins.rmd/
+
