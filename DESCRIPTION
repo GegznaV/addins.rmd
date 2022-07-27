@@ -26,7 +26,7 @@ Additional_repositories:
     https://mokymai.github.io/download/
 Depends:
     R (>= 3.2),
-    addin.tools (>= 0.0.5)
+    addin.tools (>= 0.0.10)
 Imports:
     crayon,
     rstudioapi,
