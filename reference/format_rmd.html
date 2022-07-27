@@ -18,7 +18,7 @@ interpretation in R Markdown."><!-- mathjax --><script src="https://cdnjs.cloudf
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addins.rmd</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.11</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.13</span>
       </span>
     </div>
 
@@ -58,49 +58,51 @@ interpretation in R Markdown.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rmd_format_bold</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_italics</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_bold_italics</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_bold2</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_italics2</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_code_inline</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_code_inline_r</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_code_inline_highlighted_as_r</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_superscript</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_subscript</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_strikethrough</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_format_footnote</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_horizontal_rule</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_link_url</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_insert_figure</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_insert_figure_r_code_block</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_symbol_asterisk</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_symbol_backslash</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_symbol_underscore</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_symbol_dollar</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_symbol_en_dash</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_symbol_em_dash</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rmd_format_bold</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_italics</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_bold_italics</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_bold2</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_italics2</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_html_comment</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_code_inline</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_code_inline_r</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_code_inline_highlighted_as_r</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_superscript</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_subscript</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_strikethrough</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_format_footnote</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_horizontal_rule</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_link_url</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_insert_figure</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_insert_figure_r_code_block</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_symbol_asterisk</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_symbol_backslash</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_symbol_underscore</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_symbol_dollar</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_symbol_en_dash</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_symbol_em_dash</span><span class="op">(</span>context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -108,6 +110,7 @@ interpretation in R Markdown.</p>
     <dl><dt>context</dt>
 <dd><p>(class <code>document_context</code>) <br>
 Object with context of active RStudio document.</p></dd>
+
 </dl></div>
     <div id="see-also">
     <h2>See also</h2>
@@ -134,7 +137,7 @@ Object with context of active RStudio document.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

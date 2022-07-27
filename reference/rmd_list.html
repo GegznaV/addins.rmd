@@ -25,7 +25,7 @@ rmd_master_list() - master list (which numbering continues throughout the docume
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">addins.rmd</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.11</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.13</span>
       </span>
     </div>
 
@@ -69,36 +69,41 @@ For the first-level lists:</p><ul><li><p><code>rmd_list()</code> - the main func
 </ul></div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">rmd_list</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"unordered"</span>, level <span class="op">=</span> <span class="fl">1</span>, context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-
-<span class="fu">rmd_block_quotes</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_line_blocks</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_list_unordered</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_list_unordered_2</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_list_numbered</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_list_numbered_2</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_list_lettered</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_list_lettered_2</span><span class="op">(</span><span class="op">)</span>
-
-<span class="fu">rmd_list_z_example_list</span><span class="op">(</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">rmd_list</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"unordered"</span>, level <span class="op">=</span> <span class="fl">1</span>, context <span class="op">=</span> <span class="fu">rs_get_context</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_block_quotes</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_line_blocks</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_list_unordered</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_list_unordered_2</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_list_numbered</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_list_numbered_2</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_list_lettered</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_list_lettered_2</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">rmd_list_z_example_list</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>type</dt>
 <dd><p>(character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".</p></dd>
+
+
 <dt>level</dt>
 <dd><p>(integer) the level of list.</p></dd>
+
+
 <dt>context</dt>
 <dd><p>(class <code>document_context</code>) <br>
 Object with context of active RStudio document.</p></dd>
+
 </dl></div>
     <div id="see-also">
     <h2>See also</h2>
@@ -120,7 +125,7 @@ Object with context of active RStudio document.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
