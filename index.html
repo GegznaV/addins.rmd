@@ -102,7 +102,9 @@ in strings like `"c:\data\"` converted into `"c:/data/"`).
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"addins.rmd"</span>, repos <span class="op">=</span> <span class="va">repos</span><span class="op">)</span></span></code></pre></div>
 <details><summary>Install from GitHub</summary><p>Install development version from GitHub:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span><span class="op">}</span></span>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
 <span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"GegznaV/addin.tools"</span><span class="op">)</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"GegznaV/addins.rmd"</span><span class="op">)</span></span></code></pre></div></details>
@@ -129,43 +131,43 @@ browseVignettes("addins.rmd")
 <li>Type <strong><code>{Rmd}</code></strong> in the add-ins search box;</li>
 <li>All the add-ins of the package <strong>addins.rmd</strong> will be displayed in the drop-down list below.</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/steps-search-addins.png" title="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " alt="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " width="400"></p>
+<p><img src="https://gegznav.github.io/addins.rmd/figs/steps-search-addins.png" title="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " alt="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " width="400"></p>
 <p>Below you can find a few examples how to use the add-ins of the package.</p>
 <div class="section level2">
 <h2 id="convert-text-into-headings">Convert Text into Headings<a class="anchor" aria-label="anchor" href="#convert-text-into-headings"></a>
 </h2>
-<p><img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif" title="**Fig. 2.** **Demonstration 1: headings.** 
-Place a cursor with a mouse and use a necessary add-in.  
-*(In this demonstrations, older version of the package is used.)*" alt="**Fig. 2.** **Demonstration 1: headings.** 
-Place a cursor with a mouse and use a necessary add-in.  
+<p><img src="https://gegznav.github.io/addins.rmd/figs/demo-headings-1.gif" title="**Fig. 2.** **Demonstration 1: headings.**
+Place a cursor with a mouse and use a necessary add-in.
+*(In this demonstrations, older version of the package is used.)*" alt="**Fig. 2.** **Demonstration 1: headings.**
+Place a cursor with a mouse and use a necessary add-in.
 *(In this demonstrations, older version of the package is used.)*" width="600"></p>
 <p><br></p>
-<p><img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600"></p>
+<p><img src="https://gegznav.github.io/addins.rmd/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600"></p>
 </div>
 <div class="section level2">
 <h2 id="basic-text-formatting">Basic Text Formatting<a class="anchor" aria-label="anchor" href="#basic-text-formatting"></a>
 </h2>
-<p><img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif" title="**Fig. 4.** **Demonstration 3: basic formatting.**
-Before using this type of add-in, select a piece of text that should be formatted.  
+<p><img src="https://gegznav.github.io/addins.rmd/figs/demo-formatting-1.gif" title="**Fig. 4.** **Demonstration 3: basic formatting.**
+Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 4.** **Demonstration 3: basic formatting.**
-Before using this type of add-in, select a piece of text that should be formatted.  
+Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  " width="600"></p>
 </div>
 <div class="section level2">
 <h2 id="create-lists">Create Lists<a class="anchor" aria-label="anchor" href="#create-lists"></a>
 </h2>
-<p><img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif" title="**Fig. 5.** **Demonstration 4: lists.**
-The lists can be numbered and unnumbered. 
-They can have several levels. 
+<p><img src="https://gegznav.github.io/addins.rmd/figs/demo-lists-1.gif" title="**Fig. 5.** **Demonstration 4: lists.**
+The lists can be numbered and unnumbered.
+They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 5.** **Demonstration 4: lists.**
-The lists can be numbered and unnumbered. 
-They can have several levels. 
+The lists can be numbered and unnumbered.
+They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  " width="600"></p>
 </div>
 <div class="section level2">
 <h2 id="create-r-code-chunks">Create R Code Chunks<a class="anchor" aria-label="anchor" href="#create-r-code-chunks"></a>
 </h2>
-<p><img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
+<p><img src="https://gegznav.github.io/addins.rmd/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " alt="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="600"></p>
 </div>
@@ -231,9 +233,9 @@ Select one or several lines with code, select an appropriate add-in and include 
 <ul class="list-unstyled">
 <li><a href="https://opensource.org/licenses/MIT" class="external-link"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed"></a></li>
 <li><a href="https://cran.r-project.org/package=addins.rmd" class="external-link"><img src="http://www.r-pkg.org/badges/version/addins.rmd" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://github.com/GegznaV/addins.rmd" class="external-link"><img src="https://img.shields.io/badge/GitHub-0.0.12-brightgreen.svg" alt="GitHub version"></a></li>
+<li><a href="https://github.com/GegznaV/addins.rmd" class="external-link"><img src="https://img.shields.io/badge/GitHub-0.0.13-brightgreen.svg" alt="GitHub version"></a></li>
 <li><a href="https://github.com/GegznaV/addins.rmd/actions" class="external-link"><img src="https://github.com/GegznaV/addins.rmd/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2022--07--27-yellowgreen.svg" alt="Updated-on"></a></li>
+<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2022--07--28-yellowgreen.svg" alt="Updated-on"></a></li>
 </ul>
 </div>
 
