@@ -26,6 +26,7 @@ Depends:
     R (>= 3.2),
     addin.tools (>= 0.0.5)
 Imports:
+    crayon,
     rstudioapi,
     stringr,
     purrr
