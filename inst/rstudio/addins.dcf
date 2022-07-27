@@ -296,4 +296,3 @@ Name: {Rmd} Table: grid style (example)
 Description: Insert an example of table.
 Binding: rmd_table_style_grid
 Interactive: false
-
