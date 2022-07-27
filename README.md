@@ -95,11 +95,11 @@ Below you can find a few examples how to use the add-ins of the package.
 Place a cursor with a mouse and use a necessary add-in.  
 *(In this demonstrations, older version of the package is used.)*" alt="**Fig. 2.** **Demonstration 1: headings.** 
 Place a cursor with a mouse and use a necessary add-in.  
-*(In this demonstrations, older version of the package is used.)*" width="400" />
+*(In this demonstrations, older version of the package is used.)*" width="600" />
 
 <br>
 
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="400" />
+<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
 
 ## Basic Text Formatting
 
@@ -107,7 +107,7 @@ Place a cursor with a mouse and use a necessary add-in.
 Before using this type of add-in, select a piece of text that should be formatted.  
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.  
-*(In this demonstrations, older version of the package is used.)*  " width="400" />
+*(In this demonstrations, older version of the package is used.)*  " width="600" />
 
 ## Create Lists
 
@@ -117,13 +117,13 @@ They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 5.** **Demonstration 4: lists.**
 The lists can be numbered and unnumbered. 
 They can have several levels. 
-*(In this demonstrations, older version of the package is used.)*  " width="400" />
+*(In this demonstrations, older version of the package is used.)*  " width="600" />
 
 ## Create R Code Chunks
 
 <img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " alt="**Fig. 6.** **Demonstration 5: R code chunks.**
-Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="400" />
+Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="600" />
 
 # See Also
 

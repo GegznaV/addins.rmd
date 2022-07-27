@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 -->
 
 
-<img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/> 
+<!-- <img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>  -->
 
 
 # R package **addins.rmd**  
@@ -107,7 +107,7 @@ Below you can find a few examples how to use the add-ins of the package.
 
 ## Convert Text into Headings
 
-```{r fig-ID-1, echo=FALSE, fig.cap=CAPTION, out.width=400}
+```{r fig-ID-1, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION = "**Fig. 2.** **Demonstration 1: headings.** 
 Place a cursor with a mouse and use a necessary add-in.  
 *(In this demonstrations, older version of the package is used.)*"
@@ -117,7 +117,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/ma
 
 <br>
 
-```{r fig-ID-2, echo=FALSE, fig.cap=CAPTION, out.width=400}
+```{r fig-ID-2, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION = "**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  "
 
 knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif")
@@ -126,7 +126,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/ma
 
 ## Basic Text Formatting
 
-```{r fig-ID-3, echo=FALSE, fig.cap=CAPTION, out.width=400}
+```{r fig-ID-3, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION = "**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.  
 *(In this demonstrations, older version of the package is used.)*  "
@@ -137,7 +137,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/ma
 
 ## Create Lists
 
-```{r fig-ID-4, echo=FALSE, fig.cap=CAPTION, out.width=400}
+```{r fig-ID-4, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION = "**Fig. 5.** **Demonstration 4: lists.**
 The lists can be numbered and unnumbered. 
 They can have several levels. 
@@ -150,7 +150,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/ma
 
 ## Create R Code Chunks
 
-```{r demo-chunk-add-1, echo=FALSE, fig.cap=CAPTION, out.width=400}
+```{r demo-chunk-add-1, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION = "**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  "
 
