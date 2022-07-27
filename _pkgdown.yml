@@ -6,6 +6,7 @@ template:
   bootstrap: 3
   params:
     bootswatch: sandstone
+  assets: pkgdown-assets/
 
 navbar:
   title: "addins.rmd | R package"
