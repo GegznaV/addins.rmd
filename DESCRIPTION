@@ -27,11 +27,8 @@ Depends:
     addin.tools (>= 0.0.5)
 Imports:
     rstudioapi,
-    magrittr,
-    stringi,
     stringr,
-    purrr,
-    utils
+    purrr
 Suggests:
     knitr,
     rmarkdown
