@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 -->
 
 
-<!-- <img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>  -->
+<img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
 
 
 # R package **addins.rmd**  

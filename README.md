@@ -6,7 +6,7 @@
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.12-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
+version](https://img.shields.io/badge/GitHub-0.0.13-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.rmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.rmd/actions)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-2022--07--28-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
@@ -16,7 +16,8 @@ version](https://img.shields.io/badge/GitHub-0.0.12-brightgreen.svg)](https://gi
 <!-- 
 
 -->
-<!-- <img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>  -->
+
+<img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
 
 # R package **addins.rmd**
 
