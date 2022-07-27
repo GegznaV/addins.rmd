@@ -3,10 +3,16 @@
 \name{rmd_code_block}
 \alias{rmd_code_block}
 \alias{rmd_code_block_r}
+\alias{rmd_code_block_python}
+\alias{rmd_code_block_sql}
 \alias{rmd_code_block_r_split}
 \title{Convert rows into the block of code.}
 \usage{
 rmd_code_block_r(context = rs_get_context())
+
+rmd_code_block_python(context = rs_get_context())
+
+rmd_code_block_sql(context = rs_get_context())
 
 rmd_code_block(context = rs_get_context())
 
