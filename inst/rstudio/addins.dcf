@@ -151,6 +151,16 @@ Description: Inserts R code block for a figure/image.
 Binding: rmd_insert_figure_r_code_block
 Interactive: false
 
+Name: {Rmd} Python code block (```{python}  ```)
+Description: Enclose selected lines with ```{python} and ```.
+Binding: rmd_code_block_python
+Interactive: false
+
+Name: {Rmd} SQL code block (```{sql}  ```)
+Description: Enclose selected lines with ```{sql} and ```.
+Binding: rmd_code_block_sql
+Interactive: false
+
 Name: {Rmd} Footnote ^[...]
 Description: Enclose selection with ^[ and ].
 Binding: rmd_format_footnote
