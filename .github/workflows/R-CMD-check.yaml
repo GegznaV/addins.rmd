@@ -12,6 +12,10 @@ jobs:
   R-CMD-check:
     runs-on: ${{ matrix.config.os }}
 
+    # Only restrict concurrency for non-PR jobs
+    concurrency:
+      group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
+
     name: ${{ matrix.config.os }} (R-${{ matrix.config.r }})
 
 
