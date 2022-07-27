@@ -36,11 +36,45 @@ rmd_code_block_r <- function(context = rs_get_context()) {
   if (is_rmd_visual_mode()) {
     id <- context$id
     text <- rstudioapi::selectionGet(id = id)$value
-    rstudioapi::executeCommand("insertChunk", quiet = TRUE)
+    rstudioapi::executeCommand("insertChunkR", quiet = TRUE)
     rstudioapi::selectionSet(text, id = id)
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```{r}",
+      text_below = "```",
+      context = context
+    )
+  }
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rmd_code_block
+#' @export
+rmd_code_block_python <- function(context = rs_get_context()) {
+  if (is_rmd_visual_mode()) {
+    id <- context$id
+    text <- rstudioapi::selectionGet(id = id)$value
+    rstudioapi::executeCommand("insertChunkPython", quiet = TRUE)
+    rstudioapi::selectionSet(text, id = id)
+  } else {
+    rs_enclose_selected_rows_with(
+      text_above = "```{python}",
+      text_below = "```",
+      context = context
+    )
+  }
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rmd_code_block
+#' @export
+rmd_code_block_sql <- function(context = rs_get_context()) {
+  if (is_rmd_visual_mode()) {
+    id <- context$id
+    text <- rstudioapi::selectionGet(id = id)$value
+    rstudioapi::executeCommand("insertChunkSQL", quiet = TRUE)
+    rstudioapi::selectionSet(text, id = id)
+  } else {
+    rs_enclose_selected_rows_with(
+      text_above = "```{sql}",
       text_below = "```",
       context = context
     )

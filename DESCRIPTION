@@ -1,11 +1,11 @@
 Package: addins.rmd
 Type: Package
 Title: RStudio Add-ins to Format R Markdown Documents
-Version: 0.0.12
-Date: 2022-03-27  
+Version: 0.0.13
+Date: 2022-07-27  
 Authors@R: person("Vilmantas", "Gegzna",
-                    email = "GegznaV@gmail.com",
-                    role = c("aut", "cre","cph")
+                  email = "GegznaV@gmail.com",
+                  role = c("aut", "cre","cph")
             )
 Description: Package `addins.rmd` contains RStudio add-ins to format R Markdown
              documents. The main purpose of this package is to help begginers
@@ -18,20 +18,20 @@ License: MIT + file LICENSE
 LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 VignetteBuilder: knitr
 Remotes:
     github::GegznaV/addin.tools
+Additional_repositories:
+    https://mokymai.github.io/download/
 Depends:
     R (>= 3.2),
-    addin.tools (>= 0.0.5)
+    addin.tools (>= 0.0.10)
 Imports:
+    crayon,
     rstudioapi,
-    magrittr,
-    stringi,
     stringr,
-    purrr,
-    utils
+    purrr
 Suggests:
     knitr,
     rmarkdown

@@ -2,8 +2,10 @@
 
 export(rmd_block_quotes)
 export(rmd_code_block)
+export(rmd_code_block_python)
 export(rmd_code_block_r)
 export(rmd_code_block_r_split)
+export(rmd_code_block_sql)
 export(rmd_code_inline)
 export(rmd_code_inline_highlighted_as_r)
 export(rmd_code_inline_r)

@@ -13,3 +13,4 @@
 ^TODO.Rmd$
 ^_tmp$
 ^\.github$
+^pkgdown-assets$

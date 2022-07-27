@@ -1,7 +1,13 @@
+url: https://GegznaV.github.io
+
 favicon: "favicon.png"
+
 template:
+  bootstrap: 3
   params:
-    bootswatch: united
+    bootswatch: sandstone
+  assets: pkgdown-assets/
+
 navbar:
   title: "addins.rmd | R package"
   type: default
