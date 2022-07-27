@@ -8,7 +8,7 @@ licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.12-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.rmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.rmd/actions)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2022--07--27-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2022--07--28-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ------------------------------------------------------------------------
@@ -16,8 +16,7 @@ version](https://img.shields.io/badge/GitHub-0.0.12-brightgreen.svg)](https://gi
 <!-- 
 
 -->
-
-<img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
+<!-- <img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>  -->
 
 # R package **addins.rmd**
 
@@ -54,7 +53,9 @@ Install from GitHub
 Install development version from GitHub:
 
 ``` r
-if (!require(remotes)) {install.packages("remotes")}
+if (!require(remotes)) {
+  install.packages("remotes")
+}
 
 remotes::install_github("GegznaV/addin.tools")
 remotes::install_github("GegznaV/addins.rmd")
@@ -85,43 +86,43 @@ For the current version of the package:
 3)  All the add-ins of the package **addins.rmd** will be displayed in
     the drop-down list below.
 
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/steps-search-addins.png" title="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " alt="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " width="400" />
+<img src="https://gegznav.github.io/addins.rmd/figs/steps-search-addins.png" title="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " alt="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " width="400" />
 
 Below you can find a few examples how to use the add-ins of the package.
 
 ## Convert Text into Headings
 
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif" title="**Fig. 2.** **Demonstration 1: headings.** 
-Place a cursor with a mouse and use a necessary add-in.  
-*(In this demonstrations, older version of the package is used.)*" alt="**Fig. 2.** **Demonstration 1: headings.** 
-Place a cursor with a mouse and use a necessary add-in.  
+<img src="https://gegznav.github.io/addins.rmd/figs/demo-headings-1.gif" title="**Fig. 2.** **Demonstration 1: headings.**
+Place a cursor with a mouse and use a necessary add-in.
+*(In this demonstrations, older version of the package is used.)*" alt="**Fig. 2.** **Demonstration 1: headings.**
+Place a cursor with a mouse and use a necessary add-in.
 *(In this demonstrations, older version of the package is used.)*" width="600" />
 
 <br>
 
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
+<img src="https://gegznav.github.io/addins.rmd/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
 
 ## Basic Text Formatting
 
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif" title="**Fig. 4.** **Demonstration 3: basic formatting.**
-Before using this type of add-in, select a piece of text that should be formatted.  
+<img src="https://gegznav.github.io/addins.rmd/figs/demo-formatting-1.gif" title="**Fig. 4.** **Demonstration 3: basic formatting.**
+Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 4.** **Demonstration 3: basic formatting.**
-Before using this type of add-in, select a piece of text that should be formatted.  
+Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  " width="600" />
 
 ## Create Lists
 
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif" title="**Fig. 5.** **Demonstration 4: lists.**
-The lists can be numbered and unnumbered. 
-They can have several levels. 
+<img src="https://gegznav.github.io/addins.rmd/figs/demo-lists-1.gif" title="**Fig. 5.** **Demonstration 4: lists.**
+The lists can be numbered and unnumbered.
+They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 5.** **Demonstration 4: lists.**
-The lists can be numbered and unnumbered. 
-They can have several levels. 
+The lists can be numbered and unnumbered.
+They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  " width="600" />
 
 ## Create R Code Chunks
 
-<img src="https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
+<img src="https://gegznav.github.io/addins.rmd/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " alt="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="600" />
 

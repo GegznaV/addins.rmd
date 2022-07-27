@@ -66,7 +66,9 @@ install.packages("addins.rmd", repos = repos)
 Install development version from GitHub:
 
 ```{r Install package from GitHub, eval=FALSE}
-if (!require(remotes)) {install.packages("remotes")}
+if (!require(remotes)) {
+  install.packages("remotes")
+}
 
 remotes::install_github("GegznaV/addin.tools")
 remotes::install_github("GegznaV/addins.rmd")
@@ -97,9 +99,9 @@ For the current version of the package:
 3) All the add-ins of the package **addins.rmd** will be displayed in the drop-down list below.
 
 ```{r steps-search-addins, echo=FALSE, fig.cap=CAPTION, out.width=400}
-knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/steps-search-addins.png")
+knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/steps-search-addins.png")
 
-CAPTION = "**Fig. 1.** Steps to find addins of the package **addins.rmd**.  "
+CAPTION <- "**Fig. 1.** Steps to find addins of the package **addins.rmd**.  "
 ```
 
 Below you can find a few examples how to use the add-ins of the package.
@@ -108,54 +110,52 @@ Below you can find a few examples how to use the add-ins of the package.
 ## Convert Text into Headings
 
 ```{r fig-ID-1, echo=FALSE, fig.cap=CAPTION, out.width=600}
-CAPTION = "**Fig. 2.** **Demonstration 1: headings.** 
-Place a cursor with a mouse and use a necessary add-in.  
+CAPTION <- "**Fig. 2.** **Demonstration 1: headings.**
+Place a cursor with a mouse and use a necessary add-in.
 *(In this demonstrations, older version of the package is used.)*"
 
-knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings-1.gif")
 ```
 
 <br>
 
 ```{r fig-ID-2, echo=FALSE, fig.cap=CAPTION, out.width=600}
-CAPTION = "**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  "
+CAPTION <- "**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  "
 
-knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-headings-2.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings-2.gif")
 ```
 
 
 ## Basic Text Formatting
 
 ```{r fig-ID-3, echo=FALSE, fig.cap=CAPTION, out.width=600}
-CAPTION = "**Fig. 4.** **Demonstration 3: basic formatting.**
-Before using this type of add-in, select a piece of text that should be formatted.  
+CAPTION <- "**Fig. 4.** **Demonstration 3: basic formatting.**
+Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  "
 
-knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-formatting-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-formatting-1.gif")
 ```
 
 
 ## Create Lists
 
 ```{r fig-ID-4, echo=FALSE, fig.cap=CAPTION, out.width=600}
-CAPTION = "**Fig. 5.** **Demonstration 4: lists.**
-The lists can be numbered and unnumbered. 
-They can have several levels. 
+CAPTION <- "**Fig. 5.** **Demonstration 4: lists.**
+The lists can be numbered and unnumbered.
+They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  "
 
-knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-lists-1.gif")
-
+knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-lists-1.gif")
 ```
 
 
 ## Create R Code Chunks
 
 ```{r demo-chunk-add-1, echo=FALSE, fig.cap=CAPTION, out.width=600}
-CAPTION = "**Fig. 6.** **Demonstration 5: R code chunks.**
+CAPTION <- "**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  "
 
-knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/addins.rmd/master/docs/figs/demo-chunk-add-1.gif")
-
+knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-chunk-add-1.gif")
 ```
 
 
@@ -180,4 +180,3 @@ If you need more advanced formatting options, please, read more at:
 ***
 
 Online docuentation at http://gegznav.github.io/addins.rmd/
-
