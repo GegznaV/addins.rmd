@@ -33,3 +33,6 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 _tmp
+
+# Other
+docs/
