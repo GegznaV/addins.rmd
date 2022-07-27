@@ -16,8 +16,10 @@ jobs:
   R-CMD-check:
     runs-on: ${{ matrix.config.os }}
 
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.event_name != 'pull_request' || github.run_id }}
+    # concurrency:
+    #   group: >
+    #     ${{ github.workflow }}-${{ matrix.config.os }}-${{ matrix.config.r }})-
+    #     ${{ github.event_name != 'pull_request' || github.run_id }}
 
     name: ${{ matrix.config.os }} (R-${{ matrix.config.r }})
 
