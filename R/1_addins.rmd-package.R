@@ -3,7 +3,6 @@
 #'
 #' @title RStudio Add-ins for R Markdown
 #'
-#'
 #' @description
 #'
 #' `addins.rmd` provides a set of RStudio add-ins to format R Markdown documents.
@@ -17,12 +16,12 @@
 #'
 #' Use the links below to learn more about RStudio add-ins
 #' and especially how to use them in combination with user-defined
-#' keyboard shortcuts:\enumerate{
+#' keyboard shortcuts:
 #'
-#' \item{[RStudio add-ins](https://rstudio.github.io/rstudioaddins/);}
-#' \item{[Keyboard shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts);}
-#' \item{[Customizing keyboard shortcuts.](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts)}
-#' }
+#' 1. [RStudio add-ins](https://rstudio.github.io/rstudioaddins/);
+#' 2. [Keyboard shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts);
+#' 3. [Customizing keyboard shortcuts.](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts)
+#'
 #'
 #'
 #' @import addin.tools
