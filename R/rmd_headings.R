@@ -37,50 +37,50 @@ rmd_heading_1 <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_2 <- function(context = rs_get_context()) {
-    if (is_rmd_visual_mode()) {
+  if (is_rmd_visual_mode()) {
     return()
   } else {
-  add_hash_style_heading("## ", context = context)
+    add_hash_style_heading("## ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_3 <- function(context = rs_get_context()) {
-    if (is_rmd_visual_mode()) {
+  if (is_rmd_visual_mode()) {
     return()
   } else {
-  add_hash_style_heading("### ", context = context)
+    add_hash_style_heading("### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_4 <- function(context = rs_get_context()) {
-    if (is_rmd_visual_mode()) {
+  if (is_rmd_visual_mode()) {
     return()
   } else {
-  add_hash_style_heading("#### ", context = context)
+    add_hash_style_heading("#### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_5 <- function(context = rs_get_context()) {
-      if (is_rmd_visual_mode()) {
+  if (is_rmd_visual_mode()) {
     return()
   } else {
-  add_hash_style_heading("##### ", context = context)
+    add_hash_style_heading("##### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_heading_6 <- function(context = rs_get_context()) {
-      if (is_rmd_visual_mode()) {
+  if (is_rmd_visual_mode()) {
     return()
   } else {
-  add_hash_style_heading("###### ", context = context)
+    add_hash_style_heading("###### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,7 +100,7 @@ rmd_heading_2_subtitle <- function(context = rs_get_context()) {
 #' @rdname rmd_headings
 #' @export
 rmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
-                               context = rs_get_context()) {
+  context = rs_get_context()) {
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (is_rmd_visual_mode()) {
@@ -191,10 +191,12 @@ rm_underline_style_heading <- function(row, context, detected) {
 # ============================================================================
 add_hash_style_heading <- function(symbol = "# ", context = rs_get_context()) {
   rmd_heading_remove(style = "both", context = context)
-  rs_insert_before_first_selected_row(symbol,
-    ensure_blank_above = TRUE,
-    context = context
-  )
+  if (nchar(symbol) > 0) {
+    rs_insert_before_first_selected_row(symbol,
+      ensure_blank_above = TRUE,
+      context = context
+    )
+  }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm_leading_hash <- function(str) {
@@ -208,3 +210,39 @@ rm_hash_style_heading <- function(row, context) {
   rstudioapi::modifyRange(first_selected_row, text1, id = context$id)
 }
 # ============================================================================
+rmd_heading_level_down <- function(context = rs_get_context()) {
+  if (is_rmd_visual_mode()) {
+    return()
+  } else {
+    rmd_heading_level_change("down", context = context)
+  }
+}
+
+rmd_heading_level_up <- function(context = rs_get_context()) {
+  if (is_rmd_visual_mode()) {
+    return()
+  } else {
+    rmd_heading_level_change("up", context = context)
+  }
+}
+
+rmd_heading_level_change <- function(direction, context = rs_get_context()) {
+  row_txt <- rs_get_first_selected_row(context)
+  level <- nchar(stringr::str_extract(row_txt, "^#*"))
+
+  new_level <-
+    switch(direction,
+      "down" = min(6, level + 1),
+      "up" = max(0, level - 1)
+  )
+
+  symbol <- stringr::str_dup("#", new_level)
+  if (new_level != 0) {
+    symbol <- stringr::str_c(symbol, " ")
+  }
+
+  add_hash_style_heading(symbol, context = context)
+}
+
+
+

@@ -47,6 +47,16 @@ Interactive: false
 
 
 
+Name: {Rmd} Increase heading level (e.g., ## -> #)
+Description: Increase heading level.
+Binding: rmd_heading_level_up
+Interactive: false
+
+Name: {Rmd} Decrease heading level (e.g., # -> ##)
+Description: Decrease heading level.
+Binding: rmd_heading_level_down
+Interactive: false
+
 Name: {Rmd} Heading 1 (#)
 Description: Insert #
 Binding: rmd_heading_1
