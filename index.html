@@ -93,21 +93,25 @@ that is interpreted as "**bold**").
 pieces of text (e.g., convert backslashes to forward slashes which results
 in strings like `"c:\data\"` converted into `"c:/data/"`).
 
---><div class="section level2">
+-->
+<div class="section level2">
 <h2 id="install-package">Install Package<a class="anchor" aria-label="anchor" href="#install-package"></a>
 </h2>
 <p>Install package from CRAN-like repository:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">repos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://mokymai.github.io/download/"</span>, <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"repos"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"addins.rmd"</span>, repos <span class="op">=</span> <span class="va">repos</span><span class="op">)</span></span></code></pre></div>
-<details><summary>Install from GitHub</summary><p>Install development version from GitHub:</p>
+<details><summary>
+Install from GitHub
+</summary><p>Install development version from GitHub:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"GegznaV/addin.tools"</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"GegznaV/addins.rmd"</span><span class="op">)</span></span></code></pre></div></details>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"GegznaV/addins.rmd"</span><span class="op">)</span></span></code></pre></div>
+</details>
 </div>
 </div>
 <div class="section level1">
@@ -125,7 +129,8 @@ And offline:
 vignette("v1_workflow", package = "addins.rmd")
 ```
 browseVignettes("addins.rmd") 
---><p>For the current version of the package:</p>
+-->
+<p>For the current version of the package:</p>
 <ol style="list-style-type: decimal">
 <li>Find and click <em>RStudio</em> “Addins” button;</li>
 <li>Type <strong><code>{Rmd}</code></strong> in the add-ins search box;</li>
@@ -187,7 +192,9 @@ Select one or several lines with code, select an appropriate add-in and include 
 <h2 id="pandocs-markdown">Pandoc’s Markdown<a class="anchor" aria-label="anchor" href="#pandocs-markdown"></a>
 </h2>
 <p><em>R Markdown</em> syntax is based on Pandoc’s Markdown syntax. If you need more advanced formatting options, please, read more at:</p>
-<ul><li><a href="https://pandoc.org/MANUAL.html#pandocs-markdown" target="_blank" class="external-link">https://pandoc.org/MANUAL.html#pandocs-markdown</a></li></ul>
+<ul>
+<li><a href="https://pandoc.org/MANUAL.html#pandocs-markdown" target="_blank" class="external-link">https://pandoc.org/MANUAL.html#pandocs-markdown</a></li>
+</ul>
 <hr>
 <p>Online docuentation at <a href="http://gegznav.github.io/addins.rmd/" class="external-link uri">http://gegznav.github.io/addins.rmd/</a></p>
 </div>
@@ -250,7 +257,7 @@ Select one or several lines with code, select an appropriate add-in and include 
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
