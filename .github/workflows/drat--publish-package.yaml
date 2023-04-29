@@ -28,13 +28,13 @@ jobs:
       TMP_DIR:     tmp_dir
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Info
         run: |
           echo "GitHub actor: ${{ github.actor }}"
 
-      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-r@v2
         with:
           r-version: ${{ matrix.config.r }}
           use-public-rspm: true
@@ -75,7 +75,7 @@ jobs:
           TOKEN: ${{ secrets.DEPLOY_DRAT_TOKEN }}
 
       - name: Git clone DEST_REPO
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ${{ env.DEST_REPO }} # 'mokymai/download'
           ref:   'master'
